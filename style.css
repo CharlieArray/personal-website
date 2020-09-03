@@ -1,0 +1,34 @@
+
+h1{
+font-family: Trebuchet MS, serif;
+font-size: 36px;
+color:lightslategrey;
+text-align:left;
+text-decoration: underline;(overline, line-through)
+//text-transform: capitalize; (uppercase,lowercase);
+}
+
+h2{
+font-family: Trebuchet MS, serif;
+font-size: 24px;
+color:#5D8AA8;
+text-align:left;
+}
+
+h3{
+font-family: Trebuchet MS, serif;
+font-size: 18px;
+color:black;
+text-align:left;
+}
+
+p{
+font-family: Helvetica, sans-serif;
+font-size: 13px;
+color:rgb(91, 198, 162);
+text-align:left;
+line-height: 11px; (Space between lines of text)
+
+}
+
+
