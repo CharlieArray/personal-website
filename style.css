@@ -1,34 +1,102 @@
+/*This rule centers images to width of user screen*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
 
+header{
+text-align: center;
+}
+
+/* rule for header divider at top of webpage*/
+header > div {
+text-align: center;
+background: #8C92AC;
+border: 2px solid #000000;
+padding: 10px;
+background-size: 100% 100%;
+}
+
+/*  rule for main divider in webpage*/
+main > div {
+  border: 3px solid #3d5152;
+  padding: 10px;
+  background-color:#91A3B0;
+}
+
+footer > div {
+text-align: center;
+background-color: #8C92AC;
+border: 3px solid #3d5152;
+padding: 10px;
+}
+
+/* psuedo classes style rules for hyperlinks*/
+a {
+  font-family: 'Times New Roman', sans-serif;
+  font-size: 12px;
+}
+
+a:link    { color: #ABE0AB;  }
+a:visited { color: lightsalmon;   }
+a:hover   { color: whitesmoke; }
+a:active  { color: pink;  }
+
+/*  header size 1*/
 h1{
 font-family: Trebuchet MS, serif;
 font-size: 36px;
-color:lightslategrey;
-text-align:left;
+color: darkslategrey;
+text-align:center;
 text-decoration: underline;(overline, line-through)
-//text-transform: capitalize; (uppercase,lowercase);
 }
 
+/*  header size 2 */
 h2{
 font-family: Trebuchet MS, serif;
+text-decoration: underline;
 font-size: 24px;
-color:#5D8AA8;
-text-align:left;
+color:#435e72;
+text-align:center;
 }
 
+/* header size 3 */
 h3{
 font-family: Trebuchet MS, serif;
-font-size: 18px;
-color:black;
-text-align:left;
+font-size: 16px;
+color:rgb(78, 118, 145);
+text-align:center;
 }
 
+/* paragraph rules */
 p{
-font-family: Helvetica, sans-serif;
-font-size: 13px;
-color:rgb(91, 198, 162);
-text-align:left;
-line-height: 11px; (Space between lines of text)
-
+font-family: Arial, sans-serif;
+font-size: 11px;
+color:#000000;
+text-align:center;
+line-height: 11px;
 }
 
+
+/*  unordered list rules */
+ul{
+font-family: Helvetica, sans-serif;
+font-size: 11px;
+color:#000000;
+text-align:center;
+line-height: 13px;
+padding: 0;
+}
+
+/*  ordered list rules */
+ol{
+font-family: Helvetica, sans-serif;
+font-size: 11px;
+color:#000000;
+text-align:center;
+line-height: 13px;
+padding: 0;
+}
 
