@@ -3,7 +3,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 90%;
 }
 
 header{
@@ -26,6 +26,37 @@ main > div {
   background-color:#91A3B0;
 }
 
+/*  group rule for flexbox rows*/
+.group {
+  display: flex;
+  flex-direction: column;  
+}
+
+.item {
+flex: 1;
+margin: 5px;
+text-align:center;
+}
+
+/* Groups & Items  (Desktop) */
+@media all and (min-width: 800px) {
+  section, h1 {
+    padding: 0 10%;
+  }
+  .group {
+    flex-direction: row;
+  }
+}
+
+
+img{
+    max-height:650px;
+    max-width:1000px;
+    height:auto;
+    width: 100%;
+}
+
+
 footer > div {
 text-align: center;
 background-color: #8C92AC;
@@ -35,54 +66,61 @@ padding: 10px;
 
 /* psuedo classes style rules for hyperlinks*/
 a {
-  font-family: 'Times New Roman', sans-serif;
+  font-family: 'Permanent Marker', sans-serif;
   font-size: 12px;
 }
 
-a:link    { color: #ABE0AB;  }
-a:visited { color: lightsalmon;   }
+a:link    { color: lightsalmon;  }
+a:visited { color: #ABE0AB;   }
 a:hover   { color: whitesmoke; }
 a:active  { color: pink;  }
 
 /*  header size 1*/
 h1{
-font-family: Trebuchet MS, serif;
-font-size: 36px;
-color: darkslategrey;
+font-family: 'Permanent Marker', serif;
+font-size: 48px;
+color: whitesmoke;
 text-align:center;
-text-decoration: underline;(overline, line-through)
+text-decoration: underline;
 }
 
 /*  header size 2 */
 h2{
-font-family: Trebuchet MS, serif;
+font-family: 'Permanent Marker', serif;
 text-decoration: underline;
-font-size: 24px;
-color:#435e72;
+font-size: 32px;
+color:#9FE2BF;
 text-align:center;
 }
 
+
+/* Alternate possible font colors
+  #DBE9F4 - azure white
+  #435e72
+/*#9FE2BF - seafoam green */
+
+
 /* header size 3 */
 h3{
-font-family: Trebuchet MS, serif;
-font-size: 16px;
-color:rgb(78, 118, 145);
+font-family: 'Nanum Brush Script', serif;
+font-size: 24px;
+color: #DBE9F4;
 text-align:center;
 }
 
 /* paragraph rules */
 p{
-font-family: Arial, sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
 font-size: 11px;
 color:#000000;
 text-align:center;
-line-height: 11px;
+line-height: 13px;
 }
 
 
 /*  unordered list rules */
 ul{
-font-family: Helvetica, sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
 font-size: 11px;
 color:#000000;
 text-align:center;
@@ -92,7 +130,7 @@ padding: 0;
 
 /*  ordered list rules */
 ol{
-font-family: Helvetica, sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
 font-size: 11px;
 color:#000000;
 text-align:center;
