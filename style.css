@@ -1,13 +1,9 @@
-/*This rule centers images to width of user screen*/
+/*This rule centers non-flexbox images to width of user screen*/
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-}
-
-header{
-text-align: center;
 }
 
 /* rule for header divider at top of webpage*/
@@ -26,37 +22,39 @@ main > div {
   background-color:#91A3B0;
 }
 
-/*  group rule for flexbox rows*/
+/*  Backup CSS Rule for Flex Grouping >> Do Not Modify
 .group {
-  display: flex;
-  flex-direction: column;  
+  display: inline-flex;
+  flex-direction: row;  
+  align-items: center;
+  justify-content: center;
 }
+*/
+
+.group{
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;  
+  align-content: center; /* alignes content vertically */
+  justify-content: center; /*aligns content horizontally*/
+}
+
 
 .item {
 flex: 1;
 margin: 5px;
-text-align:center;
 }
 
-/* Groups & Items  (Desktop) */
-@media all and (min-width: 800px) {
-  section, h1 {
-    padding: 0 10%;
-  }
-  .group {
-    flex-direction: row;
-  }
-}
-
-
+/* CSS Rules for Site Images */ 
 img{
     max-height:650px;
     max-width:1000px;
     height:auto;
     width: 100%;
+    border-radius: 10px;
 }
 
-
+/* Footer Nav Section  */
 footer > div {
 text-align: center;
 background-color: #8C92AC;
@@ -64,12 +62,13 @@ border: 3px solid #3d5152;
 padding: 10px;
 }
 
-/* psuedo classes style rules for hyperlinks*/
+/* Hyperlink font properties */
 a {
   font-family: 'Permanent Marker', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 
+/* psuedo classes style rules for hyperlinks*/
 a:link    { color: lightsalmon;  }
 a:visited { color: #ABE0AB;   }
 a:hover   { color: whitesmoke; }
@@ -137,4 +136,5 @@ text-align:center;
 line-height: 13px;
 padding: 0;
 }
+
 
