@@ -1,8 +1,11 @@
+ /* CSS Rules for Devices under 600px phones etc */ 
+
 @media all and (max-width: 600px) {
   body {
     margin: 0;
   }
 
+  /*This rule centers non-flexbox images to width of user screen*/
  .center {
     display: block;
     margin-left: auto;
@@ -21,14 +24,57 @@
 
   header {
     background: #8C92AC;
-    margin-bottom: 40px;
-    border: 2px solid #000000;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
   }
+
+/*CSS rule for the container for the header navigation*/
+  header nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+/*CSS rule for unordered list for nav that is in the headerr*/
+  header nav ul {
+    display: flex;
+    list-style: none;
+  }
+
+/*CSS rule for unordered list for nav that is in the header*/
+  header div ul li{
+    text-decoration: none;
+    align-content: center;
+  }
+
+  header nav ul li:last-child a {
+    margin-right: 0;
+  }
+
+  /* Hyperlink font properties */
+  a {
+    font-family: 'Permanent Marker', sans-serif;
+    font-size: 14px;
+    margin: 0 10px 0 0;
+  }
+
+  /* psuedo classes style rules for hyperlinks*/
+  a:link    { color: lightsalmon;  }
+  a:visited { color: #ABE0AB;   }
+  a:hover   { color: whitesmoke; }
+  a:active  { color: pink;  }
 
   main > div {
     border: 3px solid #3d5152;
     padding: 10px;
     background-color:#91A3B0;
+  }
+
+  /* Footer Nav Section  */
+  footer > div {
+  text-align: center;
+  background-color: #8C92AC;
+  border: 3px solid #3d5152;
+  padding: 10px;
   }
 
   header h1 {
@@ -65,32 +111,29 @@
   line-height: 13px;
   }
 
-
-  header nav {
-    display: flex;
-    justify-content: center;
+  /*  unordered list rules */
+  ul{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 11px;
+  color:#000000;
+  text-align:center;
+  line-height: 13px;
+  padding: 0;
   }
 
-  header nav ul {
-    display: flex;
-    padding-left: 0;
-    list-style: none;
-  }
-
-  header nav ul li a {
-    color: #fff;
-    font-family: 'Permanent Marker', sans-serif;
-    font-size: 14px;
-    text-decoration: none;
-    align-content: center;
-    margin: 0 20px 0 0;
-  }
-
-  header nav ul li:last-child a {
-    margin-right: 0;
+  /*  ordered list rules */
+  ol{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 11px;
+  color:#000000;
+  text-align:center;
+  line-height: 13px;
+  padding: 0;
   }
 }
 
+
+ /* CSS Rules for Devices over 600px */ 
 
 @media all and (min-width: 600px) {
 
@@ -113,7 +156,7 @@
 
   /*  rule for main divider in webpage*/
   main > div {
-    border: 3px solid #3d5152;
+    border: 2px solid #3d5152;
     padding: 10px;
     background-color:#91A3B0;
   }
@@ -154,7 +197,7 @@
   footer > div {
   text-align: center;
   background-color: #8C92AC;
-  border: 3px solid #3d5152;
+  border: 2px solid #3d5152;
   padding: 10px;
   }
 
@@ -162,6 +205,7 @@
   a {
     font-family: 'Permanent Marker', sans-serif;
     font-size: 14px;
+    margin: 0 10px 0 0;
   }
 
   /* psuedo classes style rules for hyperlinks*/
