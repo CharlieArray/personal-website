@@ -1,4 +1,4 @@
- /* CSS Rules for Devices under 600px phones etc */ 
+ /*--------CSS Rules for Devices under 600px phones etc--------*/ 
 
 @media all and (max-width: 600px) {
   body {
@@ -19,7 +19,7 @@
       max-width:1000px;
       height:auto;
       width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
   }
 
   header {
@@ -50,6 +50,28 @@
     margin-right: 0;
   }
 
+  /* Grid 2x2 Flexbox Container */
+  .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    font-family: 'Permanent Marker', serif;
+    font-size: 17px;
+    color:#DBE9F4;
+  }
+
+  /* Grid 2x2 Flexbox Item Element/Attributes */
+  .item2 {
+    width: 30%;
+    max-width:380px !important;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-bottom: 5%; /* Same as width, sets height */
+    margin-bottom: 0%; /* (100-32*2)/2 */
+    position: relative;
+  }
+
   /* Hyperlink font properties */
   a {
     font-family: 'Permanent Marker', sans-serif;
@@ -63,9 +85,11 @@
   a:hover   { color: whitesmoke; }
   a:active  { color: pink;  }
 
+  /*  rule for main divider in webpage*/
   main > div {
     border: 3px solid #3d5152;
     padding: 10px;
+    margin: 4px;    
     background-color:#91A3B0;
   }
 
@@ -77,6 +101,7 @@
   padding: 10px;
   }
 
+   /*  header size 1 */
   header h1 {
   font-family: 'Permanent Marker', serif;
   font-size: 48px;
@@ -102,10 +127,10 @@
   text-align:center;
   }
 
-  /* paragraph rules */
+  /* paragraph text rules */
   p{
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
   color:#000000;
   text-align:center;
   line-height: 13px;
@@ -113,8 +138,8 @@
 
   /*  unordered list rules */
   ul{
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
   color:#000000;
   text-align:center;
   line-height: 13px;
@@ -123,8 +148,8 @@
 
   /*  ordered list rules */
   ol{
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
   color:#000000;
   text-align:center;
   line-height: 13px;
@@ -132,8 +157,7 @@
   }
 }
 
-
- /* CSS Rules for Devices over 600px */ 
+/*-------------CSS Rules for Devices over 600px------------------*/ 
 
 @media all and (min-width: 600px) {
 
@@ -150,7 +174,7 @@
   text-align: center;
   background: #8C92AC;
   border: 2px solid #000000;
-  padding: 10px;
+  padding: 5px;
   background-size: 100% 100%;
   }
 
@@ -158,6 +182,7 @@
   main > div {
     border: 2px solid #3d5152;
     padding: 10px;
+    margin: 16px;
     background-color:#91A3B0;
   }
 
@@ -176,13 +201,38 @@
     flex-direction: row;  
     align-content: center; /* alignes content vertically */
     justify-content: center; /*aligns content horizontally*/
+    text-align: center;
+    font-family: 'Permanent Marker', serif;
+    font-size: 17px;
+    color:#DBE9F4;
   }
-
 
   .item {
   flex: 1;
   margin: 5px;
   }
+
+/* Grid 2x2 Flexbox Container */
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  font-family: 'Permanent Marker', serif;
+  font-size: 17px;
+  color:#DBE9F4;
+}
+
+/* Grid 2x2 Flexbox Item Element/Attributes */
+.item2 {
+  width: 30%;
+  max-width:380px !important;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-bottom: 5%; /* Same as width, sets height */
+  margin-bottom: 0%; /* (100-32*2)/2 */
+  position: relative;
+}
 
   /* CSS Rules for Site Images */ 
   img{
@@ -217,10 +267,10 @@
   /*  header size 1*/
   h1{
   font-family: 'Permanent Marker', serif;
-  font-size: 48px;
+  font-size: 50px;
   color: whitesmoke;
   text-align:center;
-  text-decoration: underline;
+  text-decoration: underline;    
   }
 
   /*  header size 2 */
@@ -230,14 +280,14 @@
   font-size: 32px;
   color:#9FE2BF;
   text-align:center;
+  margin:4px;
+  padding:2px;
   }
-
 
   /* Alternate possible font colors
     #DBE9F4 - azure white
     #435e72
   /*#9FE2BF - seafoam green */
-
 
   /* header size 3 */
   h3{
@@ -245,22 +295,25 @@
   font-size: 24px;
   color: #DBE9F4;
   text-align:center;
+  margin:0;
+  padding:0;
   }
 
   /* paragraph rules */
   p{
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
   color:#000000;
   text-align:center;
   line-height: 13px;
+  margin:5px;
+  padding:8px;
   }
-
 
   /*  unordered list rules */
   ul{
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
   color:#000000;
   text-align:center;
   line-height: 13px;
@@ -269,8 +322,8 @@
 
   /*  ordered list rules */
   ol{
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
   color:#000000;
   text-align:center;
   line-height: 13px;
