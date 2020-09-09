@@ -5,12 +5,30 @@
     margin: 0;
   }
 
-  /*This rule centers non-flexbox images to width of user screen*/
- .center {
+  /*This rule centers non-flexbox large images to width of user screen*/
+  .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+  }
+
+  /*CSS rule for medium images*/
+   .center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  /*CSS rule for small images/graphics*/
+   .center3 {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8%;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 
  /* CSS Rules for Site Images */ 
@@ -144,8 +162,10 @@ form button {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   color:#000000;
-  text-align:center;
-  line-height: 13px;
+  text-align: center;
+  line-height: 16px;
+  margin:3px;
+  padding:5px;
   }
 
   /*  unordered list rules */
@@ -154,7 +174,7 @@ form button {
   font-size: 12px;
   color:#000000;
   text-align:center;
-  line-height: 13px;
+  line-height: 16px;
   padding: 0;
   }
 
@@ -179,6 +199,24 @@ form button {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+  }
+
+  /*CSS rule for medium images/graphics*/
+ .center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+  }
+
+  /*CSS rule for small images/graphics*/
+ .center3 {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8%;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 
   /* rule for header divider at top of webpage*/
@@ -246,7 +284,7 @@ form button {
   position: relative;
 }
 
-  /* CSS Rules for Site Images */ 
+  /* CSS Rules for Generic Site Images */ 
   img{
       max-height:650px;
       max-width:1000px;
@@ -329,9 +367,9 @@ form button {
   font-size: 12px;
   color:#000000;
   text-align:center;
-  line-height: 13px;
-  margin:5px;
-  padding:8px;
+  line-height: 18px;
+  margin:3px;
+  padding:5px;
   }
 
   /*  unordered list rules */
@@ -340,7 +378,7 @@ form button {
   font-size: 12px;
   color:#000000;
   text-align:center;
-  line-height: 13px;
+  line-height: 16px;
   padding: 0;
   }
 
