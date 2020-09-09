@@ -72,6 +72,18 @@
     position: relative;
   }
 
+  /* Contact Form Rules */
+form label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color:#DBE9F4;
+  font-family: 'Open Sans', sans-serif;
+}
+  /* Contact Form Button Style Rules */
+form button {
+}
+
   /* Hyperlink font properties */
   a {
     font-family: 'Permanent Marker', sans-serif;
@@ -250,6 +262,18 @@
   border: 2px solid #3d5152;
   padding: 10px;
   }
+
+  /* Contact Form Rules */
+form label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color:#DBE9F4;
+  font-family: 'Open Sans', sans-serif;
+}
+  /* Contact Form Button Style Rules */
+form button {
+}
 
   /* Hyperlink font properties */
   a {
