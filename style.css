@@ -1,73 +1,285 @@
  /*--------CSS Rules for Devices under 600px phones etc--------*/ 
 
-@media all and (max-width: 600px) {
-  body {
-    margin: 0;
-  }
+ @media all and (max-width: 600px) {
+    body {
+      margin: 0;
+    }
+  
+    /*This rule centers non-flexbox large images to width of user screen*/
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+    }
+  
+    /*CSS rule for medium images*/
+     .center2 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+    }
+  
+    /*CSS rule for small images/graphics*/
+     .center3 {
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 8%;
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+  
+   /* CSS Rules for Site Images */ 
+    img{
+        max-height:650px;
+        max-width:1000px;
+        height:auto;
+        width: 100%;
+        border-radius: 12px;
+    }
+  
+    header {
+      background: #8C92AC;
+      margin-bottom: 10px;
+      border: 1px solid #000000;
+    }
+  
+  /*CSS rule for the container for the header navigation*/
+    header nav {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+  
+  /*CSS rule for unordered list for nav that is in the header*/
+    header div ul li{
+      display: flex;
+      list-style: none;
+      text-decoration: none;
+      align-content: center;
+    }
+  
+    header nav ul li:last-child a {
+      margin-right: 0;
+      list-style: none;
+    }
+  
 
-  /*This rule centers non-flexbox large images to width of user screen*/
-  .center {
+      /* Grid 1x3 Container */
+    .group{
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-direction: row;  
+      align-content: center; /* alignes content vertically */
+      justify-content: center; /*aligns content horizontally*/
+      text-align: center;
+      font-family: 'Permanent Marker', serif;
+      font-size: 17px;
+      color:#DBE9F4;
+    }
+  
+    .item {
+    flex: 1;
+    margin: 5px;
+    }
+
+    /* Grid 2x2 Flexbox Container */
+    .container2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      text-align: center;
+      font-family: 'Permanent Marker', serif;
+      font-size: 17px;
+      color:#DBE9F4;
+    }
+  
+    /* Grid 2x2 Flexbox Item Element/Attributes */
+    .item2 {
+      width: 40%;
+      max-width:380px !important;
+      margin-right: auto;
+      margin-left: auto;
+      padding-bottom: 5%; /* Same as width, sets height */
+      margin-bottom: 0%; /* (100-32*2)/2 */
+      position: relative;
+    }
+  
+    /* Contact Form Rules */
+  form label {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+    font-size: 12px;
+    margin-bottom: 5px;
+    color:#DBE9F4;
+    font-family: 'Open Sans', sans-serif;
   }
-
-  /*CSS rule for medium images*/
+    /* Contact Form Button Style Rules */
+  form button{
+    font-size: 12px;
+  }
+  
+    /* Hyperlink font properties */
+    a {
+      font-family: 'Permanent Marker', sans-serif;
+      font-size: 14px;
+      margin: 0 10px 0 0;
+    }
+  
+    /* psuedo classes style rules for hyperlinks*/
+    a:link    { color: lightsalmon;  }
+    a:visited { color: #ABE0AB;   }
+    a:hover   { color: whitesmoke; }
+    a:active  { color: pink;  }
+  
+    /*  rule for main divider in webpage*/
+    main > div {
+      border: 3px solid #3d5152;
+      padding: 10px;
+      margin: 4px;    
+      background-color:#91A3B0;
+    }
+  
+    /* Footer Nav Section  */
+    footer > div {
+    text-align: center;
+    background-color: #8C92AC;
+    border: 3px solid #3d5152;
+    padding: 10px;
+    }
+  
+     /*  header size 1 */
+    header h1 {
+    font-family: 'Permanent Marker', serif;
+    font-size: 48px;
+    color: whitesmoke;
+    text-align:center;
+    text-decoration: underline;
+    }
+  
+     /*  header size 2 */
+    h2{
+    font-family: 'Permanent Marker', serif;
+    text-decoration: underline;
+    font-size: 32px;
+    color:#9FE2BF;
+    text-align:center;
+    }
+   
+    /* header size 3 */
+    h3{
+    font-family: 'Nanum Brush Script', serif;
+    font-size: 24px;
+    color: #DBE9F4;
+    text-align:center;
+    }
+  
+    /* paragraph text rules */
+    p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color:#000000;
+    text-align: center;
+    line-height: 16px;
+    margin:3px;
+    padding:5px;
+    }
+  
+    /*  unordered list rules */
+    ul{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color:#000000;
+    text-align:center;
+    line-height: 16px;
+    padding: 0;
+    }
+  
+    /*  ordered list rules */
+    ol{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color:#000000;
+    text-align:center;
+    line-height: 13px;
+    padding: 0;
+    }
+  }
+  
+  /*-------------------CSS Rules for Devices over 600px------------------------*/ 
+  
+  @media all and (min-width: 600px) {
+  
+    /*This rule centers non-flexbox images to width of user screen*/
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+    }
+  
+    /*CSS rule for medium images/graphics*/
    .center2 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-  }
-
-  /*CSS rule for small images/graphics*/
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 65%;
+    }
+  
+    /*CSS rule for small images/graphics*/
    .center3 {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 8%;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-
- /* CSS Rules for Site Images */ 
-  img{
-      max-height:650px;
-      max-width:1000px;
-      height:auto;
-      width: 100%;
-      border-radius: 12px;
-  }
-
-  header {
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 8%;
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+  
+    /* rule for header divider at top of webpage*/
+    header > div {
+    text-align: center;
     background: #8C92AC;
-    margin-bottom: 10px;
-    border: 1px solid #000000;
-  }
-
-/*CSS rule for the container for the header navigation*/
-  header nav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-  }
-/*CSS rule for unordered list for nav that is in the headerr*/
-  header nav ul {
-    display: flex;
-    list-style: none;
-  }
-
-/*CSS rule for unordered list for nav that is in the header*/
-  header div ul li{
-    text-decoration: none;
-    align-content: center;
-  }
-
-  header nav ul li:last-child a {
-    margin-right: 0;
-  }
-
+    border: 2px solid #000000;
+    padding: 5px;
+    background-size: 100% 100%;
+    }
+  
+    /*  rule for main divider in webpage*/
+    main > div {
+      border: 2px solid #3d5152;
+      padding: 10px;
+      margin: 16px;
+      background-color:#91A3B0;
+    }
+  
+    /*  Backup CSS Rule for Flex Grouping >> Do Not Modify
+    .group {
+      display: inline-flex;
+      flex-direction: row;  
+      align-items: center;
+      justify-content: center;
+    }
+    */
+  
+    .group{
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-direction: row;  
+      align-content: center; /* alignes content vertically */
+      justify-content: center; /*aligns content horizontally*/
+      text-align: center;
+      font-family: 'Permanent Marker', serif;
+      font-size: 17px;
+      color:#DBE9F4;
+    }
+  
+    .item {
+    flex: 1;
+    margin: 5px;
+    }
+  
   /* Grid 2x2 Flexbox Container */
   .container2 {
     display: flex;
@@ -78,317 +290,125 @@
     font-size: 17px;
     color:#DBE9F4;
   }
-
+  
   /* Grid 2x2 Flexbox Item Element/Attributes */
   .item2 {
     width: 30%;
     max-width:380px !important;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
     padding-bottom: 5%; /* Same as width, sets height */
     margin-bottom: 0%; /* (100-32*2)/2 */
     position: relative;
   }
-
-  /* Contact Form Rules */
-form label {
-  display: block;
-  font-size: 12px;
-  margin-bottom: 5px;
-  color:#DBE9F4;
-  font-family: 'Open Sans', sans-serif;
-}
-  /* Contact Form Button Style Rules */
-form button {
-}
-
-  /* Hyperlink font properties */
-  a {
-    font-family: 'Permanent Marker', sans-serif;
-    font-size: 14px;
-    margin: 0 10px 0 0;
-  }
-
-  /* psuedo classes style rules for hyperlinks*/
-  a:link    { color: lightsalmon;  }
-  a:visited { color: #ABE0AB;   }
-  a:hover   { color: whitesmoke; }
-  a:active  { color: pink;  }
-
-  /*  rule for main divider in webpage*/
-  main > div {
-    border: 3px solid #3d5152;
-    padding: 10px;
-    margin: 4px;    
-    background-color:#91A3B0;
-  }
-
-  /* Footer Nav Section  */
-  footer > div {
-  text-align: center;
-  background-color: #8C92AC;
-  border: 3px solid #3d5152;
-  padding: 10px;
-  }
-
-   /*  header size 1 */
-  header h1 {
-  font-family: 'Permanent Marker', serif;
-  font-size: 48px;
-  color: whitesmoke;
-  text-align:center;
-  text-decoration: underline;
-  }
-
-   /*  header size 2 */
-  h2{
-  font-family: 'Permanent Marker', serif;
-  text-decoration: underline;
-  font-size: 32px;
-  color:#9FE2BF;
-  text-align:center;
-  }
- 
-  /* header size 3 */
-  h3{
-  font-family: 'Nanum Brush Script', serif;
-  font-size: 24px;
-  color: #DBE9F4;
-  text-align:center;
-  }
-
-  /* paragraph text rules */
-  p{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  color:#000000;
-  text-align: center;
-  line-height: 16px;
-  margin:3px;
-  padding:5px;
-  }
-
-  /*  unordered list rules */
-  ul{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  color:#000000;
-  text-align:center;
-  line-height: 16px;
-  padding: 0;
-  }
-
-  /*  ordered list rules */
-  ol{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  color:#000000;
-  text-align:center;
-  line-height: 13px;
-  padding: 0;
-  }
-}
-
-/*-------------CSS Rules for Devices over 600px------------------*/ 
-
-@media all and (min-width: 600px) {
-
-  /*This rule centers non-flexbox images to width of user screen*/
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-  }
-
-  /*CSS rule for medium images/graphics*/
- .center2 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 65%;
-  }
-
-  /*CSS rule for small images/graphics*/
- .center3 {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 8%;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-
-  /* rule for header divider at top of webpage*/
-  header > div {
-  text-align: center;
-  background: #8C92AC;
-  border: 2px solid #000000;
-  padding: 5px;
-  background-size: 100% 100%;
-  }
-
-  /*  rule for main divider in webpage*/
-  main > div {
+  
+    /* CSS Rules for Generic Site Images */ 
+    img{
+        max-height:650px;
+        max-width:1000px;
+        height:auto;
+        width: 100%;
+        border-radius: 10px;
+    }
+  
+    /* Footer Nav Section  */
+    footer > div {
+    text-align: center;
+    background-color: #8C92AC;
     border: 2px solid #3d5152;
     padding: 10px;
-    margin: 16px;
-    background-color:#91A3B0;
-  }
-
-  /*  Backup CSS Rule for Flex Grouping >> Do Not Modify
-  .group {
-    display: inline-flex;
-    flex-direction: row;  
-    align-items: center;
-    justify-content: center;
-  }
-  */
-
-  .group{
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: row;  
-    align-content: center; /* alignes content vertically */
-    justify-content: center; /*aligns content horizontally*/
-    text-align: center;
-    font-family: 'Permanent Marker', serif;
-    font-size: 17px;
+    }
+  
+    /* Contact Form Rules */
+  form label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
     color:#DBE9F4;
+    font-family: 'Open Sans', sans-serif;
   }
-
-  .item {
-  flex: 1;
-  margin: 5px;
+    /* Contact Form Button Style Rules */
+  form button {
+    font-size: 12px;
   }
-
-/* Grid 2x2 Flexbox Container */
-.container2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  text-align: center;
-  font-family: 'Permanent Marker', serif;
-  font-size: 17px;
-  color:#DBE9F4;
-}
-
-/* Grid 2x2 Flexbox Item Element/Attributes */
-.item2 {
-  width: 30%;
-  max-width:380px !important;
-  margin-right: 10px;
-  margin-left: 10px;
-  padding-bottom: 5%; /* Same as width, sets height */
-  margin-bottom: 0%; /* (100-32*2)/2 */
-  position: relative;
-}
-
-  /* CSS Rules for Generic Site Images */ 
-  img{
-      max-height:650px;
-      max-width:1000px;
-      height:auto;
-      width: 100%;
-      border-radius: 10px;
+  
+    /* Hyperlink font properties */
+    a {
+      font-family: 'Permanent Marker', sans-serif;
+      font-size: 14px;
+      margin: 0 10px 0 0;
+    }
+  
+    /* psuedo classes style rules for hyperlinks*/
+    a:link    { color: lightsalmon;  }
+    a:visited { color: #ABE0AB;   }
+    a:hover   { color: whitesmoke; }
+    a:active  { color: pink;  }
+  
+    /*  header size 1*/
+    h1{
+    font-family: 'Permanent Marker', serif;
+    font-size: 50px;
+    color: whitesmoke;
+    text-align:center;
+    text-decoration: underline;    
+    }
+  
+    /*  header size 2 */
+    h2{
+    font-family: 'Permanent Marker', serif;
+    text-decoration: underline;
+    font-size: 32px;
+    color:#9FE2BF;
+    text-align:center;
+    margin:4px;
+    padding:2px;
+    }
+  
+    /* Alternate possible font colors
+      #DBE9F4 - azure white
+      #435e72
+    /*#9FE2BF - seafoam green */
+  
+    /* header size 3 */
+    h3{
+    font-family: 'Nanum Brush Script', serif;
+    font-size: 24px;
+    color: #DBE9F4;
+    text-align:center;
+    margin:0;
+    padding:0;
+    }
+  
+    /* paragraph rules */
+    p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color:#000000;
+    text-align:center;
+    line-height: 18px;
+    margin:3px;
+    padding:5px;
+    }
+  
+    /*  unordered list rules */
+    ul{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color:#000000;
+    text-align:center;
+    line-height: 16px;
+    padding: 0;
+    }
+  
+    /*  ordered list rules */
+    ol{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color:#000000;
+    text-align:center;
+    line-height: 13px;
+    padding: 0;
+    }
   }
-
-  /* Footer Nav Section  */
-  footer > div {
-  text-align: center;
-  background-color: #8C92AC;
-  border: 2px solid #3d5152;
-  padding: 10px;
-  }
-
-  /* Contact Form Rules */
-form label {
-  display: block;
-  font-size: 12px;
-  margin-bottom: 5px;
-  color:#DBE9F4;
-  font-family: 'Open Sans', sans-serif;
-}
-  /* Contact Form Button Style Rules */
-form button {
-}
-
-  /* Hyperlink font properties */
-  a {
-    font-family: 'Permanent Marker', sans-serif;
-    font-size: 14px;
-    margin: 0 10px 0 0;
-  }
-
-  /* psuedo classes style rules for hyperlinks*/
-  a:link    { color: lightsalmon;  }
-  a:visited { color: #ABE0AB;   }
-  a:hover   { color: whitesmoke; }
-  a:active  { color: pink;  }
-
-  /*  header size 1*/
-  h1{
-  font-family: 'Permanent Marker', serif;
-  font-size: 50px;
-  color: whitesmoke;
-  text-align:center;
-  text-decoration: underline;    
-  }
-
-  /*  header size 2 */
-  h2{
-  font-family: 'Permanent Marker', serif;
-  text-decoration: underline;
-  font-size: 32px;
-  color:#9FE2BF;
-  text-align:center;
-  margin:4px;
-  padding:2px;
-  }
-
-  /* Alternate possible font colors
-    #DBE9F4 - azure white
-    #435e72
-  /*#9FE2BF - seafoam green */
-
-  /* header size 3 */
-  h3{
-  font-family: 'Nanum Brush Script', serif;
-  font-size: 24px;
-  color: #DBE9F4;
-  text-align:center;
-  margin:0;
-  padding:0;
-  }
-
-  /* paragraph rules */
-  p{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  color:#000000;
-  text-align:center;
-  line-height: 18px;
-  margin:3px;
-  padding:5px;
-  }
-
-  /*  unordered list rules */
-  ul{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  color:#000000;
-  text-align:center;
-  line-height: 16px;
-  padding: 0;
-  }
-
-  /*  ordered list rules */
-  ol{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  color:#000000;
-  text-align:center;
-  line-height: 13px;
-  padding: 0;
-  }
-}
+  
