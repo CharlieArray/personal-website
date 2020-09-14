@@ -40,6 +40,7 @@
         border-radius: 12px;
     }
   
+    /* CSS Rule for each individual headers in mobile view*/
     header {
       background: #8C92AC;
       margin-bottom: 10px;
@@ -125,6 +126,7 @@
       font-family: 'Permanent Marker', sans-serif;
       font-size: 14px;
       margin: 0 10px 0 0;
+      text-decoration: none;
     }
   
     /* psuedo classes style rules for hyperlinks*/
@@ -238,7 +240,7 @@
     }
   
     /* rule for header divider at top of webpage*/
-    header > div {
+    header div {
     text-align: center;
     background: #8C92AC;
     border: 2px solid #000000;
@@ -337,6 +339,7 @@
       font-family: 'Permanent Marker', sans-serif;
       font-size: 14px;
       margin: 0 10px 0 0;
+      text-decoration: none;
     }
   
     /* psuedo classes style rules for hyperlinks*/
