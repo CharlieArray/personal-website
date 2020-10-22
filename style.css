@@ -41,10 +41,11 @@
     }
   
     /* CSS Rule for each individual headers in mobile view*/
-    header {
+    header div{
       background: #8C92AC;
       margin-bottom: 10px;
-      border: 1px solid #000000;
+      margin: 5px;
+      border: 2px solid #000000;
     }
   
   /*CSS rule for the container for the header navigation*/
@@ -121,6 +122,7 @@
     font-size: 12px;
   }
   
+  
     /* Hyperlink font properties */
     a {
       font-family: 'Permanent Marker', sans-serif;
@@ -148,6 +150,7 @@
     text-align: center;
     background-color: #8C92AC;
     border: 3px solid #3d5152;
+    margin: 5px;
     padding: 10px;
     }
   
@@ -214,6 +217,13 @@
   @media all and (min-width: 600px) {
   
     /*This rule centers non-flexbox images to width of user screen*/
+
+    body{
+      margin-left: 10%;
+      margin-right: 10%;
+
+    }
+
     .center {
       display: block;
       margin-left: auto;
@@ -244,6 +254,7 @@
     text-align: center;
     background: #8C92AC;
     border: 2px solid #000000;
+    margin: 16px;
     padding: 5px;
     background-size: 100% 100%;
     }
@@ -318,6 +329,7 @@
     text-align: center;
     background-color: #8C92AC;
     border: 2px solid #3d5152;
+    margin: 16px;
     padding: 10px;
     }
   
