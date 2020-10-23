@@ -2,7 +2,9 @@
 
  @media all and (max-width: 600px) {
     body {
-      margin: 0;
+      min-width: 300px;
+      margin-left: 2%;
+      margin-right: 2%;
     }
   
     /*This rule centers non-flexbox large images to width of user screen*/
@@ -143,17 +145,17 @@
     /* Hyperlink font properties */
     a {
       font-family: 'Permanent Marker', sans-serif;
-      font-size: 14px;
+      font-size: 17px;
       margin: 0 10px 0 0;
       text-decoration: none;
     }
   
     /* psuedo classes style rules for hyperlinks*/
-    a:link    { color: lightsalmon;  }
-    a:visited { color: #ABE0AB;   }
-    a:hover   { color: whitesmoke; }
-    a:active  { color: pink;  }
-  
+    a:link    { color: #ABE0AB;  }
+    a:visited { color:  #ABE0AB;   }
+    a:hover   { color: lightsalmon; }
+    a:active  { color: lightyellow;  }
+
     /*  rule for main divider in webpage*/
     main > div {
       border: 3px solid #3d5152;
@@ -185,6 +187,7 @@
     font-family: 'Permanent Marker', serif;
     text-decoration: underline;
     font-size: 32px;
+    margin: 2%;
     color:#9FE2BF;
     text-align:center;
     }
@@ -193,6 +196,7 @@
     h3{
     font-family: 'Nanum Brush Script', serif;
     font-size: 24px;
+    margin: 2%;
     color: #DBE9F4;
     text-align:center;
     }
@@ -236,9 +240,8 @@
     /*This rule centers non-flexbox images to width of user screen*/
 
     body{
-      margin-left: 10%;
-      margin-right: 10%;
-
+      margin-left: 4%;
+      margin-right: 4%;
     }
 
     .center {
@@ -253,7 +256,7 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 65%;
+      width: 55%;
     }
   
     /*CSS rule for small images/graphics*/
@@ -270,7 +273,8 @@
     header div {
     text-align: center;
     background: #8C92AC;
-    border: 2px solid #000000;
+    border: 2px solid #3d5152;
+    border-radius: 5px;
     margin: 16px;
     padding: 5px;
     background-size: 100% 100%;
@@ -279,6 +283,7 @@
     /*  rule for main divider in webpage*/
     main > div {
       border: 2px solid #3d5152;
+      border-radius: 5px;
       padding: 10px;
       margin: 16px;
       background-color:#91A3B0;
@@ -346,6 +351,7 @@
     text-align: center;
     background-color: #8C92AC;
     border: 2px solid #3d5152;
+    border-radius: 5px;
     margin: 16px;
     padding: 10px;
     }
@@ -383,16 +389,16 @@
     /* Hyperlink font properties */
     a {
       font-family: 'Permanent Marker', sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       margin: 0 10px 0 0;
       text-decoration: none;
     }
   
     /* psuedo classes style rules for hyperlinks*/
-    a:link    { color: lightsalmon;  }
-    a:visited { color: #ABE0AB;   }
-    a:hover   { color: whitesmoke; }
-    a:active  { color: pink;  }
+    a:link    { color: #ABE0AB;  }
+    a:visited { color:  #ABE0AB;   }
+    a:hover   { color: lightsalmon; }
+    a:active  { color: lightyellow;  }
   
     /*  header size 1*/
     h1{
@@ -436,7 +442,8 @@
     color:#000000;
     text-align:center;
     line-height: 18px;
-    margin:3px;
+    margin-left: 10%;
+    margin-right: 10%;
     padding:5px;
     }
   
