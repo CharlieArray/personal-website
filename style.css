@@ -109,12 +109,12 @@
       position: relative;
     }
 
-   /* Rule to Center Form in Div*/
-   #form-div{
+  /* Rule to Center Form in Div*/
+  #form-div{
     display: block;
     text-align: center;
     }
-  
+
       /* Contact Form Rules */
     form label{
       display: inline-block;
@@ -133,12 +133,11 @@
       font-size: 13px;
       font-family: 'Open Sans', sans-serif;
     }
-  
+
       /* Contact Form Button Style Rules */
     form button {
       font-size: 14px;
     }
-    
   
   
     /* Hyperlink font properties */
@@ -371,7 +370,7 @@
   
   /*Form Text Input Rules*/
   textarea {
-    text-align: left;
+    text-align: center;
     font-size: 13px;
     font-family: 'Open Sans', sans-serif;
   }
