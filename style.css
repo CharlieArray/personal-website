@@ -50,14 +50,14 @@
       border: 2px solid #000000;
     }
   
-  /*CSS rule for the container for the header navigation*/
+   /*CSS rule for the container for the header navigation*/
     header nav {
       display: flex;
       justify-content: center;
       margin-bottom: 15px;
     }
   
-  /*CSS rule for unordered list for nav that is in the header*/
+   /*CSS rule for unordered list for nav that is in the header*/
     header div ul li{
       display: flex;
       list-style: none;
@@ -111,11 +111,11 @@
       position: relative;
     }
 
-  /* Rule to Center Form in Div*/
-  #form-div{
-    display: block;
-    text-align: center;
-    }
+    /* Rule to Center Form in Div*/
+    #form-div{
+      display: block;
+      text-align: center;
+      }
 
       /* Contact Form Rules */
     form label{
@@ -212,12 +212,16 @@
     padding:5px;
     }
   
-    /*  unordered list rules */
-    ul{
+    /*  unordered list rules for hobbies list */
+    #ul-hobbies{
     font-family: 'Open Sans', sans-serif;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    text-align: center;
     font-size: 12px;
     color:#000000;
-    text-align:center;
     line-height: 16px;
     padding: 0;
     }
@@ -315,156 +319,159 @@
     margin: 5px;
     }
   
-  /* Grid 2x2 Flexbox Container */
-  .container2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: center;
-    font-family: 'Permanent Marker', serif;
-    font-size: 17px;
-    color:#DBE9F4;
-  }
+    /* Grid 2x2 Flexbox Container */
+    .container2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      text-align: center;
+      font-family: 'Permanent Marker', serif;
+      font-size: 17px;
+      color:#DBE9F4;
+    }
   
-  /* Grid 2x2 Flexbox Item Element/Attributes */
-  .item2 {
-    width: 30%;
-    max-width:380px !important;
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 5%; /* Same as width, sets height */
-    margin-bottom: 0%; /* (100-32*2)/2 */
-    position: relative;
-  }
+    /* Grid 2x2 Flexbox Item Element/Attributes */
+    .item2 {
+      width: 30%;
+      max-width:380px !important;
+      margin-right: auto;
+      margin-left: auto;
+      padding-bottom: 5%; /* Same as width, sets height */
+      margin-bottom: 0%; /* (100-32*2)/2 */
+      position: relative;
+    }
   
     /* CSS Rules for Generic Site Images */ 
     img{
-        max-height:650px;
-        max-width:1000px;
-        height:auto;
-        width: 100%;
-        border-radius: 10px;
+      max-height:650px;
+      max-width:1000px;
+      height:auto;
+      width: 100%;
+      border-radius: 10px;
     }
-  
+
     /* Footer Nav Section  */
     footer > div {
-    text-align: center;
-    background-color: #8C92AC;
-    border: 2px solid #3d5152;
-    border-radius: 5px;
-    margin: 16px;
-    padding: 10px;
+      text-align: center;
+      background-color: #8C92AC;
+      border: 2px solid #3d5152;
+      border-radius: 5px;
+      margin: 16px;
+      padding: 10px;
     }
   
-  /* Rule to Center Form in Div*/
-  #form-div{
-  display: block;
-  text-align: center;
-  }
+    /* Rule to Center Form in Div*/
+    #form-div{
+      display: block;
+      text-align: center;
+    }
 
     /* Contact Form Rules */
-  form label{
-    display: inline-block;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 13px;
-    margin-bottom: 5px;
-    color:#DBE9F4;
-    font-family: 'Open Sans', sans-serif;
-  }
+    form label{
+      display: inline-block;
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 13px;
+      margin-bottom: 5px;
+      color:#DBE9F4;
+      font-family: 'Open Sans', sans-serif;
+    }
   
-  /*Form Text Input Rules*/
-  textarea {
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Open Sans', sans-serif;
-  }
+    /*Form Text Input Rules*/
+    textarea {
+      text-align: center;
+      font-size: 13px;
+      font-family: 'Open Sans', sans-serif;
+    }
 
     /* Contact Form Button Style Rules */
-  form button {
-    font-size: 13px;
-  }
+    form button {
+      font-size: 13px;
+    }
   
-    /* Hyperlink font properties */
+  /* Hyperlink font properties */
     a {
       font-family: 'Permanent Marker', sans-serif;
       font-size: 16px;
       margin: 0 10px 0 0;
       text-decoration: none;
     }
-  
+
     /* psuedo classes style rules for hyperlinks*/
     a:link    { color: #ABE0AB;  }
-    a:visited { color:  #ABE0AB;   }
+    a:visited { color: #ABE0AB;   }
     a:hover   { color: lightsalmon; }
     a:active  { color: lightyellow;  }
-  
+
     /*  header size 1*/
     h1{
-    font-family: 'Permanent Marker', serif;
-    font-size: 50px;
-    color: whitesmoke;
-    text-align:center;
-    text-decoration: underline;    
+      font-family: 'Permanent Marker', serif;
+      font-size: 50px;
+      color: whitesmoke;
+      text-align:center;
+      text-decoration: underline;    
     }
-  
+
     /*  header size 2 */
     h2{
-    font-family: 'Permanent Marker', serif;
-    text-decoration: underline;
-    font-size: 32px;
-    color:#9FE2BF;
-    text-align:center;
-    margin:4px;
-    padding:2px;
+      font-family: 'Permanent Marker', serif;
+      text-decoration: underline;
+      font-size: 32px;
+      color:#9FE2BF;
+      text-align:center;
+      margin:4px;
+      padding:2px;
     }
-  
+
     /* Alternate possible font colors
       #DBE9F4 - azure white
       #435e72
     /*#9FE2BF - seafoam green */
-  
+
     /* header size 3 */
     h3{
-    font-family: 'Nanum Brush Script', serif;
-    font-size: 24px;
-    color: #DBE9F4;
-    text-align:center;
-    margin:0;
-    padding:0;
+      font-family: 'Nanum Brush Script', serif;
+      font-size: 24px;
+      color: #DBE9F4;
+      text-align:center;
+      margin:0;
+      padding:0;
     }
-  
+
     /* paragraph rules */
     p{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    color:#000000;
-    text-align:center;
-    line-height: 18px;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding:5px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      color:#000000;
+      text-align:center;
+      line-height: 18px;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding:5px;
     }
-  
-    /*  unordered list rules */
-    ul{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    color:#000000;
-    text-align:center;
-    line-height: 16px;
-    padding: 0;
+
+    /*  unordered list rules for hobbies list */
+    #ul-hobbies{
+      font-family: 'Open Sans', sans-serif;
+      list-style-type: none;
+      margin-left: auto;
+      margin-right: auto;
+      align-content: center;
+      text-align: center;
+      font-size: 12px;
+      color:#000000;
+      line-height: 16px;
+      padding: 0;
     }
-  
+
     /*  ordered list rules */
     ol{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    color:#000000;
-    text-align:center;
-    line-height: 13px;
-    padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      color:#000000;
+      text-align:center;
+      line-height: 13px;
+      padding: 0;
     }
-  }
-  
+}
