@@ -1,12 +1,20 @@
  /*--------CSS Rules for Devices under 600px phones etc--------*/ 
 
- @media all and (max-width: 600px) {
+ @media all {
     body {
       min-width: 300px;
       margin-left: 2%;
       margin-right: 2%;
     }
-  
+
+      /*  rule for main divider in webpage*/
+    main > div {
+      border: 3px solid #3d5152;
+      padding: 10px;
+      margin: 4px;    
+      background-color:#91A3B0;
+    }
+
     /*This rule centers non-flexbox large images to width of user screen*/
     .center {
       display: block;
@@ -145,7 +153,7 @@
     /* Hyperlink font properties */
     a {
       font-family: 'Permanent Marker', sans-serif;
-      font-size: 17px;
+      font-size: 17.5px;
       margin: 0 10px 0 0;
       text-decoration: none;
     }
@@ -153,16 +161,10 @@
     /* psuedo classes style rules for hyperlinks*/
     a:link    { color: #ABE0AB;  }
     a:visited { color:  #ABE0AB;   }
-    a:hover   { color: lightsalmon; }
+    a:hover   { color: #ABE0AB; }
     a:active  { color: lightyellow;  }
 
-    /*  rule for main divider in webpage*/
-    main > div {
-      border: 3px solid #3d5152;
-      padding: 10px;
-      margin: 4px;    
-      background-color:#91A3B0;
-    }
+
   
     /* Footer Nav Section  */
     footer > div {
@@ -175,65 +177,65 @@
   
      /*  header size 1 */
     header h1 {
-    font-family: 'Permanent Marker', serif;
-    font-size: 48px;
-    color: whitesmoke;
-    text-align:center;
-    text-decoration: underline;
+      font-family: 'Permanent Marker', serif;
+      font-size: 48px;
+      color: whitesmoke;
+      text-align:center;
+      text-decoration: underline;
     }
   
      /*  header size 2 */
     h2{
-    font-family: 'Permanent Marker', serif;
-    text-decoration: underline;
-    font-size: 32px;
-    margin: 2%;
-    color:#9FE2BF;
-    text-align:center;
+      font-family: 'Permanent Marker', serif;
+      text-decoration: underline;
+      font-size: 32px;
+      margin: 2%;
+      color:#9FE2BF;
+      text-align:center;
     }
    
     /* header size 3 */
     h3{
-    font-family: 'Nanum Brush Script', serif;
-    font-size: 24px;
-    margin: 2%;
-    color: #DBE9F4;
-    text-align:center;
+      font-family: 'Nanum Brush Script', serif;
+      font-size: 24px;
+      margin: 2%;
+      color: #DBE9F4;
+      text-align:center;
     }
   
     /* paragraph text rules */
     p{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    color:#000000;
-    text-align: center;
-    line-height: 16px;
-    margin:3px;
-    padding:5px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      color:#000000;
+      text-align: center;
+      line-height: 16px;
+      margin:3px;
+      padding:5px;
     }
-  
+
     /*  unordered list rules for hobbies list */
     #ul-hobbies{
-    font-family: 'Open Sans', sans-serif;
-    list-style-type: none;
-    margin-left: auto;
-    margin-right: auto;
-    align-content: center;
-    text-align: center;
-    font-size: 12px;
-    color:#000000;
-    line-height: 16px;
-    padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      list-style-type: none;
+      margin-left: auto;
+      margin-right: auto;
+      align-content: center;
+      text-align: center;
+      font-size: 12px;
+      color:#000000;
+      line-height: 16px;
+      padding: 0;
     }
   
     /*  ordered list rules */
     ol{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    color:#000000;
-    text-align:center;
-    line-height: 13px;
-    padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      color:#000000;
+      text-align:center;
+      line-height: 13px;
+      padding: 0;
     }
   }
   
@@ -247,41 +249,21 @@
       margin-left: 4%;
       margin-right: 4%;
     }
-
-    .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 90%;
-    }
   
     /*CSS rule for medium images/graphics*/
    .center2 {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
       width: 55%;
-    }
-  
-    /*CSS rule for small images/graphics*/
-   .center3 {
-      display:block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 8%;
-      margin-top: 0 !important;
-      padding-top: 0 !important;
     }
   
     /* rule for header divider at top of webpage*/
     header div {
-    text-align: center;
-    background: #8C92AC;
-    border: 2px solid #3d5152;
-    border-radius: 5px;
-    margin: 16px;
-    padding: 5px;
-    background-size: 100% 100%;
+      text-align: center;
+      background: #8C92AC;
+      border: 2px solid #3d5152;
+      border-radius: 5px;
+      margin: 16px;
+      padding: 5px;
+      background-size: 100% 100%;
     }
   
     /*  rule for main divider in webpage*/
@@ -302,51 +284,14 @@
     }
     */
   
-    .group{
-      display: inline-flex;
-      flex-wrap: wrap;
-      flex-direction: row;  
-      align-content: center; /* alignes content vertically */
-      justify-content: center; /*aligns content horizontally*/
-      text-align: center;
-      font-family: 'Permanent Marker', serif;
-      font-size: 17px;
-      color:#DBE9F4;
-    }
-  
-    .item {
-    flex: 1;
-    margin: 5px;
-    }
-  
-    /* Grid 2x2 Flexbox Container */
-    .container2 {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      text-align: center;
-      font-family: 'Permanent Marker', serif;
-      font-size: 17px;
-      color:#DBE9F4;
-    }
-  
+
     /* Grid 2x2 Flexbox Item Element/Attributes */
     .item2 {
       width: 30%;
-      max-width:380px !important;
-      margin-right: auto;
-      margin-left: auto;
-      padding-bottom: 5%; /* Same as width, sets height */
-      margin-bottom: 0%; /* (100-32*2)/2 */
-      position: relative;
     }
   
     /* CSS Rules for Generic Site Images */ 
     img{
-      max-height:650px;
-      max-width:1000px;
-      height:auto;
-      width: 100%;
       border-radius: 10px;
     }
 
@@ -366,60 +311,25 @@
       text-align: center;
     }
 
-    /* Contact Form Rules */
-    form label{
-      display: inline-block;
-      text-align: left;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 18px;
-      margin-bottom: 5px;
-      color:#DBE9F4;
-      font-family: 'Open Sans', sans-serif;
-    }
-  
-    /*Form Text Input Rules*/
-    textarea {
-      text-align: center;
-      font-size: 12px;
-      font-family: 'Open Sans', sans-serif;
-    }
 
     /* Contact Form Button Style Rules */
     form button {
       font-size: 13px;
     }
-  
-  /* Hyperlink font properties */
-    a {
-      font-family: 'Permanent Marker', sans-serif;
-      font-size: 16px;
-      margin: 0 10px 0 0;
-      text-decoration: none;
-    }
 
     /* psuedo classes style rules for hyperlinks*/
     a:link    { color: #ABE0AB;  }
     a:visited { color: #ABE0AB;   }
-    a:hover   { color: lightsalmon; }
+    a:hover   { color: #b3b3ff; }
     a:active  { color: lightyellow;  }
 
     /*  header size 1*/
     h1{
-      font-family: 'Permanent Marker', serif;
       font-size: 50px;
-      color: whitesmoke;
-      text-align:center;
-      text-decoration: underline;    
     }
 
     /*  header size 2 */
     h2{
-      font-family: 'Permanent Marker', serif;
-      text-decoration: underline;
-      font-size: 32px;
-      color:#9FE2BF;
-      text-align:center;
       margin:4px;
       padding:2px;
     }
@@ -431,17 +341,12 @@
 
     /* header size 3 */
     h3{
-      font-family: 'Nanum Brush Script', serif;
-      font-size: 24px;
-      color: #DBE9F4;
-      text-align:center;
       margin:0;
       padding:0;
     }
 
     /* paragraph rules */
     p{
-      font-family: 'Open Sans', sans-serif;
       font-size: 13px;
       color:#000000;
       text-align:center;
@@ -451,27 +356,15 @@
       padding:5px;
     }
 
-    /*  unordered list rules for hobbies list */
-    #ul-hobbies{
-      font-family: 'Open Sans', sans-serif;
-      list-style-type: none;
-      margin-left: auto;
-      margin-right: auto;
-      align-content: center;
-      text-align: center;
-      font-size: 12px;
-      color:#000000;
-      line-height: 16px;
-      padding: 0;
-    }
-
-    /*  ordered list rules */
-    ol{
-      font-family: 'Open Sans', sans-serif;
-      font-size: 12px;
-      color:#000000;
-      text-align:center;
-      line-height: 13px;
-      padding: 0;
-    }
 }
+
+  /*-------------------CSS Rules for Devices over 1100px------------------------*/ 
+
+ @media all and (min-width: 1400px){
+
+  /*  rule for main divider in webpage*/
+  body {
+    margin-left: 16%;
+    margin-right: 16%;
+  }
+ }
