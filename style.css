@@ -12,7 +12,7 @@
       border: 3px solid #3d5152;
       padding: 10px;
       margin: 4px;    
-      background-color:#91A3B0;
+      background-color:#BEBED5;
     }
 
     /*This rule centers non-flexbox large images to width of user screen*/
@@ -52,7 +52,7 @@
   
     /* CSS Rule for each individual headers in mobile view*/
     header div{
-      background: #8C92AC;
+      background: #BEBED5;
       margin-bottom: 10px;
       margin: 5px;
       border: 2px solid #000000;
@@ -64,6 +64,7 @@
       justify-content: center;
       margin-bottom: 15px;
     }
+    
   
    /*CSS rule for unordered list for nav that is in the header*/
     header div ul li{
@@ -78,7 +79,15 @@
       list-style: none;
     }
   
-
+    /* Footer Nav Section  */
+    footer > div {
+      text-align: center;
+      background-color: #BEBED5;
+      border: 3px solid #3d5152;
+      margin: 5px;
+      padding: 10px;
+      }
+    
       /* Grid 1x3 Container */
     .group{
       display: inline-flex;
@@ -154,32 +163,25 @@
     a {
       font-family: 'Permanent Marker', sans-serif;
       font-size: 17.5px;
+      text-shadow: 1px 1px 10px #292421;      
       margin: 0 10px 0 0;
+      padding-right: 21px;
       text-decoration: none;
     }
   
     /* psuedo classes style rules for hyperlinks*/
     a:link    { color: #ABE0AB;  }
     a:visited { color:  #ABE0AB;   }
-    a:hover   { color: #ABE0AB; }
-    a:active  { color: lightyellow;  }
+    a:hover   { color:lightyellow;  }
+    a:active  { color: #DBE9F4;  }
 
 
-  
-    /* Footer Nav Section  */
-    footer > div {
-    text-align: center;
-    background-color: #8C92AC;
-    border: 3px solid #3d5152;
-    margin: 5px;
-    padding: 10px;
-    }
-  
      /*  header size 1 */
     header h1 {
       font-family: 'Permanent Marker', serif;
+      text-shadow: 1px 1px 15px #527963;      
       font-size: 48px;
-      color: whitesmoke;
+      color: #9FE2BF;
       text-align:center;
       text-decoration: underline;
     }
@@ -191,6 +193,7 @@
       font-size: 32px;
       margin: 2%;
       color:#9FE2BF;
+      text-shadow: 1px 1px 30px #36525a;      
       text-align:center;
     }
    
@@ -258,8 +261,6 @@
     /* rule for header divider at top of webpage*/
     header div {
       text-align: center;
-      background: #8C92AC;
-      border: 2px solid #3d5152;
       border-radius: 5px;
       margin: 16px;
       padding: 5px;
@@ -268,11 +269,9 @@
   
     /*  rule for main divider in webpage*/
     main > div {
-      border: 2px solid #3d5152;
       border-radius: 5px;
       padding: 10px;
       margin: 16px;
-      background-color:#91A3B0;
     }
   
     /*  Backup CSS Rule for Flex Grouping >> Do Not Modify
@@ -298,8 +297,6 @@
     /* Footer Nav Section  */
     footer > div {
       text-align: center;
-      background-color: #8C92AC;
-      border: 2px solid #3d5152;
       border-radius: 5px;
       margin: 16px;
       padding: 10px;
