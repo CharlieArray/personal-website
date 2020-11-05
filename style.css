@@ -88,6 +88,27 @@
       padding: 10px;
       }
     
+    
+    .flex-container {
+        display: flex;
+    }
+    
+    .flex-child {
+        flex: 1;
+        border: 2px lightyellow;
+        background-color: whitesmoke;
+        opacity: .9;
+        border-style: solid;
+        border-width: 4px;
+        border-color: #ABE0AB;
+    }  
+    
+    .flex-child:first-child {
+        margin-right: 20px;
+    } 
+  
+
+
       /* Grid 1x3 Container */
     .group{
       display: inline-flex;
@@ -202,9 +223,10 @@
     /* header size 3 */
     h3{
       font-family: 'Nanum Brush Script', serif;
-      font-size: 24px;
+      font-size: 28px;
+      text-shadow: 1px 2px 1px #302a2a;      
       margin: 2%;
-      color: #DBE9F4;
+      color: #9FE2BF;
       text-align:center;
     }
   
