@@ -158,15 +158,17 @@
       font-size: 14px;
     }
   
-  
     /* Hyperlink font properties */
-    a {
+    a{
       font-family: 'Permanent Marker', sans-serif;
       font-size: 17.5px;
-      text-shadow: 1px 1px 10px #292421;      
-      margin: 0 10px 0 0;
-      padding-right: 15px;
+      text-shadow: 1px 1px 10px #292421;     
       text-decoration: none;
+    }
+
+    nav a{
+      padding-left: 7px;
+      padding-right: 7px;
     }
   
     /* psuedo classes style rules for hyperlinks*/
@@ -274,6 +276,11 @@
       margin: 16px;
     }
   
+    nav a{
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
     /*  Backup CSS Rule for Flex Grouping >> Do Not Modify
     .group {
       display: inline-flex;
