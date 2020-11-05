@@ -91,23 +91,26 @@
     
     .flex-container {
         display: flex;
+        flex-wrap: wrap;
     }
     
     .flex-child {
         flex: 1;
+        flex-wrap: wrap;
         border: 2px lightyellow;
         background-color: whitesmoke;
         opacity: .9;
+        margin: 3px;
         border-style: solid;
         border-width: 4px;
         border-color: #ABE0AB;
     }  
     
     .flex-child:first-child {
-        margin-right: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
     } 
   
-
 
       /* Grid 1x3 Container */
     .group{
@@ -233,7 +236,7 @@
     /* paragraph text rules */
     p{
       font-family: 'Open Sans', sans-serif;
-      font-size: 12px;
+      font-size: 12.7px;
       color:#000000;
       text-align: center;
       line-height: 16px;
@@ -342,12 +345,6 @@
     form button {
       font-size: 13px;
     }
-
-    /* psuedo classes style rules for hyperlinks*/
-    a:link    { color: #ABE0AB;  }
-    a:visited { color: #ABE0AB;   }
-    a:hover   { color: #b3b3ff; }
-    a:active  { color: lightyellow;  }
 
     /*  header size 1*/
     h1{
