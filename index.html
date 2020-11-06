@@ -9,8 +9,7 @@
   </head>
 	
   <body>
-     <header>
-        <div>
+    <header>
         <h1>Welcome</h1>
         <!--Hyperlinks to Github and Linkedin-->
           <nav>
@@ -20,38 +19,42 @@
             <a href="#contact">Contact</a> <br>
           </nav>
         </div>
-      </header>
-  
+    </header>
+    
   <main>
-    <div>
+ 
+   <div class="section-containers">
+    <section id="banner-image">
         <!--Main image/theme for webpage, personal photo from Iceland-->
         <img src="images/glacier.jpg" alt="Panoramic view of glacier with overcast skies" class="center4">
-        <hr>
-    <article>
+    </section>
+  </div>
 
+    <div class="section-containers">
       <section id="about">
           <header>  
-            <h2>Introduction</h2>
+         <h2>Introduction</h2>
           </header>
         <div class="flex-container">
+          <img src="images/charlie-beach-square.jpg" alt="Person standing on beach" class="center2">
           <div class="flex-child">
             <h3>Who I am:</h3>
-                <p>Hello, I'm Charlie. I'm a junior software developer in Austin, TX. <br><br>
+                <p>Hi- I'm Charlie👋. I'm a junior software developer in Austin, TX. <br><br>
                  I <ins><b>design</b></ins> and <ins><b>build</b></ins> fully functional web applications and software  programs. <br><br>I'm a former military officer and engineer, and I enjoy working with others to solve problems.</p>
             </div>
           <div class="flex-child">
                <h3>What about the above photo?!</h3>
                   <img src="images/camera.jpg" alt="camera vector graphic" class="center3">
-                <p>I took that photo on vacation in Iceland last year.<br><br>I plan on using part of this website to showcase my travel photos utilizing JavaScript web applications.
-              </p>
+                <p>I took that photo at Sólheimajökull glacier in Iceland last year.</p>
             </div>
+          </div>
          </div>
-         <div class="flex-child"><img src="images/charlie-beach-square.jpg" alt="Person standing on beach" class="center2"></div>
+     </div>
 
-           <hr>
 
+      <div class="section-containers">
           <header>  
-          <h2>About Me</h2>
+         <h2>About Me</h2>
           </header>
           <div class="flex-container">
             <div class="flex-child">
@@ -59,7 +62,7 @@
                 <p>I enjoy being creative and helping solving problems with others. Software development allows for unlimited possibilities to solve a problem, in unique and creative ways.</p>
             </div>
              <div class="flex-child">
-                <h3>Hobbies/Interests:</h3>
+                <h3>Hobbies and Interests:</h3>
                   <ul id="ul-hobbies">
                     <li>🏔️ Traveling</li>
                     <li>📸 Photography</li>
@@ -69,15 +72,10 @@
                   </ul>
               </div>
             </div>
-
-          <header>  
-           <h2>Skills and Services</h2>
-          </header>
-            <img src="images/skills-modified.jpg" alt="Skills tree" class="center2">
-        </section>
-
-            <hr>
+      </div>
+           
             
+    <div class="section-containers">
       <section id="portfolio">
           <header>  
            <h2>Project Portfolio</h2>
@@ -107,16 +105,23 @@
               This is a description of the Bookmark App I built. I'll share my goals for creating it, the skills/languages I applied, and what I learned doing it.
               </p></div>
         </div>
-      </section>  
+      </section> 
+    </div> 
 
-            <hr>
+    <div class="section-containers">
+      <header>  
+       <h2>Skills and Services</h2>
+      </header>
+        <img src="images/skills-modified.jpg" alt="Skills tree" class="center2">
+    </section>
+  </div>
             
-       
+    <div class="section-containers">
         <section id="contact">
            <header>  
            <h2>Contact</h2>
            </header>
-               <h3 style="font-size: 15px; opacity: .85;">For business opportunities: contact below or on Linkedin</h3>
+               <h3 style="font-size: 15px; opacity: .85;">For business opportunities: Linkedin and contact form below</h3>
             <div class="group">
               <div class="item"><img src="images/black-beach-square.jpg"  alt="Dark skies overshadow moody beach in Iceland" ></div>
               <div class="item"><img src="images/charlie-beach-square.jpg" alt="Person standing on beach"></div>
@@ -134,9 +139,9 @@
           </form>
         </div>
       </section>
+    </div>
 
-    </article>
-  </div>
+
 </main>
     
     <footer>
@@ -151,7 +156,7 @@
         </nav>
       </div>
     </footer>
-
+  </div>
     <script src="script.js"></script>
 
   </body>

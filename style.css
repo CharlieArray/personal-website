@@ -3,6 +3,9 @@
  @media all {
     body {
       min-width: 300px;
+      background-image: url(images/pebbles-dark-filter.jpg);
+      background-size: 60%;
+      background-repeat: repeat;
       margin-left: 2%;
       margin-right: 2%;
     }
@@ -15,6 +18,17 @@
       background-color:#BEBED5;
     }
 
+    #banner-image{
+    padding: 2px;
+
+    }
+
+    .section-containers{
+      margin-bottom: 30px;
+      opacity: .97;
+    }
+
+
     /*This rule centers non-flexbox large images to width of user screen*/
     .center {
       display: block;
@@ -25,10 +39,11 @@
   
     /*CSS rule for medium images*/
      .center2 {
-      display: block;
+      display: flex;
       margin-left: auto;
       margin-right: auto;
-      width: 80%;
+      margin-bottom: 3px;
+      width: 75%;
     }
   
     /*CSS rule for small images/graphics*/
@@ -46,7 +61,7 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 90%;
+      width: 100%;
     }
   
    /* CSS Rules for Site Images */ 
@@ -58,12 +73,13 @@
         border-radius: 12px;
     }
   
-    /* CSS Rule for each individual headers in mobile view*/
+    /* CSS Rule for each individual headers*/
     header div{
       background: #BEBED5;
       margin-bottom: 10px;
       margin: 5px;
       border: 2px solid #000000;
+      opacity: .9;
     }
   
    /*CSS rule for the container for the header navigation*/
@@ -94,6 +110,7 @@
       border: 3px solid #3d5152;
       margin: 5px;
       padding: 10px;
+      opacity: .8;
       }
     
     
@@ -107,9 +124,13 @@
     .flex-child {
         flex: 1;
         border: 2px lightyellow;
+        min-width: 120px;
         background-color: #d7d7df;
         opacity: .75;
-        margin: 3px;
+        margin-top: 0px;
+        margin-left: 4px;
+        margin-right: 3px;
+        margin-bottom: 3px;
         padding: 1px;
         border-style: solid;
         border-width: 3px;
@@ -287,10 +308,15 @@
     /*This rule centers non-flexbox images to width of user screen*/
 
     body{
-      margin-left: 4%;
-      margin-right: 4%;
+      margin-left: 9%;
+      margin-right: 9%;
     }
   
+    .section-containers{
+      margin-bottom: 30px;
+      opacity: .93;
+    }
+
     /*CSS rule for medium images/graphics*/
    .center2 {
       width: 55%;
@@ -382,9 +408,9 @@
     
 }
 
-  /*-------------------CSS Rules for Devices over 1100px------------------------*/ 
+  /*-------------------CSS Rules for Devices over 1250px------------------------*/ 
 
- @media all and (min-width: 1400px){
+ @media all and (min-width: 1250px){
 
   /*  rule for main divider in webpage*/
     body {
@@ -392,9 +418,16 @@
     margin-right: 16%;
   }
 
+  .section-containers{
+    margin-bottom: 30px;
+    opacity: .96;
+  }
+
   .flex-child {
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
 }  
 
   /*  header size 1 */
