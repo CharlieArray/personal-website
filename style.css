@@ -372,8 +372,8 @@
     }
 
     /*  header size 1*/
-    h1{
-      font-size: 50px;
+    header h1{
+      font-size: 55px;
     }
 
     /*  header size 2 */
@@ -425,7 +425,9 @@
   header h1 {
       font-family: 'Permanent Marker', serif;
       text-shadow: 1px 1px 15px #527963;      
-      font-size: 48px;
+      font-size: 60px;
+      margin-top: 2%;
+      margin-bottom: 1%;
       color: #9FE2BF;
       text-align:center;
       text-decoration: underline;
