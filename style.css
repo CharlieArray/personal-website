@@ -85,6 +85,7 @@
     header nav {
       display: flex;
       justify-content: center;
+      margin-top: 10px;
       margin-bottom: 15px;
     }
     
@@ -236,8 +237,12 @@
     header h1 {
       font-family: 'Permanent Marker', serif;
       text-shadow: 1px 1px 15px #527963;      
-      font-size: 48px;
+      font-size: 36px;
       color: #9FE2BF;
+      margin-top: 6%;
+      margin-bottom: 2%;
+      margin-left: 1%;
+      margin-right: 1%;
       text-align:center;
       text-decoration: underline;
     }
@@ -246,7 +251,7 @@
     h2{
       font-family: 'Permanent Marker', serif;
       text-decoration: underline;
-      font-size: 32px;
+      font-size: 26px;
       margin: 2%;
       color:#9FE2BF;
       text-shadow: 1px 1px 8px #66605b;     
@@ -259,13 +264,14 @@
       font-size: 17.5px;
       text-shadow: 1px 1px 8px #292421;     
       text-decoration: none; 
+      opacity: .9;
       margin: 2%;
       color: #9FE2BF;
       text-align:center;
     }
   
     /* paragraph text rules */
-    p{
+    p, li{
       font-family: 'Open Sans', sans-serif;
       font-size: 14px;
       color:#000000;
@@ -300,7 +306,7 @@
     }
   }
   
-  /*-------------------CSS Rules for Devices over 600px------------------------*/ 
+  /*-----------------------------CSS Rules for Devices over 600px----------------------------------------------------------*/ 
   
   @media all and (min-width: 600px) {
   
@@ -372,7 +378,7 @@
 
     /*  header size 1*/
     header h1{
-      font-size: 55px;
+      font-size: 50px;
     }
 
     /*  header size 2 */
@@ -394,12 +400,12 @@
 
     /* paragraph/ list item rules */
     p , li{
-      font-size: 13px;
+      font-size: 14px;
     }
     
 }
 
-  /*-------------------CSS Rules for Devices over 1250px------------------------*/ 
+  /*-------------------------------------CSS Rules for Devices over 1250px------------------------------------------------------*/ 
 
  @media all and (min-width: 1250px){
 
@@ -424,8 +430,8 @@
   header h1 {
     font-family: 'Permanent Marker', serif;
     text-shadow: 1px 1px 15px #527963;      
-    font-size: 60px;
-    margin-top: 2%;
+    font-size: 55px;
+    margin-top: 4%;
     margin-bottom: 1%;
     color: #9FE2BF;
     text-align:center;
@@ -436,7 +442,7 @@
   h2{
     font-family: 'Permanent Marker', serif;
     text-decoration: underline;
-    font-size: 36px;
+    font-size: 33px;
     margin: 2%;
     color:#9FE2BF;
     text-shadow: 1px 1px 8px #66605b;     
@@ -446,7 +452,7 @@
   /* header size 3 */
   h3{
     font-family: 'Permanent Marker', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     text-shadow: 1px 1px 8px #292421;     
     text-decoration: none; 
     margin: 2%;
@@ -457,14 +463,14 @@
   /* Hyperlink font properties */
   a{
     font-family: 'Permanent Marker', sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     text-shadow: 1px 1px 10px #292421;     
     text-decoration: none;
   }
 
   /* paragraph/list item text rules */
   p , li{
-    font-size: 13px;
+    font-size: 15.3px;
 
   }
   
