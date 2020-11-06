@@ -2,7 +2,7 @@
 
  @media all {
     body {
-      min-width: 300px;
+      min-width: 340px;
       background-image: url(images/pebbles-dark-filter.jpg);
       background-size: 60%;
       background-repeat: repeat;
@@ -40,6 +40,8 @@
     /*CSS rule for medium images*/
      .center2 {
       display: flex;
+      max-width: 300px;
+      max-height: 300px;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 3px;
@@ -66,7 +68,7 @@
   
    /* CSS Rules for Site Images */ 
     img{
-        height:auto;
+        max-height: 300px;
         margin-left: auto;
         margin-right: auto;
         width: 90%;
