@@ -40,6 +40,8 @@
     /*CSS rule for medium images*/
      .center-medium {
       display: flex;
+      height: auto;
+      width: auto;
       max-height: 305px;
       max-width: 285px;
       margin-left: auto;
