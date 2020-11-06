@@ -38,9 +38,9 @@
     }
   
     /*CSS rule for medium images*/
-     .center2 {
+     .center-medium {
       display: flex;
-      max-height: 320px;
+      height: auto;
       max-width: 310px;
       margin-left: auto;
       margin-right: auto;
@@ -49,17 +49,17 @@
     }
   
     /*CSS rule for small images/graphics*/
-     .center3 {
-      display:block;
+     .center-smedium {
+      display: flex;
       margin-left: auto;
       margin-right: auto;
-      width: 8%;
+      width: 50px;
       margin-top: 0 !important;
       padding-top: 0 !important;
     }
 
     /*CSS rule for medium images*/
-    .center4 {
+    .center-large {
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -319,7 +319,7 @@
     }
 
     /*CSS rule for medium images/graphics*/
-   .center2 {
+   .center-medium {
       width: 55%;
     }
   
