@@ -2,7 +2,7 @@
 
  @media all {
     body {
-      min-width: 340px;
+      min-width: 320px;
       background-image: url(images/pebbles-dark-filter.jpg);
       background-size: 60%;
       background-repeat: repeat;
@@ -40,9 +40,8 @@
     /*CSS rule for medium images*/
      .center-medium {
       display: flex;
-      height: auto;
-      max-width: 310px;
-      max-height:310px;
+      max-height: 305px;
+      max-width: 305px;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 3px;
