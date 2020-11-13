@@ -7,8 +7,8 @@
       background-image: url(images/pebbles-dark-filter-backup.jpg);
       background-size: 60%;
       background-repeat: repeat;
-      margin-left: 2%;
-      margin-right: 2%;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
     }
 
     #banner-image{
@@ -67,9 +67,10 @@
       margin-right: auto;
       width: 100%;
       transform: scale(1);
-      transition:  .8s ease-in-out;      
+      transition:  .70s ease-in-out 1.00s; 
     }
   
+    /*On hover >>  rule*/
     .center-large:hover, .item:hover {
     -ms-transform: scale(1.2); /* IE 9 */
     -webkit-transform: scale(1.2); /* Safari 3-8 */
@@ -444,6 +445,20 @@
     padding-left: 15px;
     padding-right: 15px;
   }  
+
+    
+  .center-large:hover {
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+     transform: scale(1.3); 
+  }
+
+  .item:hover {
+    -ms-transform: scale(1.25); /* IE 9 */
+    -webkit-transform: scale(1.25); /* Safari 3-8 */
+     transform: scale(1.25); 
+  }
+
 
   /*  header size 1 */
   header h1 {
