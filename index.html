@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width">
     <title>Portfolio Website: Charles Y.</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Open+Sans&family=Permanent+Marker&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Open+Sans&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
   </head>
 	
   <body>
     <header>
         <h1>Full Stack Developer</h1>
-        <h2 style="text-decoration: none;">-Charles Ybarra-</h2>
-        <!--Hyperlinks to Github and Linkedin-->
+        <!--<h2 style="text-decoration: none;">-Charles Ybarra-</h2> -->
+         <!--Hyperlinks to Github and Linkedin-->
           <nav>
             <a href="https://charliearray.github.io/personal-website/" target="_blank">Home</a>
             <a href="#about">About</a>
             <a href="#portfolio">Projects</a>
             <a href="#contact">Contact</a> <br>
-          </nav>
+          </nav>   
+        <div class="quote-render"></div>    
     </header>
-    
+
   <main>
- 
+  
+
     <div class="section-div">
       <section id="banner-image">
         <!--Main image/theme for webpage, personal photo from Iceland-->
@@ -59,12 +62,18 @@
          <h2>About Me</h2>
           </header>
           <div class="flex-container">
-            <div class="flex-child">
+            <div class="flex-child-larger">
               <h3>Why software development?</h3>
-                <p>I enjoy being creative, and software development allows for unlimited possibilities to solve a problem, in unique and creative ways.</p>
+                <p>I enjoy being creative, and software development allows for unlimited 
+                  possibilities to solve a problem, in unique and creative ways.</p>
+              <video class="videoCRT" id="slowVid" autoplay loop muted playsinline>
+                <source src="images/CRT-TEXTURES (1080)/TRANSITIONS/SPACE_02.mp4" type="video/mp4"/> />
+                Your browser does not support the video tag.
+              </video>
             </div>
              <div class="flex-child">
                 <h3>Hobbies and Interests:</h3>
+                <br>
                   <ul id="ul-hobbies">
                     <li>🏔️ Traveling</li>
                     <li>📸 Photography</li>
