@@ -29,11 +29,11 @@
     /*Video loop styling for CRT animations */
     .videoCRT{
       display: block;
-      border-radius: 6px;
+      border-radius: 9px;
       margin-left: auto;
       margin-right: auto;
-      width: 100%;
-      opacity: .6;
+      width: 90%;
+      opacity: .7;
     }
 
     /*This rule centers non-flexbox large images to width of user screen*/
@@ -124,7 +124,14 @@
       list-style: none;
     }
   
-    .quote-render{
+    #div-banner-image-quote {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    /* Renders quote in Header*/
+    .js-quote-render{
       display: block;
       background: none;
       border: none;
@@ -134,6 +141,19 @@
       padding: 0px;
       margin: 0px;
     }
+
+      /* Renders quote over Image*/
+    .js-quote-render2 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute;
+      opacity: .78;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
 
     /* Footer Nav Section  */
     footer > div {

@@ -17,20 +17,23 @@ console.log(data)
     console.log(randomQuote.text.length);
   };
 
+
+
+
   function shortQuotesOnly(randomQuote){
     /*if quote is greater than 115 characters in length OR 
       quote from certain individual => different quote is generated*/
     if (randomQuote.text.length > 115 || randomQuote.author == "Donald Trump"){
-      $('.quote-render').empty();
+      $('.js-quote-render').empty();
       return randomQuoteGenerate();
     }
 
     else if(randomQuote.author == null){randomQuote.author = "Unknown"}
-      $('.quote-render').append(
+      $('.js-quote-render').append(
       `
        <h3 style="margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
        <h3 style="margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
-       <br>
+       
       `)
   }
       randomQuoteGenerate();    
@@ -52,7 +55,7 @@ function getQuoteApiData(){
 
 function slowAnimationPlayback(){
   let video= document.getElementById('slowVid');
-  video.playbackRate = .55;  
+  video.playbackRate = .70;  
 }
 
 
