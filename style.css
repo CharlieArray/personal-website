@@ -145,6 +145,7 @@
       /* Renders quote over Image*/
     .js-quote-render2 {
       display: block;
+      background: none;
       margin-left: auto;
       margin-right: auto;
       position: absolute;
