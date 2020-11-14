@@ -4,7 +4,7 @@
 function displayQuoteApi(data){
 console.log(data)
 
-  function randomQuoteGenerate(){
+  function generateNewQuote(){
     const quotes = data;
 
     //generates random # from json data array length
@@ -25,7 +25,7 @@ console.log(data)
       quote from certain individual => different quote is generated*/
     if (randomQuote.text.length > 100 || randomQuote.author == "Donald Trump"){
       $('.js-quote-render').empty();
-      return randomQuoteGenerate();
+      return generateNewQuote();
     }
 
     else if(randomQuote.author == null){randomQuote.author = "Unknown"}
@@ -36,7 +36,7 @@ console.log(data)
        
       `)
   }
-      randomQuoteGenerate();    
+  generateNewQuote();    
 }
 
 
