@@ -2,28 +2,44 @@
 //Quote API Functions
 
 function displayQuoteApi(data){
+console.log(data)
 
-  const quotes = data;
+  function randomQuoteGenerate(){
+    const quotes = data;
 
-  //generates random # from json data array length
-  const random = Math.floor(Math.random() * quotes.length);
-  
-  //displays random # // data array bracket notation for random number 
-  let randomQuote = quotes[random];
+    //generates random # from json data array length
+    const random = Math.floor(Math.random() * quotes.length);
+    
+    //array bracket notation for random quote 
+    const randomQuote = quotes[random];
 
+    shortQuotesOnly(randomQuote)
+    console.log(randomQuote.text.length);
+  };
 
-  if(randomQuote.author == null){randomQuote.author = "Unknown"}
-  $('.quote-render').append(
+  function shortQuotesOnly(randomQuote){
+    /*if quote is greater than 115 characters in length OR 
+      quote from certain individual => different quote is generated*/
+    if (randomQuote.text.length > 115 || randomQuote.author == "Donald Trump"){
+      $('.quote-render').empty();
+      return randomQuoteGenerate();
+    }
+
+    else if(randomQuote.author == null){randomQuote.author = "Unknown"}
+      $('.quote-render').append(
       `
-       <h3 style="margin-bottom:3px">${randomQuote.text}</h3>
-       <h3 style="margin:0px">- ${randomQuote.author}</h3>
+       <h3 style="margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
+       <h3 style="margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
        <br>
       `)
+  }
+      randomQuoteGenerate();    
 }
 
+
 function getQuoteApiData(){
-  let baseURL = 'https://type.fit/api'
-  let endURL = '/quotes'
+  let baseURL = 'https://type.fit/api';
+  let endURL = '/quotes';
   let stringURL = baseURL + endURL;
 
   fetch(stringURL)
@@ -41,11 +57,13 @@ function slowAnimationPlayback(){
 
 
 // On Page Load 
+
 function onPageLoad(){
   slowAnimationPlayback();
   getQuoteApiData();
 }
 
 //Document Ready Function 
+
 $(onPageLoad)
 
