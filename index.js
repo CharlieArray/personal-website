@@ -21,9 +21,9 @@ console.log(data)
 
 
   function shortQuotesOnly(randomQuote){
-    /*if quote is greater than 115 characters in length OR 
+    /*if quote is greater than 100 characters in length OR 
       quote from certain individual => different quote is generated*/
-    if (randomQuote.text.length > 115 || randomQuote.author == "Donald Trump"){
+    if (randomQuote.text.length > 100 || randomQuote.author == "Donald Trump"){
       $('.js-quote-render').empty();
       return randomQuoteGenerate();
     }
