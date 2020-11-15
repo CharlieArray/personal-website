@@ -22,8 +22,7 @@
       padding: 4px;
       margin: 3px; 
       margin-bottom: 30px;  
-      opacity: .95;
-      background-color:#BEBED5;
+      background-color: rgba(190,190,213,.73);
     }
 
     /*Video loop styling for CRT animations */
@@ -32,7 +31,7 @@
       border-radius: 9px;
       margin-left: auto;
       margin-right: auto;
-      width: 90%;
+      width: 85%;
       opacity: .7;
     }
 
@@ -49,6 +48,7 @@
       display: flex;
       height: auto;
       width: auto;
+      border: 2px solid #ABE0AB;
       max-height: 305px;
       max-width: 310px;
       margin-left: auto;
@@ -91,12 +91,12 @@
         margin-left: auto;
         margin-right: auto;
         width: 90%;
-        border-radius: 9px;
+        border-radius: 4%;
     }
   
     /* CSS Rule for each individual headers*/
     header div{
-      background: #BEBED5;
+      background: rgba(190,190,213,.7);
       margin-bottom: 10px;
       margin: 5px;
       border: 2px solid #000000;
@@ -159,50 +159,45 @@
     /* Footer Nav Section  */
     footer > div {
       text-align: center;
-      background-color: #BEBED5;
+      background-color: rgba(190,190,213,.7) ;
       border: 3px solid #3d5152;
       margin: 5px;
       padding: 10px;
-      opacity: .8;
       }
     
     
     .flex-container {
         display: flex;
         flex-wrap: wrap;
-        box-shadow: 0px 0px 4px #46464a;
+        box-shadow: 0px 0px 10px #46464a;
         justify-content: center;
         max-height: 700px;
     }
     
-    .flex-child {
+    div.flex-child {
         flex: 1;
-        border: 2px  #ABE0AB;
-        min-width: 120px;
-        background-color: #d7d7df;
-        opacity: .75;
+        border: 2px solid #ABE0AB;
+        min-width: 150px;
+        background-color: rgba(229,228,211,.30);
         margin-top: 0px;
         margin-left: 4px;
         margin-right: 3px;
         margin-bottom: 3px;
         padding: 1px;
         border-style: solid;
-        border-width: 3px;
     }  
 
     div.flex-child-larger {
       flex: 2.4;
       border: 2px  #ABE0AB;
-      min-width: 120px;
-      background-color: #d7d7df;
-      opacity: .75;
+      min-width: 122px;
+      background-color: rgba(229,228,211,.30);
       margin-top: 0px;
       margin-left: 4px;
       margin-right: 3px;
       margin-bottom: 3px;
       padding: 1px;
       border-style: solid;
-      border-width: 3px;
   }  
 
 
@@ -241,7 +236,6 @@
     .item2 {
       width: 40%;
       max-width:380px !important;
-      opacity: .9;
       margin-left: auto;     
       margin-right: auto;
       padding-bottom: 5%; /* Same as width, sets height */
@@ -339,7 +333,7 @@
     /* paragraph text rules */
     p, li{
       font-family: 'Open Sans', sans-serif;
-      font-size: 13.5px;
+      font-size: 14px;
       color:#000000;
       text-align: center;
       margin:3px;
@@ -407,7 +401,6 @@
       padding: 10px;
       margin: 16px;
       margin-bottom: 30px;
-      opacity: .93;
     }
   
     nav a{
@@ -497,7 +490,6 @@
   }
 
   .flex-child {
-    margin: 1%;
     padding-left: 15px;
     padding-right: 15px;
   }  
