@@ -71,7 +71,7 @@
       width: auto;
       border: 1.8px solid rgba(171,224,171,.8);
       min-width: 290px;
-      max-height: 400px;
+      max-height: 310px;
       max-width: 100%;
       transform: scale(1);
       transition:  .3s ease-in-out;
@@ -420,6 +420,7 @@
 
     /*CSS rule for medium images/graphics*/
    .center-medium {
+     max-height: 400px;
       width: auto;
     }
   
