@@ -28,12 +28,30 @@
     /*Video loop styling for CRT animations */
     .videoCRT{
       display: block;
-      border-radius: 9px;
+      border-radius: 3px;
       margin-left: auto;
       margin-right: auto;
-      width: 85%;
-      opacity: .7;
+      width: 95%;
     }
+   
+
+    /*Rules for Cycle Image JS feature UNDER DEVELOPMENT
+    #cycler{
+      position:static;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #cycler img{
+      position:absolute;z-index:1;
+    }
+
+     img.active{
+      z-index:3;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    */
 
     /*This rule centers non-flexbox large images to width of user screen*/
     .center {
@@ -46,15 +64,15 @@
     /*CSS rule for medium images*/
      .center-medium {
       display: flex;
-      height: auto;
-      width: auto;
-      border: 2px solid #ABE0AB;
-      max-height: 305px;
-      max-width: 310px;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 3px;
-      width: 100%;
+      height: auto;
+      width: auto;
+      border: 2px solid #ABE0AB;
+      min-width: 290px;
+      max-height: 400px;
+      max-width: 100%;
       transform: scale(1);
       transition:  .3s ease-in-out;
     }
@@ -67,6 +85,21 @@
       width: 50px;
       margin-top: 0 !important;
       padding-top: 0 !important;
+    }
+
+    /* CSS Rule for Heavy Opacity */
+    .opacity-heavy{
+      opacity: .55;
+    }
+
+    /* CSS Rule for Medium Opacity */
+    .opacity-medium{
+      opacity: .73;
+    }
+
+    /* CSS Rule for Light Opacity */
+    .opacity-light{
+      opacity: .85;
     }
 
     /*CSS rule for large images*/
@@ -86,14 +119,16 @@
      transform: scale(1.2); 
   }
 
+
    /* CSS Rules for Site Images */ 
     img{
         margin-left: auto;
         margin-right: auto;
-        width: 90%;
+        width: 100%;
         border-radius: 4%;
     }
-  
+
+
     /* CSS Rule for each individual headers*/
     header div{
       background: rgba(190,190,213,.7);
@@ -142,7 +177,7 @@
       margin: 0px;
     }
 
-      /* Renders quote over Image*/
+    /* Renders quote over Image*/
     .js-quote-render2 {
       display: block;
       background: none;
@@ -155,7 +190,6 @@
       transform: translate(-50%, -50%);
     }
 
-
     /* Footer Nav Section  */
     footer > div {
       text-align: center;
@@ -165,19 +199,18 @@
       padding: 10px;
       }
     
-    
     .flex-container {
         display: flex;
         flex-wrap: wrap;
         box-shadow: 0px 0px 10px #46464a;
         justify-content: center;
-        max-height: 700px;
+        max-height: 750px;
     }
     
     div.flex-child {
         flex: 1;
         border: 2px solid #ABE0AB;
-        min-width: 150px;
+        min-width: 145px;
         background-color: rgba(229,228,211,.30);
         margin-top: 0px;
         margin-left: 4px;
@@ -196,12 +229,11 @@
       margin-left: 4px;
       margin-right: 3px;
       margin-bottom: 3px;
-      padding: 1px;
+      padding: 3px;
       border-style: solid;
   }  
 
-
-      /* Grid 1x3 Container */
+    /* Grid 1x3 Container */
     div.group{
       display: inline-flex;
       flex-wrap: wrap;
@@ -234,7 +266,7 @@
   
     /* Grid 2x2 Flexbox Item Element/Attributes */
     .item2 {
-      width: 40%;
+      width: 48%;
       max-width:380px !important;
       margin-left: auto;     
       margin-right: auto;
@@ -273,25 +305,24 @@
       font-size: 14px;
     }
   
-    /* Hyperlink font properties */
-    a{
-      font-family: 'Permanent Marker', sans-serif;
-      font-size: 15px;
-      text-shadow: 1px 1px 10px #292421;     
-      text-decoration: none;
-    }
-
     nav a{
       padding-left: 7px;
       padding-right: 7px;
     }
   
+    /* Hyperlink font properties */
+    a{
+      font-family: 'Permanent Marker', sans-serif;
+      font-size: 13px;
+      text-shadow: 1px 1px 10px #292421;     
+      text-decoration: none;
+    }
+
     /* psuedo classes style rules for hyperlinks*/
     a:link    { color: #ABE0AB;  }
     a:visited { color:  #ABE0AB;   }
     a:hover   { color:lightyellow;  }
     a:active  { color: #DBE9F4;  }
-
 
      /*  header size 1 */
     header h1 {
@@ -333,7 +364,7 @@
     /* paragraph text rules */
     p, li{
       font-family: 'Open Sans', sans-serif;
-      font-size: 14px;
+      font-size: 13px;
       color:#000000;
       text-align: center;
       margin:3px;
@@ -378,13 +409,13 @@
 
     body{
       background-image: url(images/pebbles-dark-filter.jpg);
-      margin-left: 9%;
-      margin-right: 9%;
+      margin-left: 14%;
+      margin-right: 14%;
     }
 
     /*CSS rule for medium images/graphics*/
    .center-medium {
-      width: 55%;
+      width: auto;
     }
   
     /* rule for header divider at top of webpage*/
@@ -412,7 +443,6 @@
       margin-left: 3%;
       margin-right: 3%;
     }
-
 
     /* Grid 2x2 Flexbox Item Element/Attributes */
     .item2 {
@@ -557,3 +587,16 @@
   }
   
 }
+
+
+ /*-------------------------------------CSS Rules for Devices over 1400px------------------------------------------------------*/ 
+
+ @media all and (min-width: 1400px){
+
+  /*  rule for main divider in webpage*/
+   body {
+    margin-left: 21%;
+    margin-right: 21%;
+  }
+
+ }
