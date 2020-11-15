@@ -18,17 +18,17 @@
     /*Rule for section dividers in webpage*/
     main > div.section-div{
       border: 4px solid #14181b;
-      border-radius: 9px;
+      border-radius: 12px;
       padding: 4px;
       margin: 3px; 
       margin-bottom: 30px;  
-      background-color: rgba(190,190,213,.73);
+      background-color: rgba(190,190,213,.6);
     }
 
     /*Video loop styling for CRT animations */
     .videoCRT{
       display: block;
-      border-radius: 3px;
+      border-radius: 7px;
       margin-left: auto;
       margin-right: auto;
       width: 95%;
@@ -69,7 +69,7 @@
       margin-bottom: 3px;
       height: auto;
       width: auto;
-      border: 2px solid #ABE0AB;
+      border: 1.8px solid rgba(171,224,171,.8);
       min-width: 290px;
       max-height: 400px;
       max-width: 100%;
@@ -89,12 +89,12 @@
 
     /* CSS Rule for Heavy Opacity */
     .opacity-heavy{
-      opacity: .55;
+      opacity: .5;
     }
 
     /* CSS Rule for Medium Opacity */
     .opacity-medium{
-      opacity: .73;
+      opacity: .65;
     }
 
     /* CSS Rule for Light Opacity */
@@ -125,7 +125,7 @@
         margin-left: auto;
         margin-right: auto;
         width: 100%;
-        border-radius: 4%;
+        border-radius: 6px;
     }
 
 
@@ -209,22 +209,26 @@
     
     div.flex-child {
         flex: 1;
-        border: 2px solid #ABE0AB;
+        background-color: rgba(229,228,211,.35);
+        border: 1.8px solid rgba(171,224,171,.8);
+        box-shadow: 0px 0px 10px #46464a;
+        border-style: solid;
+        border-radius: 5px;
         min-width: 145px;
-        background-color: rgba(229,228,211,.30);
         margin-top: 0px;
         margin-left: 4px;
         margin-right: 3px;
         margin-bottom: 3px;
-        padding: 1px;
-        border-style: solid;
+        padding: 3px;
     }  
 
     div.flex-child-larger {
       flex: 2.4;
-      border: 2px  #ABE0AB;
+      background-color: rgba(229,228,211,.35);
+      border: 1.8px solid rgba(171,224,171,.8);
+      box-shadow: 0px 0px 10px #46464a;
+      border-radius: 5px;
       min-width: 122px;
-      background-color: rgba(229,228,211,.30);
       margin-top: 0px;
       margin-left: 4px;
       margin-right: 3px;
@@ -270,6 +274,7 @@
       max-width:380px !important;
       margin-left: auto;     
       margin-right: auto;
+      padding-top: 10px;
       padding-bottom: 5%; /* Same as width, sets height */
       margin-bottom: 0%; /* (100-32*2)/2 */
       position: relative;
@@ -421,7 +426,7 @@
     /* rule for header divider at top of webpage*/
     header div {
       text-align: center;
-      border-radius: 5px;
+      border-radius: 7px;
       margin: 16px;
       padding: 5px;
       background-size: 100% 100%;
@@ -452,7 +457,7 @@
     /* Footer Nav Section  */
     footer > div {
       text-align: center;
-      border-radius: 5px;
+      border-radius: 7px;
       margin: 16px;
       padding: 10px;
     }
@@ -518,13 +523,7 @@
   .section-div{
     margin-bottom: 30px;
   }
-
-  .flex-child {
-    padding-left: 15px;
-    padding-right: 15px;
-  }  
-
-    
+ 
   .center-large:hover {
     -ms-transform: scale(1.3); /* IE 9 */
     -webkit-transform: scale(1.3); /* Safari 3-8 */
