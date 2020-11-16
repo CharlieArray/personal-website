@@ -8,7 +8,7 @@ function renderComponents(){
 
   $('header').append(`<br>
         <nav>
-          <a href="https://charliearray.github.io/personal-website/" target="_blank">Home</a>
+          <a href="#header">Home</a>
           <a href="#about">About</a>
           <a href="#portfolio">Projects</a>
           <a href="#contact">Contact</a> <br>
@@ -40,12 +40,12 @@ function renderComponents(){
             <div class="flex-child">
               <h3>Who I am:</h3>
                   <p>Hi- I'm Charlie👋. I'm a junior software developer in Austin, TX. <br><br>
-                  I <ins><b>design</b></ins> and <ins><b>build</b></ins> fully functional web applications and reactive user interfaces. <br><br>I'm a former military officer and engineer, and I enjoy working with others to solve problems.</p>
+                  I <ins><b>design</b></ins> and <ins><b>build</b></ins> fully functional web applications and responsive user interfaces. <br><br>I'm a former military officer and engineer, and I enjoy working with others to solve problems.</p>
               </div>
             <div class="flex-child">
                 <h3>What about the travel photos?</h3>
                     <img src="images/camera.jpg" alt="camera vector graphic" class="center-smedium">
-                  <p>When I'm not glued to my computer, I like traveling. <br><br> The photos on this website are from my 2019 vacation in Iceland: Sólheimajökull Glacier and the Black Sands Beach.</p>
+                  <p>When I'm not glued to my computer, I enjoy traveling. <br><br> The photos on this website are from my 2019 vacation in Iceland: Sólheimajökull Glacier and the Black Sands Beach.</p>
               </div>
             </div>
         </section>
@@ -59,12 +59,11 @@ function renderComponents(){
         <div class="flex-container">
           <div class="flex-child-larger">
             <h3>Why software development?</h3>
-              <p>I enjoy being creative, and software development allows for unlimited 
-                possibilities to solve problems, in unique and creative ways. 
-                There is no limit to the possibilites; You could develop a simple app, or 
-                program a rocket motor sequence.</p>
+              <p>I enjoy being creative and building things. Software development allows for unlimited 
+                possibilities to build anything you could imagine: a software app, website, or even program a rocket motor sequence.
+                There is no limit to the possibilites.</p>
             <video class="videoCRT opacity-medium" id="slowVid" autoplay loop muted playsinline>
-              <source src="images/CRT-TEXTURES-(1080)/TRANSITIONS/SPACE_02.mp4" type="video/mp4"/> />
+              <source src="images/CRT-TEXTURES-(1080)/TRANSITIONS/SPACE_02.mp4" type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
           </div>
@@ -153,7 +152,7 @@ function renderComponents(){
         <div>
           <!--Hyperlinks to Github and Linkedin-->
         <nav>
-            <a href="https://charliearray.github.io/personal-website/" target="_blank">Home</a>
+            <a href="#header">Home</a>
             <a href="#about">About</a>
             <a href="#portfolio">Portfolio</a>
             <a href="https://github.com/CharlieArray" target="_blank">Github</a>
