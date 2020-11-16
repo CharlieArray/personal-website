@@ -405,6 +405,11 @@
       line-height: 13px;
       padding: 0;
     }
+
+    .hidden{
+      display: none;
+    }
+
   }
   
   /*-----------------------------CSS Rules for Devices over 600px----------------------------------------------------------*/ 

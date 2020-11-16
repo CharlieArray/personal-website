@@ -22,7 +22,7 @@ function renderComponents(){
   $('#div-banner-image-quote').append(`
         <section id="banner-image">
           <!--Main image/theme for webpage, personal photo from Iceland-->
-          <img src="images/glacier-small.jpg" id="glacier" alt="Panoramic view of glacier with overcast skies" class="center-large">
+          <img src="images/glacier-small.jpg" id="glacier" alt="picture of glacier with overcast skies" class="center-large">
           <div class="js-quote-render2"></div>
         </section>
   `);
@@ -67,7 +67,6 @@ function renderComponents(){
           </div>
             <div class="flex-child">
               <h3>Hobbies and Interests:</h3>
-              <br>
                 <ul id="ul-hobbies">
                   <li>🏔️ Traveling</li>
                   <li>📸 Photography</li>
@@ -221,6 +220,7 @@ function slowAnimationPlayback(){
   let video= document.getElementById('slowVid');
   video.playbackRate = .35;  
 }
+
 //Reduces File Size for Responsive Design
  function preventSlowMobile() {
   var screenWidth = $(window).width();
