@@ -1,4 +1,4 @@
- /*-------- CSS Rules for Devices (Devices under 600px will default this media query------*/ 
+ /*-------- Default CSS Rules for All Devices (Devices under 600px will default this media query------*/ 
 
  @media all {
     body {
@@ -517,18 +517,28 @@
 }
 
 
-  /*-------------------------------------CSS Rules for Desktop/Large Tablet Devices over 800px------------------------------------------------------*/ 
+  /*-------------------------------------CSS Rules for Large Tablet Devices over 800px------------------------------------------------------*/ 
 
   @media all and (min-width: 800px){
 
 
   body{
-    background-image: url(images/pebbles-dark-desktop.jpg);
     margin-left: 10%;
     margin-right: 10%;
   }
 
 }
+
+
+ /*-------------------------------------CSS Rules for Desktop/Large Tablet Devices over 900px------------------------------------------------------*/ 
+
+ @media all and (min-width: 900px){
+
+  body{
+    background-image: url(images/pebbles-dark-desktop.jpg);
+  }
+
+ }
 
   /*-------------------------------------CSS Rules for Desktop/Large Tablet Devices over 1250px------------------------------------------------------*/ 
 
