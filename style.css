@@ -512,9 +512,9 @@
 }
 
 
-  /*-------------------------------------CSS Rules for Desktop/Large Tablet Devices over 820px------------------------------------------------------*/ 
+  /*-------------------------------------CSS Rules for Desktop/Large Tablet Devices over 800px------------------------------------------------------*/ 
 
-  @media all and (min-width: 820px){
+  @media all and (min-width: 800px){
 
 
   body{

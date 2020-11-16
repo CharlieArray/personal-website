@@ -3,8 +3,6 @@
 
 function renderComponents(){
 
- $('#div-banner-image-quote, #introduction-component, #about-me-component,#portfolio-component, #programming-component, #contact-component').addClass('section-div');
-
 
   $('header').append(`<br>
         <nav>
@@ -24,7 +22,7 @@ function renderComponents(){
   $('#div-banner-image-quote').append(`
         <section id="banner-image">
           <!--Main image/theme for webpage, personal photo from Iceland-->
-          <img src="images/glacier.jpg" id="glacier" alt="Panoramic view of glacier with overcast skies" class="center-large">
+          <img src="images/glacier-small.jpg" id="glacier" alt="Panoramic view of glacier with overcast skies" class="center-large">
           <div class="js-quote-render2"></div>
         </section>
   `);
@@ -62,7 +60,7 @@ function renderComponents(){
               <p>I enjoy being creative and building things. Software development allows for unlimited 
                 possibilities to build anything you could imagine: a software app, website, or even program a rocket motor sequence.
                 There is no limit to the possibilities.</p>
-            <video class="videoCRT opacity-medium" id="slowVid" autoplay loop muted playsinline>
+            <video class="videoCRT opacity-medium" id="slowVid" loop muted playsinline>
               <source src="images/CRT-TEXTURES-(1080)/TRANSITIONS/SPACE_02.mp4" type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
@@ -135,7 +133,7 @@ function renderComponents(){
           <div class="group">
             <div class="item"><img src="images/black-beach-square.jpg"  alt="Dark skies overshadow moody beach in Iceland" ></div>
             <div class="item"><img src="images/charlie-beach-square.jpg" alt="Person standing on Black Sands Beach"></div>
-            <div class="item"><img src="images/jengarock-square.png" alt="Ancient volcanic stacked up on top of each other" ></div>
+            <div class="item"><img src="images/jengarock-square.jpg" alt="Ancient volcanic stacked up on top of each other" ></div>
           </div>
       
       <div id="form-div">
@@ -160,6 +158,11 @@ function renderComponents(){
           </nav>
         </div>
   `)
+
+  $('#div-banner-image-quote, #introduction-component, #about-me-component,#portfolio-component, #programming-component, #contact-component')
+  .addClass('section-div');
+
+
 
 }
 
@@ -218,6 +221,15 @@ function slowAnimationPlayback(){
   let video= document.getElementById('slowVid');
   video.playbackRate = .35;  
 }
+//Reduces File Size for Responsive Design
+ function preventSlowMobile() {
+  var screenWidth = $(window).width();
+  if (screenWidth >= 800) {
+    $('#glacier').attr('src', 'images/glacier.jpg');
+    $('.videoCRT').attr('autoplay', 'autoplay');
+  }
+};
+
 
 /*UNDER DEVELOPMENT Cycle Image Feature
 function cycleImages(){
@@ -238,6 +250,7 @@ function cycleImages(){
 
 function onPageLoad(){
   renderComponents();
+  preventSlowMobile();
   slowAnimationPlayback();
   getQuoteApiData();
 }
