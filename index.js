@@ -1,4 +1,170 @@
 
+//Render HTML Elements to DOM
+
+function renderComponents(){
+
+ $('#div-banner-image-quote, #introduction-component, #about-me-component,#portfolio-component, #programming-component, #contact-component').addClass('section-div');
+
+
+  $('header').append(`<br>
+        <nav>
+          <a href="https://charliearray.github.io/personal-website/" target="_blank">Home</a>
+          <a href="#about">About</a>
+          <a href="#portfolio">Projects</a>
+          <a href="#contact">Contact</a> <br>
+        </nav>   
+
+          <h1>Full Stack Developer</h1>
+          <h3 style="margin-top: -5px; text-decoration: none; opacity: .80;">Charles Ybarra</h3>
+          <!--Hyperlinks to Github and Linkedin-->
+          <div class="js-quote-render"></div>
+    `);
+
+
+  $('#div-banner-image-quote').append(`
+        <section id="banner-image">
+          <!--Main image/theme for webpage, personal photo from Iceland-->
+          <img src="images/glacier.jpg" id="glacier" alt="Panoramic view of glacier with overcast skies" class="center-large">
+          <div class="js-quote-render2"></div>
+        </section>
+  `);
+
+
+  $('#introduction-component').append(`
+        <section id="about">
+            <header>  
+          <h2>Introduction</h2>
+            </header>
+          <div class="flex-container">
+            <img src="images/me.jpeg" class="center-medium" alt="Charlie👋">
+            <div class="flex-child">
+              <h3>Who I am:</h3>
+                  <p>Hi- I'm Charlie👋. I'm a junior software developer in Austin, TX. <br><br>
+                  I <ins><b>design</b></ins> and <ins><b>build</b></ins> fully functional web applications and reactive user interfaces. <br><br>I'm a former military officer and engineer, and I enjoy working with others to solve problems.</p>
+              </div>
+            <div class="flex-child">
+                <h3>What about the travel photos?</h3>
+                    <img src="images/camera.jpg" alt="camera vector graphic" class="center-smedium">
+                  <p>When I'm not glued to my computer, I like traveling. <br><br> The photos on this website are from my 2019 vacation in Iceland: Sólheimajökull Glacier and the Black Sands Beach.</p>
+              </div>
+            </div>
+        </section>
+  `);
+
+
+  $('#about-me-component').append(`
+        <header>  
+        <h2>About Me</h2>
+        </header>
+        <div class="flex-container">
+          <div class="flex-child-larger">
+            <h3>Why software development?</h3>
+              <p>I enjoy being creative, and software development allows for unlimited 
+                possibilities to solve problems, in unique and creative ways. 
+                There is no limit to the possibilites; You could develop a simple app, or 
+                program a rocket motor sequence.</p>
+            <video class="videoCRT opacity-medium" id="slowVid" autoplay loop muted playsinline>
+              <source src="images/CRT-TEXTURES-(1080)/TRANSITIONS/SPACE_02.mp4" type="video/mp4"/> />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+            <div class="flex-child">
+              <h3>Hobbies and Interests:</h3>
+              <br>
+                <ul id="ul-hobbies">
+                  <li>🏔️ Traveling</li>
+                  <li>📸 Photography</li>
+                  <li>📈 Investing</li>
+                  <li>🔨 Assembling Ikea Furniture</li>
+                </ul>
+            </div>
+          </div>
+    `);
+
+
+  $('#portfolio-component').append(`
+      <section id="portfolio">
+            <header>  
+            <h2>Project Portfolio</h2>
+            <h3>In Progress</h3>
+            </header>
+        <div class="flex-child-larger">
+          <div class="container2">
+              <div class="item2"><a href="https://charliearray.github.io/api-hiking-app/" target="_blank"><img src="images/mountain-ortho.jpg" alt="mountains">Trail Finder App 🏕️</a>
+                <p>App allows users to find trails in U.S or Canada, and view detailed trail maps. App programmed in JavaScript and two APIs were used.
+                </p></div>
+
+              <div class="item2"><a href="https://charliearray.github.io/quiz-app/" target="_blank"><img src="images/piggy-bank.jpg" alt="piggy-bank">Investing Quiz App📈</a>
+                <p>
+                  Interactive Quiz covering advanced investing concepts. More than 70% of app programmed with JavaScript and jQuery library
+                </p></div>
+
+              <div class="item2"><a href="https://charliearray.github.io/park-search-app/" target="_blank"><img src="images/phone-nav.jpg" alt="phone"> Park Search App 🌲</a>
+                <p>App to find national parks and landmarks by state utilized API GET requests to the National Park Service. App programmed in: JavaScript and jQuery
+                </p></div>
+
+              <div class="item2"><a href="https://github.com/CharlieArray/project-photo" target="_blank"><img src="images/security.png" alt="orthographic graphic">Project Photo</a>
+                <p>
+                This is a description of the Photo App I built. I'll share my goals for creating it, the skills/languages I applied, and what I learned doing it.
+                </p></div>
+
+              <div class="item2"><a href="https://github.com/CharlieArray/project-bookmark" target="_blank"><img src="images/cellphone.png" alt="orthographic graphic">Project Bookmark</a>
+                <p>
+                This is a description of the Bookmark App I built. I'll share my goals for creating it, the skills/languages I applied, and what I learned doing it.
+                </p></div>
+          </div>
+        </div>
+    </section> 
+  `);
+
+
+  $("#programming-component").append(`
+        <header>  
+        <h2>Skills and Services</h2>
+        </header>
+        <div class="flex-child">
+          <img src="images/skills-modified.jpg" alt="Skills tree" class="center-large opacity-medium">
+        </div>
+  `);
+
+  $('#contact').append(`
+          <header>  
+            <h2>Contact</h2>
+          </header>
+            <h3>For business opportunities: Linkedin and contact form below</h3>
+    
+          <div class="group">
+            <div class="item"><img src="images/black-beach-square.jpg"  alt="Dark skies overshadow moody beach in Iceland" ></div>
+            <div class="item"><img src="images/charlie-beach-square.jpg" alt="Person standing on Black Sands Beach"></div>
+            <div class="item"><img src="images/jengarock-square.png" alt="Ancient volcanic stacked up on top of each other" ></div>
+          </div>
+      
+      <div id="form-div">
+        <form action="https://formspree.io/xzbjnjlb" method="POST">
+          <label>💬<input type="text" name="name" placeholder="Your Name"></label><br>
+          <label>📧<input type="text" name="_replyto" placeholder="Your Email"></label><br>
+          <textarea name="message" placeholder="📝Your Message" required="" maxlength="250"></textarea><br>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+  `);
+
+  $('footer').append(`
+        <div>
+          <!--Hyperlinks to Github and Linkedin-->
+        <nav>
+            <a href="https://charliearray.github.io/personal-website/" target="_blank">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="https://github.com/CharlieArray" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/engineercharlie/" target="_blank">Linkedin</a>
+          </nav>
+        </div>
+  `)
+
+}
+
+
 //Quote API Functions
 
 function displayQuoteApi(data){
@@ -14,8 +180,6 @@ function displayQuoteApi(data){
 
     shortQuotesOnly(randomQuote)
   };
-
-
 
 
   function shortQuotesOnly(randomQuote){
@@ -53,7 +217,7 @@ function getQuoteApiData(){
 
 function slowAnimationPlayback(){
   let video= document.getElementById('slowVid');
-  video.playbackRate = .65;  
+  video.playbackRate = .35;  
 }
 
 /*UNDER DEVELOPMENT Cycle Image Feature
@@ -74,9 +238,11 @@ function cycleImages(){
 // On Page Load 
 
 function onPageLoad(){
+  renderComponents();
   slowAnimationPlayback();
   getQuoteApiData();
 }
+
 
 //Document Ready Function 
 
