@@ -4,7 +4,7 @@
     body {
       min-width: 316px;
       width: auto;
-      background-image: url(images/pebbles-dark-filter-backup.jpg);
+      background-image: url(images/pebbles-dark-mobile.jpg);
       background-size: 60%;
       background-repeat: repeat;
       margin-left: 2.5%;
@@ -414,9 +414,8 @@
     /*This rule centers non-flexbox images to width of user screen*/
 
     body{
-      background-image: url(images/pebbles-dark-filter.jpg);
-      margin-left: 14%;
-      margin-right: 14%;
+      margin-left: 8%;
+      margin-right: 8%;
     }
 
     /*CSS rule for medium images/graphics*/
@@ -512,7 +511,21 @@
     
 }
 
-  /*-------------------------------------CSS Rules for Devices over 1250px------------------------------------------------------*/ 
+
+  /*-------------------------------------CSS Rules for Desktop/Large Tablet Devices over 820px------------------------------------------------------*/ 
+
+  @media all and (min-width: 820px){
+
+
+  body{
+    background-image: url(images/pebbles-dark-desktop.jpg);
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+}
+
+  /*-------------------------------------CSS Rules for Desktop/Large Tablet Devices over 1250px------------------------------------------------------*/ 
 
  @media all and (min-width: 1250px){
 
@@ -596,8 +609,20 @@
 
   /*  rule for main divider in webpage*/
    body {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+ /*-------------------------------------CSS Rules for Devices over 1400px------------------------------------------------------*/ 
+
+ @media all and (min-width: 1800px){
+
+  /*  rule for main divider in webpage*/
+   body {
     margin-left: 21%;
     margin-right: 21%;
   }
+
+
 
  }
