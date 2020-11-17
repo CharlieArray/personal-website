@@ -60,7 +60,7 @@ function renderComponents(){
               <p>I enjoy being creative and building things. Software development allows for unlimited 
                 possibilities to build anything you could imagine: a software app, website, or even program a rocket motor sequence.
                 There is no limit to the possibilities.</p>
-            <video class="videoCRT opacity-medium" id="slowVid" loop muted playsinline>
+            <video class="videoCRT hidden opacity-medium" id="slowVid" loop muted playsinline>
               <source src="images/CRT-TEXTURES-(1080)/TRANSITIONS/SPACE_02.mp4" type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
@@ -224,9 +224,10 @@ function slowAnimationPlayback(){
 //Reduces File Size for Responsive Design
  function preventSlowMobile() {
   var screenWidth = $(window).width();
-  if (screenWidth >= 800) {
+  if (screenWidth >= 850) {
     $('#glacier').attr('src', 'images/glacier.jpg');
     $('.videoCRT').attr('autoplay', 'autoplay');
+    $('.videoCRT').removeClass('hidden');
   }
 };
 
