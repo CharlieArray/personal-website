@@ -1,7 +1,7 @@
 # Personal-Website
 
 ## Notable Site Features:
-1. **Elements Rendered From JS/jQuery** -All HTML elements are in .js file and appended to HTML file to ensure elements are rendered as groups.
+1. **HTML Elements Rendered From JS/jQuery** -In order to ensure elements are rendered at the same time, all HTML elements are in the JavaScript file and append to the HTML in groups via a doc ready function.
 
 2. **AJAX Lazy Loading** -The website top elements are rendered immediately, elements further down the page load later, ensuring faster load times.
 
