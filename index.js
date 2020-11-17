@@ -187,19 +187,19 @@ function dynamicScrollListener(){
                 action: 'user_scroll',
                 //container_id: container
             }; 
-      //console.log(bottom_position);
+      console.log(bottom_position);
     $.ajax({
             //url: 'index.html',
             data: scroll_data,
             context: document.body,
           success: () => {
-            if(bottom_position < 1300){
+            if(bottom_position < 1500 && bottom_position < 3000){
                renderBottomFoldElements();
                ajaxInProgress = false;
              }
           },
           error: () => {
-            console.log("Error: Ajax Request Failuer for remaining Page Elements");
+            console.log("Error: Ajax Request Failure for Remaining Page Elements");
             setTimeout(() => { console.log("Reloading Page") }, 1000);
             setTimeout(() => { location.reload(true); }, 4000);
           }
