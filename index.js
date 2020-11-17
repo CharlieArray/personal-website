@@ -1,7 +1,7 @@
 
-//Render HTML Elements to DOM
+//--------Progressive Render of HTML Elements to DOM---------------------------------//
 
-function renderComponents(){
+function renderAboveFoldElements(){
 
 
   $('header').append(`<br>
@@ -27,7 +27,6 @@ function renderComponents(){
         </section>
   `);
 
-
   $('#introduction-component').append(`
         <section id="about">
             <header>  
@@ -49,33 +48,40 @@ function renderComponents(){
         </section>
   `);
 
-
   $('#about-me-component').append(`
-        <header>  
-        <h2>About Me</h2>
-        </header>
-        <div class="flex-container">
-          <div class="flex-child-larger">
-            <h3>Why software development?</h3>
-              <p>I enjoy being creative and building things. Software development allows for unlimited 
-                possibilities to build anything you could imagine: a software app, website, or even program a rocket motor sequence.
-                There is no limit to the possibilities.</p>
-            <video class="videoCRT hidden opacity-medium" id="slowVid" loop muted playsinline>
-              <source src="images/CRT-TEXTURES-(1080)/TRANSITIONS/SPACE_02.mp4" type="video/mp4"/>
-              Your browser does not support the video tag.
-            </video>
-          </div>
-            <div class="flex-child">
-              <h3>Hobbies and Interests:</h3>
-                <ul id="ul-hobbies">
-                  <li>🏔️ Traveling</li>
-                  <li>📸 Photography</li>
-                  <li>📈 Investing</li>
-                  <li>🔨 Assembling Ikea Furniture</li>
-                </ul>
-            </div>
-          </div>
-    `);
+  <header>  
+  <h2>About Me</h2>
+  </header>
+  <div class="flex-container">
+    <div class="flex-child-larger">
+      <h3>Why software development?</h3>
+        <p>I enjoy being creative and building things. Software development allows for unlimited 
+          possibilities to build anything you could imagine: a software app, website, or even program a rocket motor sequence.
+          There is no limit to the possibilities.</p>
+      <video class="videoCRT hidden opacity-medium" id="slowVid" loop muted playsinline>
+        <source src="images/CRT-TEXTURES-(1080)/TRANSITIONS/SPACE_02.mp4" type="video/mp4"/>
+        Your browser does not support the video tag.
+      </video>
+    </div>
+      <div class="flex-child">
+        <h3>Hobbies and Interests:</h3>
+          <ul id="ul-hobbies">
+            <li>🏔️ Traveling</li>
+            <li>📸 Photography</li>
+            <li>📈 Investing</li>
+            <li>🔨 Assembling Ikea Furniture</li>
+          </ul>
+      </div>
+    </div>
+`);
+
+
+  $('#div-banner-image-quote, #introduction-component, #about-me-component')
+  .addClass('section-div');
+
+}
+
+function renderBottomFoldElements(){
 
 
   $('#portfolio-component').append(`
@@ -158,15 +164,52 @@ function renderComponents(){
         </div>
   `)
 
-  $('#div-banner-image-quote, #introduction-component, #about-me-component,#portfolio-component, #programming-component, #contact-component')
+  $('#portfolio-component, #programming-component, #contact-component')
   .addClass('section-div');
-
-
 
 }
 
 
-//Quote API Functions
+//-----Dynamic Content Loading on Page Scroll---------------------//
+
+function dynamicScrollListener(){
+
+  var ajaxInProgress = false;
+
+  $(window).scroll(function(){
+    //if ajaxInProgress == true, script stops//
+    if(ajaxInProgress) return;
+    ajaxInProgress = true;
+
+        // get the bottom position
+        var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
+        var scroll_data = {
+                action: 'user_scroll',
+                //container_id: container
+            }; 
+      //console.log(bottom_position);
+    $.ajax({
+            //url: 'index.html',
+            data: scroll_data,
+            context: document.body,
+          success: () => {
+            if(bottom_position < 1300){
+               renderBottomFoldElements();
+               ajaxInProgress = false;
+             }
+          },
+          error: () => {
+            console.log("Error: Ajax Request Failuer for remaining Page Elements");
+            setTimeout(() => { console.log("Reloading Page") }, 1000);
+            setTimeout(() => { location.reload(true); }, 4000);
+          }
+    })
+  })
+}
+  
+
+  
+//--------Quote API Functions-----------------------------------------//
 
 function displayQuoteApi(data){
 
@@ -182,10 +225,9 @@ function displayQuoteApi(data){
     shortQuotesOnly(randomQuote)
   };
 
-
   function shortQuotesOnly(randomQuote){
-    /*if quote is greater than 85 characters in length OR 
-      quote from certain individual => different quote is generated*/
+    /*if quote > 85 char in length OR 
+      quote from certain individual => different quote generated*/
     if (randomQuote.text.length > 85 || randomQuote.author == "Donald Trump"){
       $('.js-quote-render').empty();
       return generateNewQuote();
@@ -214,7 +256,7 @@ function getQuoteApiData(){
 }
 
 
-//Animation and Transition Functions
+//-------Animation and Transition Functions-----------------------------//
 
 function slowAnimationPlayback(){
   let video= document.getElementById('slowVid');
@@ -232,6 +274,25 @@ function slowAnimationPlayback(){
 };
 
 
+// On Page Load 
+
+function onPageLoad(){
+  renderAboveFoldElements();
+  preventSlowMobile();
+  slowAnimationPlayback();
+  getQuoteApiData();
+  dynamicScrollListener();
+}
+
+//Document Ready Function 
+
+$(document).ready(function(){
+  onPageLoad();
+  // run every 4s
+  //setInterval('cycleImages()', 4000);
+});
+
+
 /*UNDER DEVELOPMENT Cycle Image Feature
 function cycleImages(){
   var $active = $('#cycler .active');
@@ -245,23 +306,3 @@ function cycleImages(){
   });
 }
 */
-
-
-// On Page Load 
-
-function onPageLoad(){
-  renderComponents();
-  preventSlowMobile();
-  slowAnimationPlayback();
-  getQuoteApiData();
-}
-
-
-//Document Ready Function 
-
-$(document).ready(function(){
-  onPageLoad();
-  // run every 4s
-  //setInterval('cycleImages()', 4000);
-});
-
