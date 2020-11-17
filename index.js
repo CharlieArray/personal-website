@@ -37,7 +37,7 @@ function renderAboveFoldElements(){
             <div class="flex-child">
               <h3>Who I am:</h3>
                   <p>Hi- I'm Charlie👋. I'm a junior software developer in Austin, TX. <br><br>
-                  I <ins><b>design</b></ins> and <ins><b>build</b></ins> fully functional web applications and responsive user interfaces. <br><br>I'm a former military officer and engineer, and I enjoy working with others to solve problems.</p>
+                  I <ins><b>design</b></ins> and <ins><b>build</b></ins> fully functional web applications and user interfaces. <br><br>I'm a former military officer and engineer, and I enjoy working with others to solve problems.</p>
               </div>
             <div class="flex-child">
                 <h3>What about the travel photos?</h3>
