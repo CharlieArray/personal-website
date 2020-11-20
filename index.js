@@ -201,7 +201,7 @@ function dynamicScrollListener(){
           success: () => {
             let renderCount;
             //console.log(renderCount)
-            if(bottom_position < 1100 && renderCount !== 1){
+            if(bottom_position < 1500 && renderCount !== 1){
                renderBottomFoldElements();
                renderCount = 1;
                //console.log(bottom_position)
