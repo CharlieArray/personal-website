@@ -192,15 +192,15 @@ function dynamicScrollListener(){
                 //container_id: container
             }; 
     
-    console.log(bottom_position);
+    //console.log(bottom_position);
     
     $.ajax({
             //url: 'index.html',
             data: scroll_data,
             context: document.body,
           success: () => {
-            //let renderCount;
-            console.log(renderCount)
+            let renderCount;
+            //console.log(renderCount)
             if(bottom_position < 1100 && renderCount !== 1){
                renderBottomFoldElements();
                renderCount = 1;
