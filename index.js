@@ -171,6 +171,9 @@ function renderBottomFoldElements(){
 
 
 //-----Dynamic Content Loading on Page Scroll---------------------//
+//global screen variable
+const screenWidth = $(window).width();
+
 
 function dynamicScrollListener(){
 
@@ -215,6 +218,7 @@ function displayQuoteApi(data){
 
   function generateNewQuote(){
     const quotes = data;
+    console.log(quotes)
 
     //generates random # from json data array length
     const random = Math.floor(Math.random() * quotes.length);
@@ -226,6 +230,7 @@ function displayQuoteApi(data){
   };
 
   function shortQuotesOnly(randomQuote){
+
     /*if quote > 85 char in length OR 
       quote from certain individual => different quote generated*/
     if (randomQuote.text.length > 85 || randomQuote.author == "Donald Trump"){
@@ -233,13 +238,25 @@ function displayQuoteApi(data){
       return generateNewQuote();
     }
 
-    else if(randomQuote.author == null){randomQuote.author = "Unknown"}
+    else if(screenWidth < 800 ){
+      if(randomQuote.author == null){randomQuote.author = "Unknown"}
+      $('.js-quote-render').append(
+      `
+       <h3 style="font-size: 14.5px; margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
+       <h3 style="font-size: 14.5px; margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
+       
+      `)
+      }
+    else { 
+      if(randomQuote.author == null){randomQuote.author = "Unknown"}
       $('.js-quote-render').append(
       `
        <h3 style="margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
        <h3 style="margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
        
       `)
+    }
+
   }
   generateNewQuote();    
 }
@@ -265,7 +282,6 @@ function slowAnimationPlayback(){
 
 //Reduces File Size for Responsive Design
  function preventSlowMobile() {
-  var screenWidth = $(window).width();
   if (screenWidth >= 850) {
     $('#glacier').attr('src', 'images/glacier.jpg');
     $('.videoCRT').attr('autoplay', 'autoplay');
