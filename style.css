@@ -1,4 +1,5 @@
- /*-------- Default CSS Rules for All Devices (Devices under 600px will default this media query------*/ 
+/*-------- Default CSS Rules for All Devices (Devices under 600px will default this media query------*/ 
+
 
  @media all {
     body {
@@ -195,7 +196,8 @@
     footer > div {
       text-align: center;
       background-color: rgba(190,190,213,.7) ;
-      border: 3px solid #3d5152;
+      border: 3px solid #14181b;
+      border-radius: 12px;
       margin: 5px;
       padding: 10px;
       }
@@ -220,7 +222,6 @@
         margin-left: 4px;
         margin-right: 3px;
         margin-bottom: 3px;
-        padding: 3px;
     }  
 
     div.flex-child-larger {

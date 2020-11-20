@@ -83,7 +83,6 @@ function renderAboveFoldElements(){
 
 function renderBottomFoldElements(){
 
-
   $('#portfolio-component').append(`
       <section id="portfolio">
             <header>  
@@ -184,20 +183,29 @@ function dynamicScrollListener(){
     if(ajaxInProgress) return;
     ajaxInProgress = true;
 
+
+
         // get the bottom position
         var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
         var scroll_data = {
                 action: 'user_scroll',
                 //container_id: container
             }; 
-      console.log(bottom_position);
+    
+    console.log(bottom_position);
+    
     $.ajax({
             //url: 'index.html',
             data: scroll_data,
             context: document.body,
           success: () => {
-            if(bottom_position < 1500 && bottom_position < 3000){
+            //let renderCount;
+            console.log(renderCount)
+            if(bottom_position < 1100 && renderCount !== 1){
                renderBottomFoldElements();
+               renderCount = 1;
+               //console.log(bottom_position)
+               //console.log(renderCount)
                ajaxInProgress = false;
              }
           },
@@ -218,7 +226,7 @@ function displayQuoteApi(data){
 
   function generateNewQuote(){
     const quotes = data;
-    console.log(quotes)
+    //console.log(quotes)
 
     //generates random # from json data array length
     const random = Math.floor(Math.random() * quotes.length);
