@@ -238,7 +238,7 @@ function displayQuoteApi(data){
     //array bracket notation for random quote 
     const randomQuote = quotes[random];
 
-    shortQuotesOnly(randomQuote)
+    shortQuotesOnly(randomQuote);
   };
 
   function shortQuotesOnly(randomQuote){
@@ -267,7 +267,7 @@ function displayQuoteApi(data){
        <h3 style="margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
        
       `)
-    }
+    };
 
   }
   generateNewQuote();    
@@ -298,23 +298,20 @@ function fadeInIntroTop(){
   $('a').addClass('hidden');
   $('#js-main-banner').fadeIn(1500);
   $('#js-name').fadeIn(2500);
-  // $('a').fadeIn(10000);
 
-  setTimeout(function(){
-    $('.js-quote-render').fadeIn(2000);
-    $('.section-div').fadeIn(4000)} , 2000)
-}
-
+    setTimeout(function(){
+      $('.js-quote-render').fadeIn(2000);
+      $('.section-div').fadeIn(4000)} , 2000);
+};
 
 function fadeInIntroBottom(){
   $('.section-div').addClass('hidden');
 
-  setTimeout(function(){
-    $('.section-div').fadeIn(2500)
-    $('a').fadeIn(3000);
-   ;
+    setTimeout(function(){
+      $('.section-div').fadeIn(2500);
+      $('a').fadeIn(3000);
     },500)
-}
+};
 
 
 function onHover(){
@@ -332,7 +329,7 @@ function onHover(){
   if (screenWidth >= 850) {
     $('#glacier').attr('src', 'images/glacier.jpg');
     $('.videoCRT').removeClass('hidden');
-  }
+  };
 };
 
 
@@ -344,8 +341,8 @@ function onPageLoad(){
   renderAboveFoldElements();
   onHover();
   preventSlowMobile();
-  dynamicScrollListener();
   fadeInIntroTop();
+  dynamicScrollListener();
   getQuoteApiData();
   slowAnimationPlayback();
 }
