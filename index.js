@@ -194,6 +194,7 @@ function dynamicScrollListener(){
 
     // get the bottom position
     var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
+    var document_height =  $(document).height();
     var scroll_data = {
             action: 'user_scroll',
             //container_id: container
@@ -205,7 +206,7 @@ function dynamicScrollListener(){
             context: document.body,
           success: () => {
             let renderCount;
-            if( bottom_position < 1590 && renderCount !== 1){
+            if(document_height > 300 && bottom_position < 1590 && renderCount !== 1){
                renderCount = 1;
                ajaxInProgress = false;
                return renderBottomFoldElements();
