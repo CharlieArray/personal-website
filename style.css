@@ -12,6 +12,7 @@
       margin-right: 2.5%;
     }
 
+  
     #banner-image{
     padding: 2px;
     }
@@ -36,24 +37,6 @@
       box-shadow: 2px 2px 3px #000000;
     }
    
-
-    /*Rules for Cycle Image JS feature UNDER DEVELOPMENT
-    #cycler{
-      position:static;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    #cycler img{
-      position:absolute;z-index:1;
-    }
-
-     img.active{
-      z-index:3;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    */
 
     /*This rule centers non-flexbox large images to width of user screen*/
     .center {
@@ -418,6 +401,12 @@
     .hidden{
       display: none;
     }
+
+    
+    .visibility-hidden{
+     visibility: hidden;
+    }
+
 
   }
   
