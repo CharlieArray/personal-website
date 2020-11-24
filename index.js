@@ -300,8 +300,9 @@ function fadeInIntroTop(){
   $('#js-name').fadeIn(2500);
 
     setTimeout(function(){
+      enablePageScroll();
       $('.js-quote-render').fadeIn(2000);
-      $('.section-div').fadeIn(4000)} , 2000);
+      $('.section-div').fadeIn(4000)} , 2200);
 };
 
 function fadeInIntroBottom(){
@@ -313,6 +314,19 @@ function fadeInIntroBottom(){
     },500)
 };
 
+function preventPageScroll(){
+  $('body').on('touchstart touchmove', event => { 
+    $('body').toggleClass('stop-scrolling')
+    event.preventDefault(); 
+  });
+}
+
+function enablePageScroll(){
+  $('body').on('touchstart touchmove', event => { 
+    $('body').toggleClass('stop-scrolling')
+    event.preventDefault(); 
+  });
+}
 
 function onHover(){
   $('#slowVid').hover( event => 
@@ -338,6 +352,8 @@ function onHover(){
 // On Page Load 
 
 function onPageLoad(){
+  preventPageScroll();
+  enablePageScroll();
   renderAboveFoldElements();
   onHover();
   preventSlowMobile();
