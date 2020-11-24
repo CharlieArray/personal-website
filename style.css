@@ -367,7 +367,15 @@
       color: #9FE2BF;
       text-align:center;
     }
-  
+
+    /* header size 3 for quote banner*/
+    .js-quote-render > h3{
+      text-decoration: none; 
+      margin: 0%;
+      color: #9FE2BF;
+      text-align:center;
+    }
+
     /* paragraph text rules */
     p, li{
       font-family: 'Open Sans', sans-serif;
@@ -513,6 +521,7 @@
     /* paragraph/ list item rules */
     p , li{
       font-size: 14px;
+      padding: 4px;
     }
     
 }
@@ -594,6 +603,7 @@
     color: #9FE2BF;
     text-align:center;
   }
+
 
   /* Hyperlink font properties */
   a{

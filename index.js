@@ -1,8 +1,6 @@
-
 //--------Progressive Render of HTML Elements to DOM---------------------------------//
 
 function renderAboveFoldElements(){
-
 
   $('header').append(`<br>
         <nav>
@@ -12,10 +10,14 @@ function renderAboveFoldElements(){
           <a href="#contact">Contact</a> <br>
         </nav>   
 
-          <h1>Full Stack Developer</h1>
-          <h3 style="margin-top: -5px; text-decoration: none; opacity: .80;">Charles Ybarra</h3>
-          <!--Hyperlinks to Github and Linkedin-->
-          <div class="js-quote-render"></div>
+          <span id='js-main-banner' class='hidden'>
+            <h1>Software Developer</h1>
+               <span id='js-name' class='hidden'>
+                  <h3 style="margin-top: -5px; text-decoration: none; opacity: .80;">
+                    Charles Ybarra</h3>
+               </span>
+           </span>
+            <div class="js-quote-render hidden"></div>
     `);
 
 
@@ -36,7 +38,7 @@ function renderAboveFoldElements(){
             <img src="images/me.jpeg" class="center-medium" alt="Charlie👋">
             <div class="flex-child">
               <h3>Who I am:</h3>
-                  <p>Hi- I'm Charlie👋. I'm a junior software developer in Austin, TX. <br><br>
+                  <p>Hi- I'm Charlie👋. I'm a software developer in Austin, TX. <br><br>
                   I <ins><b>design</b></ins> and <ins><b>build</b></ins> fully functional web applications and user interfaces. <br><br>I'm a former military officer and engineer, and I enjoy working with others to solve problems.</p>
               </div>
             <div class="flex-child">
@@ -81,6 +83,8 @@ function renderAboveFoldElements(){
 
 }
 
+//-----------------Render Bottom Elements -------------------//
+
 function renderBottomFoldElements(){
 
   $('#portfolio-component').append(`
@@ -121,7 +125,7 @@ function renderBottomFoldElements(){
 
   $("#programming-component").append(`
         <header>  
-        <h2>Skills and Services</h2>
+        <h2>Experience and Tech Stack</h2>
         </header>
         <div class="flex-child">
           <img src="images/skills-modified.jpg" alt="Skills tree" class="center-large opacity-medium">
@@ -163,13 +167,18 @@ function renderBottomFoldElements(){
         </div>
   `)
 
+  $('#copyright').append(`
+  <h3 style="font-size: 13px; opacity: .6;">All content copyrighted or licensed by Charles Ybarra © 2019-2020</h3>  
+  `)
+
   $('#portfolio-component, #programming-component, #contact-component')
   .addClass('section-div');
 
 }
 
 
-//-----Dynamic Content Loading on Page Scroll---------------------//
+//------AJAX Dynamic Lazy Loading on Page Scroll---------------------//
+
 //global screen variable
 const screenWidth = $(window).width();
 
@@ -183,29 +192,23 @@ function dynamicScrollListener(){
     if(ajaxInProgress) return;
     ajaxInProgress = true;
 
+    // get the bottom position
+    var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
+    var scroll_data = {
+            action: 'user_scroll',
+            //container_id: container
+        }; 
 
-
-        // get the bottom position
-        var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
-        var scroll_data = {
-                action: 'user_scroll',
-                //container_id: container
-            }; 
-    
-    //console.log(bottom_position);
-    
     $.ajax({
             //url: 'index.html',
             data: scroll_data,
             context: document.body,
           success: () => {
             let renderCount;
-            //console.log(renderCount)
-            if(bottom_position < 1500 && renderCount !== 1){
+
+            if(bottom_position < 1590 && renderCount !== 1){
                renderBottomFoldElements();
                renderCount = 1;
-               //console.log(bottom_position)
-               //console.log(renderCount)
                ajaxInProgress = false;
              }
           },
@@ -215,12 +218,13 @@ function dynamicScrollListener(){
             setTimeout(() => { location.reload(true); }, 4000);
           }
     })
+    $('a').fadeIn(1500);
+    fadeInIntroBottom();
   })
 }
   
-
   
-//--------Quote API Functions-----------------------------------------//
+//----------Quote API Functions-----------------------------------------//
 
 function displayQuoteApi(data){
 
@@ -258,7 +262,7 @@ function displayQuoteApi(data){
     else { 
       if(randomQuote.author == null){randomQuote.author = "Unknown"}
       $('.js-quote-render').append(
-      `
+      `<
        <h3 style="margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
        <h3 style="margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
        
@@ -281,52 +285,74 @@ function getQuoteApiData(){
 }
 
 
-//-------Animation and Transition Functions-----------------------------//
+//-------Animation and Transition Functions--------------------------//
 
 function slowAnimationPlayback(){
   let video= document.getElementById('slowVid');
-  video.playbackRate = .35;  
+  video.playbackRate = .65;  
 }
+
+
+function fadeInIntroTop(){
+  $('.section-div').addClass('hidden');
+  $('a').addClass('hidden');
+  $('#js-main-banner').fadeIn(1500);
+  $('#js-name').fadeIn(2500);
+  // $('a').fadeIn(10000);
+
+  setTimeout(function(){
+    $('.js-quote-render').fadeIn(2000);
+    $('.section-div').fadeIn(4000)} , 2000)
+}
+
+
+function fadeInIntroBottom(){
+  $('.section-div').addClass('hidden');
+
+  setTimeout(function(){
+    $('.section-div').fadeIn(2500)
+    $('a').fadeIn(3000);
+   ;
+    },500)
+}
+
+
+function onHover(){
+  $('#slowVid').hover( event => 
+    $(event.currentTarget).attr('autoplay', 'autoplay'),
+    event => {
+      $(event.currentTarget).fadeOut(2400, () =>
+        $(event.currentTarget).removeAttr('loop')
+      )}
+  )};
+      
 
 //Reduces File Size for Responsive Design
  function preventSlowMobile() {
   if (screenWidth >= 850) {
     $('#glacier').attr('src', 'images/glacier.jpg');
-    $('.videoCRT').attr('autoplay', 'autoplay');
     $('.videoCRT').removeClass('hidden');
   }
 };
 
 
+//---------Document on Ready/Page Load ----------------------------//
+
 // On Page Load 
 
 function onPageLoad(){
   renderAboveFoldElements();
+  onHover();
   preventSlowMobile();
-  slowAnimationPlayback();
-  getQuoteApiData();
   dynamicScrollListener();
+  fadeInIntroTop();
+  getQuoteApiData();
+  slowAnimationPlayback();
 }
 
 //Document Ready Function 
 
 $(document).ready(function(){
   onPageLoad();
-  // run every 4s
-  //setInterval('cycleImages()', 4000);
 });
 
-
-/*UNDER DEVELOPMENT Cycle Image Feature
-function cycleImages(){
-  var $active = $('#cycler .active');
-  var $next = ($active.next().length > 0) ? $active.next() : $('#cycler img:first');
-  $next.css('z-index',2);//move the next image up the pile
-  $active.fadeOut(6000,function(){//fade out the top image
-  $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
-  $next.css('z-index',3).addClass('active');//make the next image the top one
-  //console.log($('.center-medium').width()+" image is")
-  //console.log($('.flex-child-larger').width()+" flex-child-larger is")  
-  });
-}
-*/
