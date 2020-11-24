@@ -205,11 +205,10 @@ function dynamicScrollListener(){
             context: document.body,
           success: () => {
             let renderCount;
-
-            if(bottom_position < 1590 && renderCount !== 1){
-               renderBottomFoldElements();
+            if( bottom_position < 1590 && renderCount !== 1){
                renderCount = 1;
                ajaxInProgress = false;
+               return renderBottomFoldElements();
              }
           },
           error: () => {
