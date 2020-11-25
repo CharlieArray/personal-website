@@ -20,6 +20,7 @@ function renderAboveFoldElements(){
             <div class="js-quote-render hidden"></div>
     `);
 
+    $('#loader-span').append(`<img src="images/loader.gif" id="loader" class="img-custom hidden" alt="loading animation">`)
 
   $('#div-banner-image-quote').append(`
         <section id="banner-image">
@@ -77,11 +78,10 @@ function renderAboveFoldElements(){
     </div>
 `);
 
-
   $('#div-banner-image-quote, #introduction-component, #about-me-component')
   .addClass('section-div');
-
 }
+
 
 //-----------------Render Bottom Elements -------------------//
 
@@ -154,25 +154,26 @@ function renderBottomFoldElements(){
       </div>
   `);
 
-  $('footer').append(`
-        <div>
-          <!--Hyperlinks to Github and Linkedin-->
-        <nav>
-            <a href="#header">Home</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="https://github.com/CharlieArray" target="_blank">Github</a>
-            <a href="https://www.linkedin.com/in/engineercharlie/" target="_blank">Linkedin</a>
-          </nav>
-        </div>
-  `)
-
-  $('#copyright').append(`
-  <h3 style="font-size: 13px; opacity: .6;">All content copyrighted or licensed by Charles Ybarra © 2019-2020</h3>  
-  `)
-
+ 
   $('#portfolio-component, #programming-component, #contact-component')
   .addClass('section-div');
+
+  $('footer').append(`
+    <div>
+    <!--Hyperlinks to Github and Linkedin-->
+    <nav>
+      <a href="#header">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="https://github.com/CharlieArray" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/engineercharlie/" target="_blank">Linkedin</a>
+    </nav>
+    </div>
+    `)
+
+  $('#copyright').append(`<h3 id="copyright">All content copyrighted or licensed by Charles Ybarra © 2019-2020</h3>`)
+
+  $('#loader').fadeOut(3000);
 
 }
 
@@ -193,23 +194,23 @@ function dynamicScrollListener(){
     ajaxInProgress = true;
 
     // get the bottom position
-    var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
-    var document_height =  $(document).height();
+    // var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
+    var document_height = $(document).height()
     var scroll_data = {
             action: 'user_scroll',
             //container_id: container
         }; 
 
-    $.ajax({
+    $.ajax({ 
             //url: 'index.html',
             data: scroll_data,
             context: document.body,
           success: () => {
-            let renderCount;
-            if(renderCount !== 1 && document_height > 300 && bottom_position < 1590 ){
-               renderCount = 1;
+            //  setInterval(function(){
+            //    console.log(document_height),10000})
+            if(document_height < 2800){
                ajaxInProgress = false;
-               return renderBottomFoldElements();
+               renderBottomFoldElements()
              }
           },
           error: () => {
@@ -294,12 +295,17 @@ function slowAnimationPlayback(){
 
 function fadeInIntroTop(){
   if(screenWidth < 900){
-      $('.section-div').addClass('hidden');
+      $('.section-div').addClass('visibility-hidden');
       $('a').addClass('hidden');
+          setTimeout(function(){
+            $('.section-div').addClass('hidden')
+            $('.section-div').removeClass('visibility-hidden');
+            $('.section-div').fadeIn(4000)
+            $('#loader').removeClass('hidden')
+            , 400});
       $('#js-main-banner').fadeIn(1500);
       $('#js-name').fadeIn(2500);
       $('.js-quote-render').fadeIn(2000);
-      $('.section-div').fadeIn(4000);
   }
   else{
       $('.section-div').addClass('hidden');
@@ -309,7 +315,8 @@ function fadeInIntroTop(){
       setTimeout(function(){
         $('.js-quote-render').fadeIn(2000);
         $('.section-div').fadeIn(4000)
-      } , 2000);
+        $('#loader').removeClass('hidden')
+      } , 1000);
   }
 };
 
@@ -317,7 +324,7 @@ function fadeInIntroBottom(){
   $('.section-div').addClass('hidden');
 
     setTimeout(function(){
-      $('.section-div').fadeIn(2500);
+      $('.section-div').fadeIn(3000);
       $('a').fadeIn(3000);
     },500)
 };

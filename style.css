@@ -12,7 +12,6 @@
       margin-right: 2.5%;
     }
 
-  
     #banner-image{
     padding: 2px;
     }
@@ -23,6 +22,7 @@
       border-radius: 12px;
       padding: 4px;
       margin: 3px; 
+      margin-top: 30px;  
       margin-bottom: 30px;  
       background-color: rgba(190,190,213,.6);
     }
@@ -41,9 +41,9 @@
     /*This rule centers non-flexbox large images to width of user screen*/
     .center {
       display: block;
+      width: 20%;
       margin-left: auto;
       margin-right: auto;
-      width: 40%;
     }
   
     /*CSS rule for medium images*/
@@ -109,6 +109,7 @@
     img{
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: auto;
         width: 100%;
         border-radius: 6px;
     }
@@ -316,7 +317,7 @@
 
      /*  header size 1 */
     header h1 {
-      font-family: 'Permanent Marker', serif;
+      font-family: 'Permanent Marker', sans-serif;
       text-shadow: 1px 1px 15px #527963;      
       font-size: 24px;
       color: #9fe2bff4;
@@ -357,6 +358,11 @@
       margin: 0%;
       color: #9FE2BF;
       text-align:center;
+    }
+
+    #copyright {
+     font-size: 13px; 
+     opacity: .75;
     }
 
     /* paragraph text rules */
