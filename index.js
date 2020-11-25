@@ -40,12 +40,12 @@ function renderAboveFoldElements(){
             <div class="flex-child">
               <h3>Who I am:</h3>
                   <p>Hi- I'm Charlie👋. I'm a software developer in Austin, TX. <br><br>
-                  I <ins><b>design</b></ins> and <ins><b>build</b></ins> fully functional web applications and user interfaces. <br><br>I'm a former military officer and engineer, and I enjoy working with others to solve problems.</p>
+                  I <ins><b>design</b></ins> and <ins><b>build</b></ins> web applications and user interfaces. <br><br>I'm a former military officer and engineer, and I enjoy working with others to solve problems.</p>
               </div>
             <div class="flex-child">
                 <h3>What about the travel photos?</h3>
                     <img src="images/camera.png" alt="camera vector graphic" class="center-smedium">
-                  <p>When I'm not glued to my computer, I enjoy traveling. <br><br> The photos on this website are from my 2019 vacation in Iceland: Sólheimajökull Glacier and the Black Sands Beach.</p>
+                  <p>When I'm not glued to my computer, I enjoy traveling. <br><br> The photos on this website are from Sólheimajökull Glacier and the "Black Beach" in Iceland.</p>
               </div>
             </div>
         </section>
@@ -257,7 +257,6 @@ function displayQuoteApi(data){
       `
        <h3 style="font-size: 14.5px; margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
        <h3 style="font-size: 14.5px; margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
-       
       `)
       $('.js-quote-render').fadeIn(3500);
 
@@ -266,7 +265,7 @@ function displayQuoteApi(data){
     else { 
       if(randomQuote.author == null){randomQuote.author = "Unknown"}
       $('.js-quote-render').append(
-      `<
+      `
        <h3 style="margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
        <h3 style="margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
       `)
