@@ -44,7 +44,7 @@ function renderAboveFoldElements(){
               </div>
             <div class="flex-child">
                 <h3>What about the travel photos?</h3>
-                    <img src="images/camera.jpg" alt="camera vector graphic" class="center-smedium">
+                    <img src="images/camera.png" alt="camera vector graphic" class="center-smedium">
                   <p>When I'm not glued to my computer, I enjoy traveling. <br><br> The photos on this website are from my 2019 vacation in Iceland: Sólheimajökull Glacier and the Black Sands Beach.</p>
               </div>
             </div>
@@ -108,12 +108,12 @@ function renderBottomFoldElements(){
                 <p>App to find national parks and landmarks by state utilized API GET requests to the National Park Service. App programmed in: JavaScript and jQuery
                 </p></div>
 
-              <div class="item2"><a href="https://github.com/CharlieArray/project-photo" target="_blank"><img src="images/security.png" alt="orthographic graphic">Project Photo</a>
+              <div class="item2"><a href="https://github.com/CharlieArray/project-photo" target="_blank"><img src="images/security.jpg" alt="orthographic graphic">Project Photo</a>
                 <p>
                 This is a description of the Photo App I built. I'll share my goals for creating it, the skills/languages I applied, and what I learned doing it.
                 </p></div>
 
-              <div class="item2"><a href="https://github.com/CharlieArray/project-bookmark" target="_blank"><img src="images/cellphone.png" alt="orthographic graphic">Project Bookmark</a>
+              <div class="item2"><a href="https://github.com/CharlieArray/project-bookmark" target="_blank"><img src="images/cellphone.jpg" alt="orthographic graphic">Project Bookmark</a>
                 <p>
                 This is a description of the Bookmark App I built. I'll share my goals for creating it, the skills/languages I applied, and what I learned doing it.
                 </p></div>
@@ -210,7 +210,7 @@ function dynamicScrollListener(){
             //    console.log(document_height),10000})
             if(document_height < 2800){
                ajaxInProgress = false;
-               renderBottomFoldElements()
+               renderBottomFoldElements();
              }
           },
           error: () => {
@@ -220,6 +220,7 @@ function dynamicScrollListener(){
           }
     })
     $('a').fadeIn(1500);
+
     fadeInIntroBottom();
   })
 }
@@ -247,7 +248,6 @@ function displayQuoteApi(data){
     /*if quote > 85 char in length OR 
       quote from certain individual => different quote generated*/
     if (randomQuote.text.length > 85 || randomQuote.author == "Donald Trump"){
-      $('.js-quote-render').empty();
       return generateNewQuote();
     }
 
@@ -259,15 +259,18 @@ function displayQuoteApi(data){
        <h3 style="font-size: 14.5px; margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
        
       `)
-      }
+      $('.js-quote-render').fadeIn(3500);
+
+    }
+
     else { 
       if(randomQuote.author == null){randomQuote.author = "Unknown"}
       $('.js-quote-render').append(
       `<
        <h3 style="margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
        <h3 style="margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
-       
       `)
+      $('.js-quote-render').fadeIn(3500);
     };
 
   }
@@ -294,37 +297,21 @@ function slowAnimationPlayback(){
 }
 
 function fadeInIntroTop(){
-  if(screenWidth < 900){
-      $('.section-div').addClass('visibility-hidden');
-      $('a').addClass('hidden');
-          setTimeout(function(){
-            $('.section-div').addClass('hidden')
-            $('.section-div').removeClass('visibility-hidden');
-            $('.section-div').fadeIn(4000)
-            $('#loader').removeClass('hidden')
-            , 400});
-      $('#js-main-banner').fadeIn(1500);
-      $('#js-name').fadeIn(2500);
-      $('.js-quote-render').fadeIn(2000);
-  }
-  else{
       $('.section-div').addClass('hidden');
       $('a').addClass('hidden');
       $('#js-main-banner').fadeIn(1500);
       $('#js-name').fadeIn(2500);
       setTimeout(function(){
-        $('.js-quote-render').fadeIn(2000);
-        $('.section-div').fadeIn(4000)
+        $('.section-div').fadeIn(3000)
         $('#loader').removeClass('hidden')
-      } , 1000);
+      } , 2700);
   }
-};
 
 function fadeInIntroBottom(){
   $('.section-div').addClass('hidden');
 
     setTimeout(function(){
-      $('.section-div').fadeIn(3000);
+      $('.section-div').fadeIn(2500);
       $('a').fadeIn(3000);
     },500)
 };
