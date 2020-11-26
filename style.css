@@ -96,7 +96,7 @@
       margin-right: auto;
       width: 100%;
       transform: scale(1);
-      transition:  .70s ease-in-out 1.00s; 
+      transition:  .35s ease-in-out; 
     }
   
     /* On hover >> Enlarge*/
