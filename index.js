@@ -10,13 +10,13 @@ function renderAboveFoldElements(){
           <a href="#contact">Contact</a> <br>
         </nav>   
 
-          <span id='js-main-banner' class='hidden'>
+          <div id='js-main-banner' class='hidden'>
             <h1>Software Developer</h1>
-               <span id='js-name' class='hidden'>
+               <div id='js-name' class='hidden'>
                   <h3 style="margin-top: -5px; text-decoration: none; opacity: .80;">
                     Charles Ybarra</h3>
-               </span>
-           </span>
+               </div>
+          </div>
             <div class="js-quote-render hidden"></div>
     `);
 
@@ -253,25 +253,28 @@ function displayQuoteApi(data){
 
     else if(screenWidth < 800 ){
       if(randomQuote.author == null){randomQuote.author = "Unknown"}
-      $('.js-quote-render').append(
-      `
-       <h3 style="font-size: 14.5px; margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
-       <h3 style="font-size: 14.5px; margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
-      `)
-      $('.js-quote-render').fadeIn(3500);
-
+        $('.js-quote-render').append(
+        `
+        <h3 style="font-size: 14.5px; margin:1%; margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
+        <h3 style="font-size: 14.5px; margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
+        `)
+      setTimeout(function(){
+        $('.js-quote-render').fadeIn(4100);
+      } , 1000);
+    
     }
 
     else { 
       if(randomQuote.author == null){randomQuote.author = "Unknown"}
-      $('.js-quote-render').append(
-      `
-       <h3 style="margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
-       <h3 style="margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
-      `)
-      $('.js-quote-render').fadeIn(3500);
+        $('.js-quote-render').append(
+        `
+        <h3 style="margin:1%; margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
+        <h3 style="margin:0px; color:#ffffe0">- ${randomQuote.author}</h3>
+        `)
+      setTimeout(function(){
+        $('.js-quote-render').fadeIn(4100);
+      } , 1000);
     };
-
   }
   generateNewQuote();    
 }
@@ -298,12 +301,12 @@ function slowAnimationPlayback(){
 function fadeInIntroTop(){
       $('.section-div').addClass('hidden');
       $('a').addClass('hidden');
-      $('#js-main-banner').fadeIn(1500);
-      $('#js-name').fadeIn(2500);
+      $('#js-main-banner').fadeIn(2500);
+      $('#js-name').fadeIn(3200);
       setTimeout(function(){
-        $('.section-div').fadeIn(3000)
+        $('.section-div').fadeIn(3800)
         $('#loader').removeClass('hidden')
-      } , 2700);
+      } , 4500);
   }
 
 function fadeInIntroBottom(){
