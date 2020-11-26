@@ -194,7 +194,7 @@ function dynamicScrollListener(){
     ajaxInProgress = true;
 
     // get the bottom position
-    // var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
+    var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
     var document_height = $(document).height()
     var scroll_data = {
             action: 'user_scroll',
@@ -208,9 +208,11 @@ function dynamicScrollListener(){
           success: () => {
             //  setInterval(function(){
             //    console.log(document_height),10000})
-            if(document_height < 2800){
+            if(bottom_position > 500 && document_height < 2800){
                ajaxInProgress = false;
-               renderBottomFoldElements();
+
+                renderBottomFoldElements()
+               
              }
           },
           error: () => {
