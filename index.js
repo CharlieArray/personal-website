@@ -206,14 +206,15 @@ function dynamicScrollListener(){
             data: scroll_data,
             context: document.body,
           success: () => {
-            //  setInterval(function(){
-            //    console.log(document_height),10000})
-            if(bottom_position > 500 && document_height < 2800){
+            if(bottom_position < 1700 && document_height < 2800){
                ajaxInProgress = false;
-
-                renderBottomFoldElements()
-               
+               renderBottomFoldElements()
+               setTimeout(() => {
+                overflow: hidden;
+                position: fixed}, 200)     
              }
+             overflow: visible;
+             position: static
           },
           error: () => {
             console.log("Error: Ajax Request Failure for Remaining Page Elements");
