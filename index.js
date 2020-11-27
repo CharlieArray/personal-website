@@ -195,7 +195,8 @@ function dynamicScrollListener(){
 
     // get the bottom position
     var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
-    var document_height = $(document).height()
+    var document_height = $(document).height();
+
     var scroll_data = {
             action: 'user_scroll',
             //container_id: container
@@ -206,15 +207,12 @@ function dynamicScrollListener(){
             data: scroll_data,
             context: document.body,
           success: () => {
-            if(bottom_position < 1700 && document_height < 2800){
+
+            // let sectionDivVisible = $('#about-me-component').css('display') !== 'visible' 
+            if(bottom_position < 880 && document_height < 2800){
                ajaxInProgress = false;
                renderBottomFoldElements()
-               setTimeout(() => {
-                overflow: hidden;
-                position: fixed}, 200)     
              }
-             overflow: visible;
-             position: static
           },
           error: () => {
             console.log("Error: Ajax Request Failure for Remaining Page Elements");
@@ -302,13 +300,13 @@ function slowAnimationPlayback(){
 }
 
 function fadeInIntroTop(){
-      $('.section-div').addClass('hidden');
+      $('.section-div').addClass('visibility-hidden');
       $('a').addClass('hidden');
       $('#js-main-banner').fadeIn(2500);
       $('#js-name').fadeIn(3200);
       setTimeout(function(){
-        $('.section-div').fadeIn(3800)
-        $('#loader').removeClass('hidden')
+        $('.section-div').addClass('hidden').removeClass('visibility-hidden').fadeIn(3800);
+        $('#loader').removeClass('hidden');
       } , 4500);
   }
 
@@ -330,7 +328,6 @@ function onHover(){
       )}
   )};
       
-
 //Reduces File Size for Responsive Design
  function preventSlowMobile() {
   if (screenWidth >= 850) {
