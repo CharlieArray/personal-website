@@ -191,9 +191,8 @@ function dynamicScrollListener(){
     // get the bottom position
     const document_height = $(document).height();
     var bottom_position = $(document).height() - $(window).height();
-    console.log(bottom_position, '- bottom position')
-    console.log(document_height, ' document height')
-
+    // console.log(bottom_position, '- bottom position')
+    // console.log(document_height, ' document height')
 
 
     var scroll_data = {
@@ -206,7 +205,12 @@ function dynamicScrollListener(){
             data: scroll_data,
             context: document.body,
           success: () => {
-            if(bottom_position < 1700 && document_height < 2700){
+            if(screenWidth <= 920 && bottom_position < 1600){
+              ajaxInProgress = false;
+              return renderBottomFoldElements()
+            }
+
+            else if(screenWidth >=920 && bottom_position < 1700 && document_height < 2700){
                ajaxInProgress = false;
                return renderBottomFoldElements()
              }
@@ -296,18 +300,21 @@ function slowAnimationPlayback(){
   video.playbackRate = .65;  
 }
 
+
 function fadeInIntroTop(){
-  if(screenWidth <= 890 ){
-    $('.section-div').addClass('visibility-hidden');
-    $('.section-div').addClass('hidden');
+  const targetElement = document.querySelector('#introduction-component');
+
+  if(screenWidth <= 920 ){
+    bodyScrollLock.disableBodyScroll(targetElement);
+    $('.section-div').addClass('hidden')
     $('a').addClass('hidden');
     $('#js-main-banner').fadeIn(2500);
-    $('#js-name').fadeIn(3200);
+    $('#js-name').fadeIn(2800);
     setTimeout(function(){
-      $('.section-div').removeClass('visibility-hidden')
-      $('.section-div').fadeIn(2400)
+      $('.section-div').fadeIn(3000);
+      bodyScrollLock.enableBodyScroll(targetElement)
       $('#loader').removeClass('hidden')
-    } , 4000);
+    } , 4500);
   }
 
   else{
@@ -357,10 +364,10 @@ function onHover(){
 function onPageLoad(){
   renderAboveFoldElements();
   fadeInIntroTop();
+  getQuoteApiData();
   onHover();
   preventSlowMobile();
   dynamicScrollListener();
-  getQuoteApiData();
   slowAnimationPlayback();
 }
 
