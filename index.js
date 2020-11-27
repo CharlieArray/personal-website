@@ -9,7 +9,6 @@ function renderAboveFoldElements(){
           <a href="#portfolio">Projects</a>
           <a href="#contact">Contact</a> <br>
         </nav>   
-
           <div id='js-main-banner' class='hidden'>
             <h1>Software Developer</h1>
                <div id='js-name' class='hidden'>
@@ -98,21 +97,17 @@ function renderBottomFoldElements(){
               <div class="item2"><a href="https://charliearray.github.io/api-hiking-app/" target="_blank"><img src="images/mountain-ortho.jpg" alt="mountains">Trail Finder App 🏕️</a>
                 <p>App allows users to find trails in U.S or Canada, and view detailed trail maps. App programmed in JavaScript and two APIs were used.
                 </p></div>
-
               <div class="item2"><a href="https://charliearray.github.io/quiz-app/" target="_blank"><img src="images/piggy-bank.jpg" alt="piggy-bank">Investing Quiz App📈</a>
                 <p>
                   Interactive Quiz covering advanced investing concepts. More than 70% of app programmed with JavaScript and jQuery library
                 </p></div>
-
               <div class="item2"><a href="https://charliearray.github.io/park-search-app/" target="_blank"><img src="images/phone-nav.jpg" alt="phone"> Park Search App 🌲</a>
                 <p>App to find national parks and landmarks by state utilized API GET requests to the National Park Service. App programmed in: JavaScript and jQuery
                 </p></div>
-
               <div class="item2"><a href="https://github.com/CharlieArray/project-photo" target="_blank"><img src="images/security.jpg" alt="orthographic graphic">Project Photo</a>
                 <p>
                 This is a description of the Photo App I built. I'll share my goals for creating it, the skills/languages I applied, and what I learned doing it.
                 </p></div>
-
               <div class="item2"><a href="https://github.com/CharlieArray/project-bookmark" target="_blank"><img src="images/cellphone.jpg" alt="orthographic graphic">Project Bookmark</a>
                 <p>
                 This is a description of the Bookmark App I built. I'll share my goals for creating it, the skills/languages I applied, and what I learned doing it.
@@ -175,13 +170,13 @@ function renderBottomFoldElements(){
 
   $('#loader').fadeOut(3000);
 
+  
 }
 
 
 //------AJAX Dynamic Lazy Loading on Page Scroll---------------------//
-
-//global screen variable
-const screenWidth = $(window).width();
+  //----global variables
+  const screenWidth = $(window).width();
 
 
 function dynamicScrollListener(){
@@ -194,9 +189,8 @@ function dynamicScrollListener(){
     ajaxInProgress = true;
 
     // get the bottom position
+    const document_height = $(document).height();
     var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
-    var document_height = $(document).height();
-
     var scroll_data = {
             action: 'user_scroll',
             //container_id: container
@@ -207,11 +201,9 @@ function dynamicScrollListener(){
             data: scroll_data,
             context: document.body,
           success: () => {
-
-            // let sectionDivVisible = $('#about-me-component').css('display') !== 'visible' 
-            if(bottom_position < 880 && document_height < 2800){
+            if(bottom_position > 800 && document_height < 2800){
                ajaxInProgress = false;
-               renderBottomFoldElements()
+               return renderBottomFoldElements()
              }
           },
           error: () => {
@@ -300,15 +292,30 @@ function slowAnimationPlayback(){
 }
 
 function fadeInIntroTop(){
-      $('.section-div').addClass('visibility-hidden');
+  if(screenWidth <= 890 ){
+    $('.section-div').addClass('visibility-hidden');
+    $('.section-div').addClass('hidden');
+    $('a').addClass('hidden');
+    $('#js-main-banner').fadeIn(2500);
+    $('#js-name').fadeIn(3200);
+    setTimeout(function(){
+      $('.section-div').removeClass('visibility-hidden')
+      $('.section-div').fadeIn(2400)
+      $('#loader').removeClass('hidden')
+    } , 4000);
+  }
+
+  else{
+      $('.section-div').addClass('hidden');
       $('a').addClass('hidden');
       $('#js-main-banner').fadeIn(2500);
       $('#js-name').fadeIn(3200);
       setTimeout(function(){
-        $('.section-div').addClass('hidden').removeClass('visibility-hidden').fadeIn(3800);
-        $('#loader').removeClass('hidden');
+        $('.section-div').fadeIn(3800)
+        $('#loader').removeClass('hidden')
       } , 4500);
   }
+}
 
 function fadeInIntroBottom(){
   $('.section-div').addClass('hidden');
@@ -328,6 +335,7 @@ function onHover(){
       )}
   )};
       
+
 //Reduces File Size for Responsive Design
  function preventSlowMobile() {
   if (screenWidth >= 850) {
@@ -356,4 +364,3 @@ function onPageLoad(){
 $(document).ready(function(){
   onPageLoad();
 });
-
