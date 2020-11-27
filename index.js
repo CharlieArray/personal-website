@@ -19,7 +19,6 @@ function renderAboveFoldElements(){
             <div class="js-quote-render hidden"></div>
     `);
 
-    $('#loader-span').append(`<img src="images/loader.gif" id="loader" class="img-custom hidden" alt="loading animation">`)
 
   $('#div-banner-image-quote').append(`
         <section id="banner-image">
@@ -38,8 +37,8 @@ function renderAboveFoldElements(){
             <img src="images/me.jpeg" class="center-medium" alt="Charlie👋">
             <div class="flex-child">
               <h3>Who I am:</h3>
-                  <p>Hi- I'm Charlie👋. I'm a software developer in Austin, TX. <br><br>
-                  I <ins><b>design</b></ins> and <ins><b>build</b></ins> web applications and user interfaces. <br><br>I'm a former veteran and engineer, and I enjoy working with others to solve problems.</p>
+                  <p>Hi - I'm Charlie👋 - I'm a software developer in Austin, TX. <br><br>
+                  I <ins><b>design</b></ins> and <ins><b>build</b></ins> web applications and user interfaces. <br><br>I'm a veteran and engineer, and I enjoy working with others to solve problems.</p>
               </div>
             <div class="flex-child">
                 <h3>What about the travel photos?</h3>
@@ -81,10 +80,14 @@ function renderAboveFoldElements(){
   .addClass('section-div');
 }
 
+$('#loader-span').append(`<img src="images/loader.gif" id="loader" class="img-custom" alt="loading animation">`)
 
-//-----------------Render Bottom Elements -------------------//
+
+//-----------------Render Bottom Elements ------------------------------------//
 
 function renderBottomFoldElements(){
+
+  $('#loader-span').fadeOut(3000);
 
   $('#portfolio-component').append(`
       <section id="portfolio">
@@ -116,7 +119,6 @@ function renderBottomFoldElements(){
         </div>
     </section> 
   `);
-
 
   $("#programming-component").append(`
         <header>  
@@ -168,32 +170,28 @@ function renderBottomFoldElements(){
 
   $('#copyright').append(`<h3 id="copyright">All content copyrighted or licensed by Charles Ybarra © 2019-2020</h3>`)
 
-  $('#loader').fadeOut(3000);
-
-  
 }
 
 
-//------AJAX Dynamic Lazy Loading on Page Scroll---------------------//
-  //----global variables
+//-----Global variables----------------------------------------------------//
   const screenWidth = $(window).width();
 
 
+//------AJAX Dynamic Lazy Loading on Page Scroll-------------------------//
+
 function dynamicScrollListener(){
 
-  var ajaxInProgress = false;
+  let ajaxInitiated = false;
 
   $(window).scroll(function(){
-    //if ajaxInProgress == true, script stops//
-    if(ajaxInProgress) return;
-    ajaxInProgress = true;
+
+    //if ajaxInitiated == true, script stops//
+    if(ajaxInitiated) return;
+    ajaxInitiated = true;
 
     // get the bottom position
     const document_height = $(document).height();
     var bottom_position = $(document).height() - $(window).height();
-    // console.log(bottom_position, '- bottom position')
-    // console.log(document_height, ' document height')
-
 
     var scroll_data = {
             action: 'user_scroll',
@@ -201,34 +199,35 @@ function dynamicScrollListener(){
         }; 
 
     $.ajax({ 
-            //url: 'index.html',
-            data: scroll_data,
-            context: document.body,
+        //url: 'index.html',
+        data: scroll_data,
+        context: document.body,
+
           success: () => {
             if(screenWidth <= 920 && bottom_position < 1600){
-              ajaxInProgress = false;
-              return renderBottomFoldElements()
+               renderBottomFoldElements()
+               ajaxInitiated = true;
             }
 
             else if(screenWidth >=920 && bottom_position < 1700 && document_height < 2700){
-               ajaxInProgress = false;
-               return renderBottomFoldElements()
-             }
+               renderBottomFoldElements()
+               ajaxInitiated = true;
+            }
           },
+
           error: () => {
             console.log("Error: Ajax Request Failure for Remaining Page Elements");
             setTimeout(() => { console.log("Reloading Page") }, 1000);
             setTimeout(() => { location.reload(true); }, 4000);
           }
-    })
-    $('a').fadeIn(1500);
-
-    fadeInIntroBottom();
+     })
+  $('a').fadeIn(1500);
+  fadeInIntroBottom();
   })
 }
   
   
-//----------Quote API Functions-----------------------------------------//
+//----------Quote API Functions----------------------------------------------//
 
 function displayQuoteApi(data){
 
@@ -254,7 +253,7 @@ function displayQuoteApi(data){
     }
 
     else if(screenWidth < 800 ){
-      if(randomQuote.author == null){randomQuote.author = "Unknown"}
+      if(randomQuote.author == null){randomQuote.author = "Unknown"};
         $('.js-quote-render').append(
         `
         <h3 style="font-size: 14.5px; margin:1%; margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
@@ -267,7 +266,7 @@ function displayQuoteApi(data){
     }
 
     else { 
-      if(randomQuote.author == null){randomQuote.author = "Unknown"}
+      if(randomQuote.author == null){randomQuote.author = "Unknown"};
         $('.js-quote-render').append(
         `
         <h3 style="margin:1%; margin-bottom:3px; color:#ffffe0">${randomQuote.text}</h3>
@@ -277,9 +276,10 @@ function displayQuoteApi(data){
         $('.js-quote-render').fadeIn(4100);
       } , 1000);
     };
-  }
-  generateNewQuote();    
-}
+  };
+
+   generateNewQuote();
+};
 
 
 function getQuoteApiData(){
@@ -290,10 +290,10 @@ function getQuoteApiData(){
   fetch(stringURL)
     .then(response => response.json())
     .then(data => displayQuoteApi(data))
-}
+};
 
 
-//-------Animation and Transition Functions--------------------------//
+//-------Animation and Transition Functions---------------------------------------//
 
 function slowAnimationPlayback(){
   let video= document.getElementById('slowVid');
@@ -312,8 +312,8 @@ function fadeInIntroTop(){
     $('#js-name').fadeIn(2800);
     setTimeout(function(){
       $('.section-div').fadeIn(3000);
+      $('#loader-span').removeClass('hidden')
       bodyScrollLock.enableBodyScroll(targetElement)
-      $('#loader').removeClass('hidden')
     } , 4500);
   }
 
@@ -324,10 +324,10 @@ function fadeInIntroTop(){
       $('#js-name').fadeIn(3200);
       setTimeout(function(){
         $('.section-div').fadeIn(3800)
-        $('#loader').removeClass('hidden')
+        $('#loader-span').removeClass('hidden')
       } , 4500);
   }
-}
+};
 
 function fadeInIntroBottom(){
   $('.section-div').addClass('hidden');
@@ -357,7 +357,7 @@ function onHover(){
 };
 
 
-//---------Document on Ready/Page Load ----------------------------//
+//---------Document on Ready/Page Load -------------------------------------//
 
 // On Page Load 
 
@@ -365,8 +365,8 @@ function onPageLoad(){
   renderAboveFoldElements();
   fadeInIntroTop();
   getQuoteApiData();
-  onHover();
   preventSlowMobile();
+  onHover();
   dynamicScrollListener();
   slowAnimationPlayback();
 }
