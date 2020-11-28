@@ -422,10 +422,9 @@
 
     /*CSS rule for medium images/graphics*/
    .center-medium {
-     max-height: 400px;
+     max-height: 365px;
     }
   
-    
     main > div.section-div{
       padding: 10px;
       margin: 16px;
