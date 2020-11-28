@@ -311,7 +311,7 @@ function fadeInIntroTop(){
     $('#js-main-banner').fadeIn(2500);
     $('#js-name').fadeIn(2800);
     setTimeout(function(){
-      $('.section-div').fadeIn(3000);
+      $('.section-div').fadeIn(2800);
       $('#loader-span').removeClass('hidden')
       bodyScrollLock.enableBodyScroll(targetElement)
     } , 4500);
@@ -323,7 +323,7 @@ function fadeInIntroTop(){
       $('#js-main-banner').fadeIn(2500);
       $('#js-name').fadeIn(3200);
       setTimeout(function(){
-        $('.section-div').fadeIn(3800)
+        $('.section-div').fadeIn(2800)
         $('#loader-span').removeClass('hidden')
       } , 4500);
   }
@@ -350,7 +350,7 @@ function onHover(){
 
 //Reduces File Size for Responsive Design
  function preventSlowMobile() {
-  if (screenWidth >= 850) {
+  if (screenWidth >= 900) {
     $('#glacier').attr('src', 'images/glacier.jpg');
     $('.videoCRT').removeClass('hidden');
   };
@@ -362,13 +362,27 @@ function onHover(){
 // On Page Load 
 
 function onPageLoad(){
-  renderAboveFoldElements();
-  fadeInIntroTop();
-  getQuoteApiData();
-  preventSlowMobile();
-  onHover();
-  dynamicScrollListener();
-  slowAnimationPlayback();
+  if (screenWidth < 900){
+    setTimeout(function(){
+      renderAboveFoldElements();
+      fadeInIntroTop();
+      getQuoteApiData();
+    }, 1800)
+    preventSlowMobile();
+    onHover();
+    dynamicScrollListener();
+    slowAnimationPlayback();
+  }
+
+  else{
+    renderAboveFoldElements();
+    fadeInIntroTop();
+    getQuoteApiData();
+    preventSlowMobile();
+    onHover();
+    dynamicScrollListener();
+    slowAnimationPlayback();
+  }
 }
 
 //Document Ready Function 
