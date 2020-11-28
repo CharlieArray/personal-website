@@ -34,16 +34,17 @@ function renderAboveFoldElements(){
           <h2>Introduction</h2>
             </header>
           <div class="flex-container">
-            <img src="images/me.jpeg" class="center-medium" alt="Charlie👋">
+            <img src="images/me.jpeg" class="center-medium" alt="handsome software developer">
             <div class="flex-child">
               <h3>Who I am:</h3>
-                  <p>Hi - I'm Charlie👋 - I'm a software developer in Austin, TX. <br><br>
-                  I <ins><b>design</b></ins> and <ins><b>build</b></ins> web applications and user interfaces. <br><br>I'm a veteran and engineer, and I enjoy working with others to solve problems.</p>
+                  <p>Hi - I'm Charlie - a software developer in Austin, TX. <br><br>
+                  If you want to be dramatic:<br>app architect, software sorcerer🔮, or full stack engineer works too. Really I just enjoy
+                  <b>designing</b> and <b>building</b> beautiful web apps and user interfaces. <br><br>Former veteran to some; engineer to others, I like working with others to solve problems.</p>
               </div>
             <div class="flex-child">
                 <h3>What about the travel photos?</h3>
                     <img src="images/camera.png" alt="camera vector graphic" class="center-smedium">
-                  <p>When I'm not glued to my computer, I enjoy traveling. <br><br> The photos on this website are from Sólheimajökull Glacier and the "Black Beach" in Iceland.</p>
+                  <p>When I'm not glued to my computer, I enjoy traveling and photography. <br><br> The photos on this website are from my trip to Sólheimajökull Glacier and the "Black Beach" in Iceland.</p>
               </div>
             </div>
         </section>
@@ -98,22 +99,22 @@ function renderBottomFoldElements(){
         <div class="flex-child-larger">
           <div class="container2">
               <div class="item2"><a href="https://charliearray.github.io/api-hiking-app/" target="_blank"><img src="images/mountain-ortho.jpg" alt="mountains">Trail Finder App 🏕️</a>
-                <p>App allows users to find trails in U.S or Canada, and view detailed trail maps. App programmed in JavaScript and two APIs were used.
+                <p>App to search trails in U.S or Canada and view detailed trail maps. App programmed in JavaScript and two APIs were used.
                 </p></div>
               <div class="item2"><a href="https://charliearray.github.io/quiz-app/" target="_blank"><img src="images/piggy-bank.jpg" alt="piggy-bank">Investing Quiz App📈</a>
                 <p>
-                  Interactive Quiz covering advanced investing concepts. More than 70% of app programmed with JavaScript and jQuery library
+                  Interactive quiz covering advanced investing concepts. 70% of the app was programmed with JavaScript and jQuery library
                 </p></div>
               <div class="item2"><a href="https://charliearray.github.io/park-search-app/" target="_blank"><img src="images/phone-nav.jpg" alt="phone"> Park Search App 🌲</a>
-                <p>App to find national parks and landmarks by state utilized API GET requests to the National Park Service. App programmed in: JavaScript and jQuery
+                <p>App to find national parks and landmarks utilizing API GET requests to the National Park Service. App programmed in: JavaScript and jQuery
                 </p></div>
               <div class="item2"><a href="https://github.com/CharlieArray/project-photo" target="_blank"><img src="images/security.jpg" alt="orthographic graphic">Project Photo</a>
                 <p>
-                This is a description of the Photo App I built. I'll share my goals for creating it, the skills/languages I applied, and what I learned doing it.
+                This is a placeholder link for the Photo App I'm building. I'll share my goals for creating it, and the skills/languages I applied.
                 </p></div>
               <div class="item2"><a href="https://github.com/CharlieArray/project-bookmark" target="_blank"><img src="images/cellphone.jpg" alt="orthographic graphic">Project Bookmark</a>
                 <p>
-                This is a description of the Bookmark App I built. I'll share my goals for creating it, the skills/languages I applied, and what I learned doing it.
+                This is a placeholder link for the Bookmark App I'm building. I'll share my goals for creating it, and the skills/languages I applied.
                 </p></div>
           </div>
         </div>

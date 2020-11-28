@@ -1,6 +1,4 @@
 /*-------- Default CSS Rules for All Devices (Devices under 600px will default this media query------*/ 
-
-
  @media all {
     body {
       min-width: 316px;
@@ -95,17 +93,8 @@
       margin-left: auto;
       margin-right: auto;
       width: 100%;
-      transform: scale(1);
-      transition:  .35s ease-in-out; 
     }
   
-    /* On hover >> Enlarge*/
-    .center-large:hover, .item:hover {
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari 3-8 */
-     transform: scale(1.2); 
-  }
-
 
    /* CSS Rules for Site Images */ 
     img{
@@ -320,7 +309,7 @@
       font-family: 'Permanent Marker', sans-serif;
       text-shadow: 1px 1px 15px #527963;      
       font-size: 24px;
-      color: #9fe2bff4;
+      color: #9FE2BF;
       margin-top: 6%;
       margin-bottom: 0%;
       margin-left: 1%;
@@ -413,15 +402,11 @@
      visibility: hidden;
     }
 
-
   }
   
   /*-----------------------------CSS Rules for Devices over 600px----------------------------------------------------------*/ 
-  
   @media all and (min-width: 600px) {
   
-    /*This rule centers non-flexbox images to width of user screen*/
-
     body{
       margin-left: 8%;
       margin-right: 8%;
@@ -430,23 +415,22 @@
     /*CSS rule for medium images/graphics*/
    .center-medium {
      max-height: 400px;
-      width: auto;
     }
   
-    /* rule for header divider at top of webpage*/
-    header div {
-      text-align: center;
-      border-radius: 7px;
-      margin: 16px;
-      padding: 5px;
-      background-size: 100% 100%;
-    }
-  
-    /*  rule for main divider in webpage*/
+    
     main > div.section-div{
       padding: 10px;
       margin: 16px;
       margin-bottom: 30px;
+    }
+
+    /* rule for header divider at top of webpage*/
+    header div {
+      /* text-align: center; */
+      border-radius: 7px;
+      /* margin: 16px; */
+      padding: 5px;
+      /* background-size: 100% 100%; */
     }
   
     nav a{
@@ -466,19 +450,10 @@
   
     /* Footer Nav Section  */
     footer > div {
-      text-align: center;
       border-radius: 7px;
       margin: 16px;
-      padding: 10px;
     }
   
-    /* Rule to Center Form in Div*/
-    #form-div{
-      display: block;
-      text-align: center;
-    }
-
-
     /* Contact Form Button Style Rules */
     form button {
       font-size: 13px;
@@ -496,11 +471,6 @@
       padding:2px;
     }
 
-    /* Alternate possible font colors
-      #DBE9F4 - azure white
-      #435e72
-    /*#9FE2BF - seafoam green */
-
     /* header size 3 */
     h3{
       margin-bottom: 10px;
@@ -509,7 +479,6 @@
 
     /*Hyperlinked Text*/
     a{
-      font-family: 'Permanent Marker', sans-serif;
       font-size: 17px;
     }
 
@@ -521,22 +490,35 @@
     
 }
 
-
   /*-------------------------------------CSS Rules for Large Tablet Devices over 800px------------------------------------------------------*/ 
-
   @media all and (min-width: 800px){
-
 
   body{
     margin-left: 10%;
     margin-right: 10%;
   }
 
+    /*CSS rule for large images*/
+    .center-large {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      transform: scale(1);
+      transition:  .35s ease-in-out; 
+    }
+  
+    /* On hover >> Enlarge*/
+    .center-large:hover, .item:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+     transform: scale(1.2); 
+  }
+
+
 }
 
-
  /*-------------------------------------CSS Rules for Desktop/Large Tablet Devices over 900px------------------------------------------------------*/ 
-
  @media all and (min-width: 900px){
 
   body{
@@ -546,10 +528,8 @@
  }
 
   /*-------------------------------------CSS Rules for Desktop/Large Tablet Devices over 1250px------------------------------------------------------*/ 
-
  @media all and (min-width: 1250px){
 
-  /*  rule for main divider in webpage*/
    body {
     margin-left: 16%;
     margin-right: 16%;
@@ -576,51 +556,35 @@
     font-size: 55px;
     margin-top: 4%;
     margin-bottom: 1%;
-    color: #9FE2BF;
-    text-align:center;
-    text-decoration: underline;
   }
 
     /*  header size 2 */
   h2{
     font-size: 33px;
-    text-decoration: underline;
     margin: 2%;
-    color:#9FE2BF;
-    text-align:center;
   }
   
   /* header size 3 */
   h3{
     font-size: 22px;
-    text-decoration: none; 
-    margin: 2%;
-    color: #9FE2BF;
-    text-align:center;
   }
 
 
   /* Hyperlink font properties */
   a{
-    font-family: 'Permanent Marker', sans-serif;
     font-size: 22px;
-    text-shadow: 1px 1px 10px #292421;     
-    text-decoration: none;
   }
 
   /* paragraph/list item text rules */
   p , li{
-    font-size: 15.3px;
+    font-size: 14.3px;
   }
   
 }
 
-
  /*-------------------------------------CSS Rules for Devices over 1400px------------------------------------------------------*/ 
-
  @media all and (min-width: 1400px){
 
-  /*  rule for main divider in webpage*/
    body {
     margin-left: 20%;
     margin-right: 20%;
@@ -629,14 +593,11 @@
  }
 
  /*-------------------------------------CSS Rules for Devices over 1800px------------------------------------------------------*/ 
-
  @media all and (min-width: 1800px){
-
-  /*  rule for main divider in webpage*/
+  
    body {
     margin-left: 22%;
     margin-right: 22%;
   }
 
-  
  }
