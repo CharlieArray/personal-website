@@ -5,7 +5,7 @@ function renderAboveFoldElements() {
         <nav>
           <a href="#header">Home</a>
           <a href="#about">About</a>
-          <a href="#portfolio">Projects</a>
+          <a href="#portfolio">Portfolio</a>
           <a href="#contact">Contact</a> <br>
         </nav>   
           <div id='js-main-banner' class='hidden'>
@@ -36,8 +36,8 @@ function renderAboveFoldElements() {
             <div class="flex-child">
               <h3>Who I am:</h3>
                   <p>Hi - I'm Charlie. I'm a software developer in Austin, TX. <br><br>
-                  If you want to be dramatic:<br>app architect, software sorcerer🔮, or full stack engineer works too. Really I just enjoy
-                  <b>designing</b> and <b>building</b> beautiful web apps and user interfaces. <br><br>Former veteran to some; engineer to others, I like working with others to solve problems.</p>
+                  If you want to be dramatic<b>:</b><br>app architect, software sorcerer🔮, or full stack engineer works too. Really I just enjoy
+                  <b>designing</b> and <b>building</b> beautiful web apps and user interfaces. <br><br>Former veteran to some<b>;</b> engineer to others, I like working with others to solve problems.</p>
               </div>
             <div class="flex-child">
                 <h3>What about the travel photos?</h3>
@@ -55,9 +55,9 @@ function renderAboveFoldElements() {
   <div class="flex-container">
     <div class="flex-child-larger">
       <h3>Why software development?</h3>
-        <p>I enjoy being creative and building things. Software development allows for unlimited 
-          possibilities to build anything you could imagine: a software app, website, or even program a rocket motor sequence.
-          There is no limit to the possibilities.</p>
+        <p>Software development allows for unlimited 
+          possibilities to build anything you could imagine<b>:</b> a software app, website, or even program a rocket motor sequence.
+          There is no limit to the creative possibilities.</p>
       <video class="videoCRT hidden opacity-medium" id="slowVid" loop muted playsinline>
         <source src="images/CRT-TEXTURES-(1080)/TRANSITIONS/SPACE_02.mp4" type="video/mp4"/>
         Your browser does not support the video tag.
@@ -87,7 +87,11 @@ $("#loader-span").append(
 //-----------------Render Bottom Elements ------------------------------------//
 
 function renderBottomFoldElements() {
-  $("#loader-span").fadeOut(3000);
+
+  //when eventTrigger is inserted/appended in DOM, targetElement fadeOut
+  let eventTrigger = $('#portfolio');
+  let targetElement = $('#loader');
+  fadeElement(eventTrigger, targetElement);
 
   $("#portfolio-component").append(`
       <section id="portfolio">
@@ -173,6 +177,7 @@ function renderBottomFoldElements() {
   );
 }
 
+
 //-----Global variables----------------------------------------------------//
 const screenWidth = $(window).width();
 
@@ -201,16 +206,21 @@ function dynamicScrollListener() {
       context: document.body,
 
       success: () => {
+          function ajaxSuccessful(){
+            renderBottomFoldElements();
+            $("a").addClass("hidden").removeClass("visibility-hidden").fadeIn(2000);
+            fadeInIntroBottom();
+            ajaxInitiated = true;
+          }
+
         if (screenWidth <= 920 && bottom_position < 1600) {
-          renderBottomFoldElements();
-          ajaxInitiated = true;
+          ajaxSuccessful();
         } else if (
           screenWidth >= 920 &&
           bottom_position < 1700 &&
           document_height < 2700
         ) {
-          renderBottomFoldElements();
-          ajaxInitiated = true;
+          ajaxSuccessful();
         }
       },
 
@@ -223,9 +233,8 @@ function dynamicScrollListener() {
           location.reload(true);
         }, 4000);
       },
+      
     });
-    $("a").fadeIn(1500);
-    fadeInIntroBottom();
   });
 }
 
@@ -295,8 +304,10 @@ function getQuoteApiData() {
 //-------Animation and Transition Functions---------------------------------------//
 
 function slowAnimationPlayback() {
+  if (screenWidth >= 900){
   let video = document.getElementById("slowVid");
   video.playbackRate = 0.65;
+  }
 }
 
 function fadeInIntroTop() {
@@ -305,9 +316,9 @@ function fadeInIntroTop() {
   if (screenWidth <= 920) {
     bodyScrollLock.disableBodyScroll(targetElement);
     $(".section-div").addClass("hidden");
-    $("a").addClass("hidden");
-    $("#js-main-banner").fadeIn(2500);
-    $("#js-name").fadeIn(2800);
+    $("a").addClass("visibility-hidden");
+    $("#js-main-banner").fadeIn(2000);
+    $("#js-name").fadeIn(3200);
     setTimeout(function () {
       $(".section-div").fadeIn(2800);
       $("#loader-span").removeClass("hidden");
@@ -315,9 +326,9 @@ function fadeInIntroTop() {
     }, 4500);
   } else {
     $(".section-div").addClass("hidden");
-    $("a").addClass("hidden");
-    $("#js-main-banner").fadeIn(2500);
-    $("#js-name").fadeIn(3200);
+    $("a").addClass("visibility-hidden");
+    $("#js-main-banner").fadeIn(2200);
+    $("#js-name").fadeIn(2900);
     setTimeout(function () {
       $(".section-div").fadeIn(2800);
       $("#loader-span").removeClass("hidden");
@@ -327,21 +338,25 @@ function fadeInIntroTop() {
 
 function fadeInIntroBottom() {
   $(".section-div").addClass("hidden");
-
   setTimeout(function () {
-    $(".section-div").fadeIn(2500);
+    $(".section-div").fadeIn(3200);
     $("a").fadeIn(3000);
-  }, 500);
+  }, 300);
 }
+
+function fadeElement(eventTrigger, targetElement){
+ //when eventTrigger element is loaded in DOM => targetElement fadeOut
+  $(eventTrigger).ready( () => {
+    $(targetElement).fadeTo(3800, 0, () => {
+      $(targetElement).css("visibility", "hidden");
+    }) // duration, opacity, callback
+  });
+};
 
 function onHover() {
   $("#slowVid").hover(
     (event) => $(event.currentTarget).attr("autoplay", "autoplay"),
-    (event) => {
-      $(event.currentTarget).fadeOut(2400, () =>
-        $(event.currentTarget).removeAttr("loop")
-      );
-    }
+    (event) => $(event.currentTarget).fadeOut(2400, () => $(this).removeAttr("loop"))
   );
 }
 
@@ -363,10 +378,10 @@ function onPageLoad() {
       renderAboveFoldElements();
       fadeInIntroTop();
       getQuoteApiData();
-    }, 1800);
+    }, 900);
+    dynamicScrollListener();
     preventSlowMobile();
     onHover();
-    dynamicScrollListener();
     slowAnimationPlayback();
   } else {
     renderAboveFoldElements();

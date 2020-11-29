@@ -41,7 +41,7 @@
     /*This rule centers non-flexbox large images to width of user screen*/
     .center {
       display: block;
-      width: 20%;
+      width: 16%;
       margin-left: auto;
       margin-right: auto;
     }
@@ -158,19 +158,6 @@
       opacity: .78;
       padding: 0px;
       margin: 0px;
-    }
-
-    /* Renders quote over Image*/
-    .js-quote-render2 {
-      display: block;
-      background: none;
-      margin-left: auto;
-      margin-right: auto;
-      position: absolute;
-      opacity: .78;
-      top: 20%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
 
     /* Footer Nav Section  */
