@@ -111,13 +111,13 @@ function renderBottomFoldElements() {
               <div class="item2"><a href="https://charliearray.github.io/park-search-app/" target="_blank"><img src="images/phone-nav.jpg" alt="phone"> Park Search App 🌲</a>
                 <p>App to find national parks and landmarks utilizing API GET requests to the National Park Service. App programmed in: JavaScript and jQuery
                 </p></div>
-              <div class="item2"><a href="https://github.com/CharlieArray/project-photo" target="_blank"><img src="images/security.jpg" alt="orthographic graphic">Project Photo</a>
+              <div class="item2"><a href="https://github.com/CharlieArray/Social-Media-App" target="_blank"><img src="images/security.jpg" alt="orthographic graphic">Social Media App</a>
                 <p>
-                This is a placeholder link for the Photo App I'm building. I'll share my goals for creating it, and the skills/languages I applied.
+                This is a placeholder link for the Social Media App I'm building. I'll share my goals for creating it, and the skills/languages I applied.
                 </p></div>
-              <div class="item2"><a href="https://github.com/CharlieArray/project-bookmark" target="_blank"><img src="images/cellphone.jpg" alt="orthographic graphic">Project Bookmark</a>
+              <div class="item2"><a href="https://github.com/CharlieArray/Payment-Processor-App-Ribbon" target="_blank"><img src="images/cellphone.jpg" alt="orthographic graphic">Payment Processor App</a>
                 <p>
-                This is a placeholder link for the Bookmark App I'm building. I'll share my goals for creating it, and the skills/languages I applied.
+                This is a placeholder link for the Payment Processor App I'm building. I'll share my goals for creating it, and the skills/languages I applied.
                 </p></div>
           </div>
         </div>
