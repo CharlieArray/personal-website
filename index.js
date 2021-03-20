@@ -56,7 +56,7 @@ function renderAboveFoldElements() {
     <div class="flex-child-larger">
       <h3>Why software development?</h3>
         <p>Software development allows for unlimited 
-          possibilities to build anything you could imagine<b>:</b> a software app, website, or even program a rocket motor sequence.
+          possibilities to collaborate with a team and build anything you could imagine<b>:</b> a software app, website, or even program a rocket motor sequence.
           There is no limit to the creative possibilities.</p>
       <video class="videoCRT hidden opacity-medium" id="slowVid" loop muted playsinline>
         <source src="images/CRT-TEXTURES-(1080)/TRANSITIONS/SPACE_02.mp4" type="video/mp4"/>
@@ -101,19 +101,19 @@ function renderBottomFoldElements() {
         <div class="flex-child-larger">
           <div class="container2">
               <div class="item2"><a href="https://finance-app-client.vercel.app/" target="_blank"><img src="images/envelope.png" alt="orthographic graphic">Envelope Finance App✉️</a>
-              <p>This is a financial stock watchlist app called Envelope. It allows users to create a profile and search for stock prices by ticker symbol. Utilizes React, Express, Node, and Postgres SQL database.</p>
+              <p>This is a financial stock watchlist app called Envelope. It allows people who are interested in investing to create a profile and search for stock prices by ticker symbol. I built the app because I'm passionate about investing. App utilizes React, Express, Node, and Postgres SQL database.</p>
               <a href="https://github.com/CharlieArray/finance-app" target="_blank">Source Code</a>
             </div>
 
             <div class="item2"><a href="https://charliearray.github.io/api-hiking-app/" target="_blank"><img src="images/mountain-ortho.jpg"          
               alt="mountains">Trail Finder App🏕️</a>
-              <p>App to search trails in U.S or Canada and view detailed trail maps. App programmed in JavaScript and two APIs were used.</p>
+              <p>This app allows users to search trails in U.S or Canada and view detailed trail maps. App is designed for people interested in being outdoors, like myself. Tech stack used to program this app were JavaScript and 3rd party APIs.</p>
                 <a href="https://github.com/CharlieArray/api-hiking-app" target="_blank">Source Code</a>
             </div>
 
             <div class="item2"><a href="https://charliearray.github.io/quiz-app/" target="_blank"><img src="images/piggy-bank.jpg" alt="piggy-bank">Investing Quiz App📈</a>
                 <p>
-                  Interactive quiz covering advanced investing concepts. 70% of the app was programmed with JavaScript and jQuery library
+                  This interactive quiz app discusses intermediate investing concepts. The app is designed to test people's knowledge of investing. 70% of the app was programmed with JavaScript and jQuery library
                 </p><a href="https://github.com/CharlieArray/quiz-app" target="_blank">Source Code</a>
             </div>
           
@@ -135,8 +135,9 @@ function renderBottomFoldElements() {
           <header>  
             <h2>Contact</h2>
           </header>
-            <h3>For business opportunities: Linkedin and contact form below</h3>
-    
+            <h3>For business opportunities: Linkedin, email and contact form below</h3>
+            <h4>Email: charles.ybarra@outlook.com</h4>
+
           <div class="group">
             <div class="item"><img src="images/black-beach-square.jpg"  alt="Dark skies overshadow moody beach in Iceland" ></div>
             <div class="item"><img src="images/charlie-beach-square.jpg" alt="Person standing on Black Sands Beach"></div>
