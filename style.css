@@ -478,7 +478,6 @@
 
     /* paragraph/ list item rules */
     p , li{
-      font-size: 14px;
       padding: 4px;
     }
     
@@ -566,12 +565,7 @@
 
   /* Hyperlink font properties */
   a{
-    font-size: 22px;
-  }
-
-  /* paragraph/list item text rules */
-  p , li{
-    font-size: 14.3px;
+    font-size: 20px;
   }
   
 }

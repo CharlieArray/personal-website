@@ -100,13 +100,13 @@ function renderBottomFoldElements() {
             </header>
         <div class="flex-child-larger">
           <div class="container2">
-              <div class="item2"><a href="https://finance-app-client.vercel.app/" target="_blank"><img src="images/envelope.png" alt="orthographic graphic">Envelope-Finance App</a>
+              <div class="item2"><a href="https://finance-app-client.vercel.app/" target="_blank"><img src="images/envelope.png" alt="orthographic graphic">Envelope Finance App✉️</a>
               <p>This is a financial stock watchlist app called Envelope. It allows users to create a profile and search for stock prices by ticker symbol. Utilizes React, Express, Node, and Postgres SQL database.</p>
               <a href="https://github.com/CharlieArray/finance-app" target="_blank">Source Code</a>
             </div>
 
             <div class="item2"><a href="https://charliearray.github.io/api-hiking-app/" target="_blank"><img src="images/mountain-ortho.jpg"          
-              alt="mountains">Trail Finder App 🏕️</a>
+              alt="mountains">Trail Finder App🏕️</a>
               <p>App to search trails in U.S or Canada and view detailed trail maps. App programmed in JavaScript and two APIs were used.</p>
                 <a href="https://github.com/CharlieArray/api-hiking-app" target="_blank">Source Code</a>
             </div>
