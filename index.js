@@ -87,10 +87,9 @@ $("#loader-span").append(
 //-----------------Render Bottom Elements ------------------------------------//
 
 function renderBottomFoldElements() {
-
   //when eventTrigger is inserted/appended in DOM, targetElement fadeOut
-  let eventTrigger = $('#portfolio');
-  let targetElement = $('#loader');
+  let eventTrigger = $("#portfolio");
+  let targetElement = $("#loader");
   fadeElement(eventTrigger, targetElement);
 
   $("#portfolio-component").append(`
@@ -101,24 +100,23 @@ function renderBottomFoldElements() {
             </header>
         <div class="flex-child-larger">
           <div class="container2">
-              <div class="item2"><a href="https://charliearray.github.io/api-hiking-app/" target="_blank"><img src="images/mountain-ortho.jpg" alt="mountains">Trail Finder App 🏕️</a>
-                <p>App to search trails in U.S or Canada and view detailed trail maps. App programmed in JavaScript and two APIs were used.
-                </p></div>
-              <div class="item2"><a href="https://charliearray.github.io/quiz-app/" target="_blank"><img src="images/piggy-bank.jpg" alt="piggy-bank">Investing Quiz App📈</a>
+              <div class="item2"><a href="https://finance-app-client.vercel.app/" target="_blank"><img src="images/envelope.png" alt="orthographic graphic">Envelope-Finance App</a>
+              <p>This is a financial stock watchlist app called Envelope. It allows users to create a profile and search for stock prices by ticker symbol. Utilizes React, Express, Node, and Postgres SQL database.</p>
+              <a href="https://github.com/CharlieArray/finance-app" target="_blank">Source Code</a>
+            </div>
+
+            <div class="item2"><a href="https://charliearray.github.io/api-hiking-app/" target="_blank"><img src="images/mountain-ortho.jpg"          
+              alt="mountains">Trail Finder App 🏕️</a>
+              <p>App to search trails in U.S or Canada and view detailed trail maps. App programmed in JavaScript and two APIs were used.</p>
+                <a href="https://github.com/CharlieArray/api-hiking-app" target="_blank">Source Code</a>
+            </div>
+
+            <div class="item2"><a href="https://charliearray.github.io/quiz-app/" target="_blank"><img src="images/piggy-bank.jpg" alt="piggy-bank">Investing Quiz App📈</a>
                 <p>
                   Interactive quiz covering advanced investing concepts. 70% of the app was programmed with JavaScript and jQuery library
-                </p></div>
-              <div class="item2"><a href="https://charliearray.github.io/park-search-app/" target="_blank"><img src="images/phone-nav.jpg" alt="phone"> Park Search App 🌲</a>
-                <p>App to find national parks and landmarks utilizing API GET requests to the National Park Service. App programmed in: JavaScript and jQuery
-                </p></div>
-              <div class="item2"><a href="https://github.com/CharlieArray/Social-Media-App" target="_blank"><img src="images/security.jpg" alt="orthographic graphic">Social Media App</a>
-                <p>
-                This is a placeholder link for the Social Media App I'm building. I'll share my goals for creating it, and the skills/languages I applied.
-                </p></div>
-              <div class="item2"><a href="https://github.com/CharlieArray/Payment-Processor-App-Ribbon" target="_blank"><img src="images/cellphone.jpg" alt="orthographic graphic">Payment Processor App</a>
-                <p>
-                This is a placeholder link for the Payment Processor App I'm building. I'll share my goals for creating it, and the skills/languages I applied.
-                </p></div>
+                </p><a href="https://github.com/CharlieArray/quiz-app" target="_blank">Source Code</a>
+            </div>
+          
           </div>
         </div>
     </section> 
@@ -173,10 +171,9 @@ function renderBottomFoldElements() {
     `);
 
   $("#copyright").append(
-    `<h3 id="copyright">All content copyrighted or licensed by Charles Ybarra © 2019-2020</h3>`
+    `<h3 id="copyright">All content copyrighted or licensed by Charles Ybarra © 2019-2021</h3>`
   );
 }
-
 
 //-----Global variables----------------------------------------------------//
 const screenWidth = $(window).width();
@@ -206,12 +203,15 @@ function dynamicScrollListener() {
       context: document.body,
 
       success: () => {
-          function ajaxSuccessful(){
-            renderBottomFoldElements();
-            $("a").addClass("hidden").removeClass("visibility-hidden").fadeIn(2000);
-            fadeInIntroBottom();
-            ajaxInitiated = true;
-          }
+        function ajaxSuccessful() {
+          renderBottomFoldElements();
+          $("a")
+            .addClass("hidden")
+            .removeClass("visibility-hidden")
+            .fadeIn(2000);
+          fadeInIntroBottom();
+          ajaxInitiated = true;
+        }
 
         if (screenWidth <= 920 && bottom_position < 1600) {
           ajaxSuccessful();
@@ -233,7 +233,6 @@ function dynamicScrollListener() {
           location.reload(true);
         }, 4000);
       },
-      
     });
   });
 }
@@ -304,9 +303,9 @@ function getQuoteApiData() {
 //-------Animation and Transition Functions---------------------------------------//
 
 function slowAnimationPlayback() {
-  if (screenWidth >= 900){
-  let video = document.getElementById("slowVid");
-  video.playbackRate = 0.65;
+  if (screenWidth >= 900) {
+    let video = document.getElementById("slowVid");
+    video.playbackRate = 0.65;
   }
 }
 
@@ -344,19 +343,20 @@ function fadeInIntroBottom() {
   }, 300);
 }
 
-function fadeElement(eventTrigger, targetElement){
- //when eventTrigger element is loaded in DOM => targetElement fadeOut
-  $(eventTrigger).ready( () => {
+function fadeElement(eventTrigger, targetElement) {
+  //when eventTrigger element is loaded in DOM => targetElement fadeOut
+  $(eventTrigger).ready(() => {
     $(targetElement).fadeTo(3800, 0, () => {
       $(targetElement).css("visibility", "hidden");
-    }) // duration, opacity, callback
+    }); // duration, opacity, callback
   });
-};
+}
 
 function onHover() {
   $("#slowVid").hover(
     (event) => $(event.currentTarget).attr("autoplay", "autoplay"),
-    (event) => $(event.currentTarget).fadeOut(2400, () => $(this).removeAttr("loop"))
+    (event) =>
+      $(event.currentTarget).fadeOut(2400, () => $(this).removeAttr("loop"))
   );
 }
 
