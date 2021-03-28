@@ -113,7 +113,7 @@ function renderBottomFoldElements() {
 
             <div class="item2"><a href="https://charliearray.github.io/quiz-app/" target="_blank"><img src="images/piggy-bank.jpg" alt="piggy-bank">Investing Quiz App📈</a>
                 <p>
-                  This interactive quiz app discusses intermediate investing concepts. The app is designed to test people's knowledge of investing. 70% of the app was programmed with JavaScript and jQuery library
+                  This interactive quiz app discusses intermediate investing concepts. The app is designed to test people's knowledge of investing. I built this investing quiz app because I'm passionate about investing and want people to learn more. 70% of the app was programmed with JavaScript and jQuery
                 </p><a href="https://github.com/CharlieArray/quiz-app" target="_blank">Source Code</a>
             </div>
           
