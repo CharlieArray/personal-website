@@ -135,8 +135,7 @@ function renderBottomFoldElements() {
           <header>  
             <h2>Contact</h2>
           </header>
-            <h3>For business opportunities: Linkedin, email and contact form below</h3>
-            <h4>Email: charles.ybarra@outlook.com</h4>
+            <h3>For business opportunities: Linkedin and contact form below</h3>
 
           <div class="group">
             <div class="item"><img src="images/black-beach-square.jpg"  alt="Dark skies overshadow moody beach in Iceland" ></div>
