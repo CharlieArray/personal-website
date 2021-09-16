@@ -36,7 +36,7 @@ function renderAboveFoldElements() {
             <div class="flex-child">
               <h3>Who I am:</h3>
                   <p>Hi - I'm Charlie. I'm a software developer in Austin, TX. <br><br>
-                  If you want to be dramatic<b>:</b><br>app architect, software sorcerer🔮, or full stack engineer works too. Really I just enjoy
+                  If you want to be dramatic<b>:</b><br>app architect, software sorcerer, or full stack engineer works too. Really I just enjoy
                   <b>designing</b> and <b>building</b> beautiful web apps and user interfaces. <br><br>Former veteran to some<b>;</b> engineer to others, I like working with others to solve problems.</p>
               </div>
             <div class="flex-child">
@@ -96,7 +96,6 @@ function renderBottomFoldElements() {
       <section id="portfolio">
             <header>  
             <h2>Project Portfolio</h2>
-            <h3>In Progress</h3>
             </header>
         <div class="flex-child-larger">
           <div class="container2">
